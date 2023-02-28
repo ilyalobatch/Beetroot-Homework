@@ -1,0 +1,469 @@
+@font-face {
+	font-family: "Proxima Nova";
+	src: url('./fonts/ProximaNova-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Proxima Nova";
+	src: url('./fonts/ProximaNova-Bold.ttf');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Proxima Nova";
+	src: url('./fonts/ProximaNova-ThinIt.ttf');
+	font-weight: 300;
+	font-style: italic;
+}
+
+ul {
+	list-style: none;
+}
+
+html {
+	font-family: sans-serif;
+	/* width: 1500px; */
+}
+
+body {
+	margin: 0;
+	/* width: 1500px; */
+}
+
+header.header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+
+header.header nav.navigation {
+	background-color: #7b7b7b91;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header.header nav.navigation a {
+	margin: 0;
+}
+
+header.header nav.navigation img {
+	width: 65px;
+	height: 29px;
+	margin: 15px 40px;
+}
+
+header.header nav.navigation ul.links {
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+}
+
+header.header nav.navigation ul.links li {
+	margin: 0 10px;
+	padding: 0 5px;
+}
+
+header.header nav.navigation ul.links a {
+	color: #ffffff;
+	font: 400 16px "Proxima Nova";
+	letter-spacing: 0.7px;
+	text-decoration: none;
+	transition: 0.3s;
+	position: relative;
+}
+
+header.header nav.navigation ul.links a::after {
+	content: '';
+	display: block;
+	background-color: #ff9d00;
+	height: 3px;
+	position: absolute;
+	width: 0%;
+	bottom: -7px;
+	transform: scale(0, 1);
+	transition: transform ease-in-out 0.3s;
+}
+
+header.header nav.navigation ul.links a:hover::after {
+	transform: scale(1, 1);
+	width: 100%;
+}
+
+main.main div.container {
+	max-width: 830px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+div.container h1,
+p {
+	margin: 0;
+}
+
+section.hero-section {
+	min-height: 700px;
+	color: white;
+	display: flex;
+	align-items: center;
+	background-image: url('./imgs/Dairy.png');
+	text-align: left;
+	position: relative;
+	background-size: contain;
+}
+
+section.hero-section:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(66, 69, 255, 0.85);
+	z-index: 1;
+}
+
+section.hero-section div.container {
+	z-index: 2;
+}
+
+section.hero-section p.subtitle {
+	color: #ade7db;
+	font: 700 13px/1.25 "Proxima Nova";
+	letter-spacing: 0.38px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+section.hero-section h1.title {
+	color: #ffd3db;
+	font: 700 74px/75px "Proxima Nova";
+	letter-spacing: 1.85px;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+section.hero-section p.text {
+	color: #fff;
+	width: 413px;
+	font: 400 16px "Proxima Nova";
+	letter-spacing: 0.47px;
+}
+
+section.cheese {
+	min-height: 562px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+section.cheese h2.title {
+	color: #4245ff;
+	font: 700 64px/72px "Proxima Nova";
+	letter-spacing: 0.82px;
+	text-align: center;
+	padding-top: 130px;
+}
+
+section.cheese p.text {
+	color: #000000;
+	font: 400 16px "Proxima Nova";
+	letter-spacing: 0.54px;
+	text-align: center;
+}
+
+section.press {
+	min-height: 820px;
+	margin: 0 auto;
+	background-color: #ffe4e2;
+}
+
+
+section.press h2.title {
+	padding: 80px 0;
+	color: #4245ff;
+	font: 700 64px "Proxima Nova";
+	letter-spacing: 0.44px;
+	text-align: center;
+}
+
+div.box {
+	max-width: 800px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+div.infobox {
+	max-width: 240px;
+	margin-right: 40px;
+	background-color: #fff;
+}
+
+div.infobox:last-child {
+	margin-right: 0;
+}
+
+div.infobox div.image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+div.infobox div.image {
+	display: flex;
+	height: 168px;
+	background-color: #d8d8d8;
+}
+
+div.infobox div.container {
+	max-width: 75%;
+	margin: 0 44px 0 34px;
+}
+
+div.infobox p.date {
+	color: #9e9e9e;
+	font: 400 13px "Proxima Nova";
+	letter-spacing: 0.38px;
+	text-align: left;
+	margin-top: 21px;
+}
+
+div.infobox h3.heading {
+	color: #242424;
+	font: 700 16px/20px "Proxima Nova";
+	letter-spacing: 0.35px;
+	text-align: left;
+}
+
+div.infobox p.text {
+	color: #242424;
+	font: 400 13px/16px "Proxima Nova";
+	letter-spacing: 0.38px;
+	text-align: left;
+	padding-bottom: 38px;
+}
+
+section.about div.container {
+	max-width: 650px;
+	min-height: 1045px;
+	margin: 0 auto;
+}
+
+section.about div.container h4.subtitle {
+	color: #ffbfc7;
+	font: 700 13px "Proxima Nova";
+	letter-spacing: 0.38px;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 96px;
+}
+
+section.about div.container h2.title {
+	color: #4245ff;
+	font: 700 65px "Proxima Nova";
+	letter-spacing: 0.44px;
+	text-align: center;
+	margin: 0 0 30px;
+}
+
+section.about div.container div.info {
+	padding: 0 59px 50px;
+}
+
+section.about div.container p.text {
+	color: #000000;
+	font: 400 16px "Proxima Nova";
+	letter-spacing: 0.35px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+section.about div.container p.text span.link {
+	font: 100 16px "Proxima Nova";
+	color: grey;
+}
+
+section.about div.container img.photo {
+	margin: 0 0 0 17px;
+}
+
+section.join {
+	min-height: 903px;
+	background-color: #4245ff;
+}
+
+section.join div.container {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+section.join div.container h4.subtitle {
+	color: #80e0cc;
+	font: 700 13px "Proxima Nove";
+	letter-spacing: 0.38px;
+	text-align: left;
+	text-transform: uppercase;
+	padding-top: 10em;
+	margin-bottom: 0.5em;
+}
+
+section.join div.container h2.title {
+	color: #ffd3db;
+	font: 700 64px "Proxima Nova";
+	letter-spacing: 0.44px;
+	text-align: left;
+	margin: 0;
+	padding-top: 0;
+}
+
+section.join div.product h3.heading {
+	color: #ffffff;
+	font: 700 20px "Proxima Nova";
+	letter-spacing: 0.2px;
+	text-align: left;
+	margin-bottom: 0.5em;
+}
+
+section.join div.product p.text {
+	color: #ffffff;
+	font: 400 13px/17px "Proxima Nova";
+	letter-spacing: 0.38px;
+	text-align: left;
+}
+
+section.join div.product button.button a {
+	text-decoration: none;
+	color: #fff;
+}
+
+section.join div.product button.button {
+	border: 0;
+	padding: 7px 35px;
+	border-radius: 8px;
+	background-color: #ffc364;
+	margin: 1.5em 0 3em;
+}
+
+section.join div.product button.button:hover {
+	background-color: #ff9d00;
+}
+
+section.team {
+	background-color: #fff;
+	min-height: 700px;
+}
+
+section.team div.container {
+	max-width: 551px;
+	margin: 0 auto;
+}
+
+section.team div.container h2.title {
+	color: #4245ff;
+	font: 700 64px "Proxima Nova";
+	letter-spacing: 0.82px;
+	text-align: center;
+	padding: 1.0em 0 0.7em;
+}
+
+section.team div.founders {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+section.team div.infobox {
+	text-align: center;
+	max-width: 258px;
+}
+
+section.team div.infobox h4.name {
+	color: #ffbfc7;
+	font: 700 20px "Proxima Nova";
+	letter-spacing: 0.64px;
+	text-align: center;
+}
+
+section.team div.infobox span.link {
+	color: grey;
+	font: 100 13px "Proxima Nova";
+	letter-spacing: 0.42px;
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+section.team div.infobox p.text {
+	color: #000;
+	font: 400 13px "Proxima Nova";
+	text-align: center;
+	padding: 0;
+}
+
+footer.foot {
+	background-color: #ffc2bf;
+	min-height: 266px;
+}
+
+section.bottom div.container {
+	max-width: 770px;
+	margin: 0 auto;
+}
+
+section.bottom div.container div.info {
+	padding: 1.7em 0 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+section.bottom div.container div.info div.infobox {
+	background-color: #ffc2bf;
+}
+
+section.bottom div.container div.info img {
+	height: 44px;
+	width: 99px;
+	margin-top: 20px;
+}
+
+section.bottom div.container div.info h4.title {
+	color: #ffffff;
+	font: 700 12px "Proxima Nova";
+	letter-spacing: 0.85px;
+	text-align: left;
+}
+
+section.bottom div.container div.info p.text {
+	color: #ffffff;
+	font: 300 12px "Proxima Nova";
+	letter-spacing: 0.78px;
+	text-align: left;
+}
+
+section.bottom div.container div.info div.infobox div.email {
+	color: #ffffff;
+	font: 400 10px "Proxima Nova";
+	letter-spacing: 0.65px;
+	text-align: left;
+	background-color: #4245ff;
+	padding: 5px 0 5px 10px;
+	margin-right: 10px;
+	transition: 400ms;
+}
+
+section.bottom div.container div.info div.infobox div.email:hover {
+	background-color: #2529f8;
+	border-radius: 8px;
+}
+
+section.bottom div.container h5.copyright {
+	color: #ffffff;
+	font: 400 10px "Proxima Nova";
+	letter-spacing: 0.65px;
+	text-align: center;
+	padding: 3.5em 0 0;
+}
