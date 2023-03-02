@@ -1,0 +1,193 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(./fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(./fonts/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section, footer {
+    padding: 100px 0;
+}
+
+section:nth-of-type(odd) {
+    background-color: #F6F6F6;
+}
+
+.container {
+    max-width: 65vw;
+    margin: 0 auto;
+}
+
+    /****** Images ******/
+
+.img-lg {
+    width: 100%;
+}
+
+.img-main {
+    margin: 50px 0 0 0;
+}
+
+    /****** Headers & Text ******/
+
+h2, h3, p {
+    text-align: center;
+}
+
+h1 {
+    font: 700 48px "Open Sans";
+    color: #070707;
+    margin: 15px 0;
+}
+
+h2 {
+    font: 700 34px "Open Sans";
+    color: #070707;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font: 700 14px "Open Sans";
+    color: #828282;
+    margin: 25px 0 50px;
+}
+
+p {
+    font: 400 18px "Open Sans";
+    color: #070707;
+}
+
+    /****** Navbar ******/
+
+nav {
+    border-bottom: 3px solid rgb(210, 210, 210);
+    display: flex;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    max-width: 70%;
+    margin: 27.5px 0;
+    padding: 0;
+}
+
+
+.link {
+    color: #828282;
+    font: 300 20px "Open Sans";
+    margin: 0 28px;
+}
+
+.home {
+    color: black;
+}
+
+    /****** About me ******/
+
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.about p {
+    margin-top: 30px;
+}
+
+    /****** Skills ******/
+
+.skills h2 {
+    margin: 0;
+}
+
+.skills p {
+    margin: 0 0 50px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills {
+    display: block;
+}
+
+.stars {
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-top: auto;
+}
+
+    /****** Portfolio ******/
+
+.portfolio h2 {
+    margin: 0 0 30px;
+}
+
+.portfolio p {
+    margin: 40px 0 70px;
+}
+
+.portfolio a {
+    color: #070707;
+    text-decoration: underline;
+}
+
+    /****** Contact Us ******/
+
+.contact h2 {
+    margin: 0;
+}
+
+.contact p {
+    margin: 0 0 60px
+}
+
+.messagebox {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.messagebox button {
+    font: 700 18px "Open Sans";
+    background-color: #070707;
+    border-radius: 3rem;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    margin: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+}
+
+.messagebox button:hover {
+    background-color: #809c3c;
+    box-shadow: 0 0.7em 0.2em -0.4em #38671e;
+    transform: translateY(-0.3em);
+}
+
+.messagebox a {
+    margin: 0 30px;
+}
