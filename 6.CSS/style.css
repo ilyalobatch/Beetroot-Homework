@@ -20,13 +20,18 @@ body {
     padding: 0;
 }
 
-section, footer {
+section {
     padding: 100px 0;
 }
 
 section:nth-of-type(odd) {
     background-color: #F6F6F6;
 }
+
+footer {
+    padding: 100px 0 0;
+}
+
 
 .container {
     max-width: 65vw;
@@ -40,6 +45,7 @@ section:nth-of-type(odd) {
 }
 
 .img-main {
+    display: block;
     margin: 50px 0 0 0;
 }
 
@@ -130,14 +136,23 @@ nav {
     margin-right: auto;
 }
 
-.skills {
-    display: block;
+.skill {
+    display: flex;
+    flex-direction: column;
 }
 
 .stars {
-    font-size: 30px;
-    letter-spacing: 4px;
+    display: flex;
     margin-top: auto;
+}
+
+.stars img {
+    display: block;
+    margin: 0 5px;
+}
+
+.star-grey {
+    opacity: 0.1;
 }
 
     /****** Portfolio ******/
