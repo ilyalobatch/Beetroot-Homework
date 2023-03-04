@@ -98,6 +98,27 @@ nav {
     color: #828282;
     font: 300 20px "Open Sans";
     margin: 0 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.link::after {
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    background: #ff9d00;
+    height: 3px;
+    opacity: 0;
+    transition: all 0.4s
+}
+
+.link:hover::after {
+    width: 100%;
+    opacity: 1;
 }
 
 .home {
@@ -193,7 +214,7 @@ nav {
     padding: 0.5rem 1.5rem;
     margin: 30px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
     border: none;
 }
 
