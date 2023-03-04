@@ -10,6 +10,35 @@
 <body>
 
     <section>
+        <div class="ingredients">
+            <div class="set">
+                <div>
+                    <img src="./imgs/spinach.png" alt="spinach"/>
+                </div>
+                <div>
+                    <img src="./imgs/tomato.png" alt="tomato"/>
+                </div>
+                <div>
+                    <img src="./imgs/mushroom.png" alt="mushroom"/>
+                </div>
+                <div>
+                    <img src="./imgs/cheese.png" alt="cheese"/>
+                </div>
+                <div>
+                    <img src="./imgs/salami.png" alt="salami"/>
+                </div>
+                <div>
+                    <img src="./imgs/paprika.png" alt="paprika"/>
+                </div>
+                <div>
+                    <img src="./imgs/olives.png" alt="olives"/>
+                </div>
+                <div>
+                    <img src="./imgs/onion.png" alt="onion"/>
+                </div>
+            </div>
+        </div>
+        <img class="bg" src="./imgs/pizza.jpg" alt="pizza"/>
         <form class="form" action="" method="GET">
             <h1>Order Pizza</h1>
             <div class="inputBox">
@@ -19,7 +48,7 @@
                     type="text" 
                     placeholder="John Smith"
                     required
-                >
+                />
             </div>
             <div class="inputBox">
                 <label for="pizza">Pizza</label>
@@ -44,7 +73,7 @@
                             type="radio"
                             value="small" 
                             required
-                        >
+                        />
                         <label for="size1">Small</label>
                     </div>
                     <div class="radio">
@@ -54,7 +83,7 @@
                             type="radio"
                             value="medium" 
                             required
-                        >
+                        />
                         <label for="size2">Medium</label>
                     </div>
                     <div class="radio">
@@ -64,7 +93,7 @@
                             type="radio"
                             value="large" 
                             required
-                        >
+                        />
                         <label for="size3">Large</label>
                     </div>
                 </div>
@@ -75,10 +104,15 @@
                 <input 
                     id="address" 
                     type="text" 
+                    name="address"
                     placeholder="23 Great Avenue, 12"
-                >
+                    required
+                />
             </div>
-            <button type="submit">Submit</button>
+            <div class="btns">
+                <button class="success" type="submit">Submit</button>
+                <button class="danger" type="reset">Cancel</button>
+            </div>
         </form>
     </section>
 </body>
