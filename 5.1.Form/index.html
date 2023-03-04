@@ -4,75 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
 
-    <h1>Form</h1>
     <section>
-        <form action="" method="GET">
-            <h2>Order Pizza</h2>
-            <label for="name">Name</label>
-            <br>
-            <input 
-                id="name" 
-                type="text" 
-                placeholder="John Smith"
-                required
-            >
-            <br>
-            <label for="pizza">Pizza</label>
-            <br>
-            <select 
-                id="pizza" 
-                name="pizza"
-                required
-            >
-                <option disabled=“disabled” selected=“selected” required>Type</option>
-                <option value="pizza1">Hawaii</option>
-                <option value="pizza2">Peperonni</option>
-                <option value="pizza3">Vegan</option>
-            </select>
-
-            <p>Size</p>
-            <div>
+        <form class="form" action="" method="GET">
+            <h1>Order Pizza</h1>
+            <div class="inputBox">
+                <label for="name">Name</label>
                 <input 
-                    id="size1" 
-                    name="size" 
-                    type="radio"
-                    value="small" 
+                    id="name" 
+                    type="text" 
+                    placeholder="John Smith"
                     required
-                    >
-                <label for="size1">Small</label>
-                <input 
-                    id="size2" 
-                    name="size" 
-                    type="radio"
-                    value="medium" 
-                    required
-                    >
-                <label for="size2">Medium</label>
-                <input 
-                    id="size3" 
-                    name="size" 
-                    type="radio"
-                    value="large" 
-                    required
-                    >
-                <label for="size3">Large</label>
+                >
             </div>
-            <br>
-            <label for="address" required>Address</label>
-            <br>
-            <input 
-                id="address" 
-                type="text" 
-                placeholder="23 Great Avenue, 12"
-            >
-            <br>
-            <button>Order</button>
+            <div class="inputBox">
+                <label for="pizza">Pizza</label>
+                <select 
+                    id="pizza" 
+                    name="pizza"
+                    required
+                >
+                    <option disabled=“disabled” selected=“selected” required>Choose Pizza</option>
+                    <option value="pizza1">Hawaii</option>
+                    <option value="pizza2">Peperonni</option>
+                    <option value="pizza3">Vegan</option>
+                </select>
+            </div>
+            <div class="sizeBox">
+                <p>Size</p>
+                <div class="radioBox">
+                    <div class="radio">
+                        <input 
+                            id="size1" 
+                            name="size" 
+                            type="radio"
+                            value="small" 
+                            required
+                        >
+                        <label for="size1">Small</label>
+                    </div>
+                    <div class="radio">
+                        <input 
+                            id="size2" 
+                            name="size" 
+                            type="radio"
+                            value="medium" 
+                            required
+                        >
+                        <label for="size2">Medium</label>
+                    </div>
+                    <div class="radio">
+                        <input 
+                            id="size3" 
+                            name="size" 
+                            type="radio"
+                            value="large" 
+                            required
+                        >
+                        <label for="size3">Large</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputBox">
+                <label for="address" required>Address</label>
+                <input 
+                    id="address" 
+                    type="text" 
+                    placeholder="23 Great Avenue, 12"
+                >
+            </div>
+            <button type="submit">Submit</button>
         </form>
     </section>
-    
 </body>
 </html>
