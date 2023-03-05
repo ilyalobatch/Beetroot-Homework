@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:description" content="Looking for delicious pizza delivered right to your doorstep? Our pizza delivery service offers a wide range of mouth-watering toppings and crispy crusts to satisfy your cravings. Order online today and enjoy piping hot pizza from the comfort of your own home!">
+    <meta property="og:image" content="https://ilyalobatch.github.io/imgs/pizza-bg.jpg">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="./imgs/pizza-icon.png"/>
+    <title>Mamma Mia</title>
+</head>
+<body>
+
+    <section>
+        <div class="ingredients">
+            <div class="set">
+                <div>
+                    <img src="./imgs/spinach.png" alt="spinach"/>
+                </div>
+                <div>
+                    <img src="./imgs/tomato.png" alt="tomato"/>
+                </div>
+                <div>
+                    <img src="./imgs/mushroom.png" alt="mushroom"/>
+                </div>
+                <div>
+                    <img src="./imgs/cheese.png" alt="cheese"/>
+                </div>
+                <div>
+                    <img src="./imgs/salami.png" alt="salami"/>
+                </div>
+                <div>
+                    <img src="./imgs/paprika.png" alt="paprika"/>
+                </div>
+                <div>
+                    <img src="./imgs/olives.png" alt="olives"/>
+                </div>
+                <div>
+                    <img src="./imgs/onion.png" alt="onion"/>
+                </div>
+            </div>
+        </div>
+        <img class="bg" src="./imgs/pizza-bg.jpg" alt="pizza"/>
+        <form class="form" action="" method="GET">
+            <h1>Order Pizza</h1>
+            <div class="inputBox">
+                <label for="name">Name</label>
+                <input 
+                    id="name" 
+                    type="text" 
+                    placeholder="John Smith"
+                    required
+                />
+            </div>
+            <div class="inputBox">
+                <label for="pizza">Pizza</label>
+                <select 
+                    id="pizza" 
+                    name="pizza"
+                    required
+                >
+                    <option disabled=“disabled” selected=“selected” required>Choose Pizza</option>
+                    <option value="pizza1">Hawaii</option>
+                    <option value="pizza2">Peperonni</option>
+                    <option value="pizza3">Vegan</option>
+                </select>
+            </div>
+            <div class="sizeBox">
+                <p>Size</p>
+                <div class="radioBox">
+                    <div class="radio">
+                        <input 
+                            id="size1" 
+                            name="size" 
+                            type="radio"
+                            value="small" 
+                            required
+                        />
+                        <label for="size1">Small</label>
+                    </div>
+                    <div class="radio">
+                        <input 
+                            id="size2" 
+                            name="size" 
+                            type="radio"
+                            value="medium" 
+                            required
+                        />
+                        <label for="size2">Medium</label>
+                    </div>
+                    <div class="radio">
+                        <input 
+                            id="size3" 
+                            name="size" 
+                            type="radio"
+                            value="large" 
+                            required
+                        />
+                        <label for="size3">Large</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputBox">
+                <label for="address" required>Address</label>
+                <input 
+                    id="address" 
+                    type="text" 
+                    name="address"
+                    placeholder="23 Great Avenue, 12"
+                    required
+                />
+            </div>
+            <div class="btns">
+                <button class="success" type="submit">Submit</button>
+                <button class="danger" type="reset">Cancel</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
