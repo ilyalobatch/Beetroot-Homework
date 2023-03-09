@@ -54,9 +54,8 @@
 }
 
 .bubble-button:hover
-.bubble-button-text,
-.bubble-button img {
-  color: #FFF;
+.bubble-button-text {
+  color: #F9F9F9;
 }
 
     /**** Background ****/
@@ -76,7 +75,34 @@
 }
 
 .bubble-navbar-link {
+  position: relative;
   margin-left: 40px;
+}
+
+.bubble-navbar-link::before, 
+.bubble-navbar-link::after {
+  position: absolute;
+  content: "";
+  background-color: #54D5A3;
+  height: 3px;
+  width: 0%;
+  border-radius: 100px;
+  transition: all 0.4s;
+}
+
+.bubble-navbar-link::before {
+  top: -10px;
+  left: 0;
+}
+
+.bubble-navbar-link::after {
+  bottom: -10px;
+  right: 0;
+}
+
+.bubble-navbar-link:hover::before, 
+.bubble-navbar-link:hover::after {
+  width: 100%;
 }
 
     /**** Home ****/
@@ -124,8 +150,23 @@
 }
 
 .bubble-services .bubble-service {
-  border: 1px solid black;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
   padding: 32px 24px;
+  transition: all 0.4s;
+}
+
+.bubble-services 
+.bubble-services-container:hover 
+.bubble-service{
+  transform: scale3d(0.9,0.9,1)
+}
+
+.bubble-services 
+.bubble-services-container:hover 
+.bubble-service:hover{
+  transform: scale3d(1,1,1);
+  box-shadow: 0px 4px 6px 4px #437D67;
+  cursor: pointer;
 }
 
 .bubble-services .bubble-service .bubble-title {
@@ -224,7 +265,12 @@
 }
 
 .bubble-footer .bubble-social-media {
-  padding-right: 24px;
+  margin-right: 24px;
+  transition: all 0.4s;
+}
+
+.bubble-footer .bubble-social-media:hover {
+  transform: scale(1.2);
 }
 
 .bubble-footer .bubble-links-box {
@@ -232,11 +278,25 @@
   align-items: flex-start;
 }
 
-.bubble-footer .bubble-links {
-  display: flex;
-  flex-direction: column;
-}
-
 .bubble-footer .bubble-link {
   margin-bottom: 16px;
+}
+
+.bubble-footer .bubble-link .bubble-link-tag {
+  position: relative;
+}
+
+.bubble-footer .bubble-link .bubble-link-tag::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #060606;
+  bottom: -4px;
+  left: 0;
+  transition: all 0.4s;
+}
+
+.bubble-footer .bubble-link .bubble-link-tag:hover::before {
+  width: 100%;
 }
