@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:description" content="The Information Technology Specialist serves as a technical expert for the development, implementation, management, and support of systems and networks. The IT specialist plans and carries out exciting, complex assignments and develops new methods and approaches in a wide variety of IT specialties.">
+        <link rel="stylesheet" href="./assets/normalize.css">
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="icon" type="image/png" href="./assets/imgs/beetroot-icon.png"/>
+        <title>Beetroot Form</title>
+    </head>
+    <body>
+        <section>
+            <form action="#" method="GET">
+                <h1>Start your IT Carrier</h1>
+                <div class="container">
+                    <div class="inputBox">
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Full Name"
+                            required
+                        />
+                    </div>
+                    <div class="inputBox">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Email"
+                            required
+                        />
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="inputBox">
+                        <input 
+                            type="password" 
+                            id="pass" 
+                            name="pass"
+                            placeholder="Password"
+                            required
+                        />
+                    </div>
+                    <div class="inputBox">
+                        <input 
+                            type="password" 
+                            id="confirm" 
+                            name="confirm"
+                            placeholder="Confirm Password"
+                            required
+                        />
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <p>Gender</p>
+                    <div class="radioBox">
+                        <div class="radio">
+                            <label for="male">Male</label>
+                            <input 
+                                type="radio" 
+                                id="male" 
+                                name="gender" 
+                                required
+                            />
+                        </div>
+                        <div class="radio">
+                            <label for="female">Female</label>
+                            <input 
+                                type="radio" 
+                                id="female" 
+                                name="gender" 
+                                required
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="inputBox">
+                        <input 
+                            type="number" 
+                            id="age" 
+                            name="age" 
+                            placeholder="Age" 
+                            required
+                        />
+                    </div>
+                    <div class="inputBox">
+                        <select 
+                            id="course" 
+                            name="course" 
+                            required
+                        >
+                            <option disabled=“disabled” selected=“selected” required>Select Course</option>
+                            <option value="">Front-End</option>
+                            <option value="">Back-End</option>
+                            <option value="">Project Management</option>
+                            <option value="">QA Manual</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <textarea 
+                        id="address" 
+                        name="address" 
+                        cols="60" 
+                        maxlength="100"
+                        rows="1"
+                        placeholder="Full Address"
+                        required
+                    ></textarea>
+                </div>
+                <div class="checkBox">
+                    <input 
+                        type="checkbox" 
+                        id="agree" 
+                        name="agree" 
+                        required
+                    />
+                    <label for="agree">I agree with terms and conditions</label>
+                </div>
+                <div class="btns">
+                    <button class="danger" type="reset">Cancel</button>
+                    <button class="success" type="submit">Register</button>
+                </div>
+            </form>
+
+        </section>
+        
+    </body>
+</html>
