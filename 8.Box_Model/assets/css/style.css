@@ -1,0 +1,120 @@
+    /**** Header ****/
+
+.product-header {
+  padding: 17px 0;
+}
+
+.product-active {
+  color: #FF9900;
+}
+
+.product-navbar-link {
+  margin: 0 20px;
+}
+
+.product-navbar-signin, .product-navbar-register {
+  padding: 10px 22.5px;
+  margin: 0 35px;
+  border-radius: 4px;
+}
+
+.product-navbar-signin {
+  border: 2px solid rgba(188, 208, 229, 0.8);
+}
+.product-navbar-register {
+  background-color: #FF9900;
+  color: #FFFFFF;
+}
+
+    /**** Hero ****/
+
+.product-hero {
+  margin: 70px 0 100px;
+}
+
+.product-hero .product-contentbox {
+  max-width: 500px;
+}
+
+    /**** Features ****/
+
+.product-features {
+  margin: 100px 0;
+  position: relative;
+}
+
+.product-bg {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  z-index: -2;
+}
+
+.product-feature-box {
+  flex: 25%;
+  max-width: 270px;
+}
+
+.product-feature-box .product-title {
+  margin-bottom: 16px;
+}
+
+    /**** Design Professionals ****/
+
+.product-design {
+  margin-bottom: 100px;
+} 
+
+.product-design .product-contentbox {
+  max-width: 525px;
+}    
+
+.product-design h4 {
+  color: #2F281E;
+}
+
+    /**** Product Managers ****/
+
+.product-managers {
+  margin-bottom: 100px;
+}
+.product-managers .product-contentbox {
+  max-width: 440px;
+}
+
+    /**** Marketers ****/
+
+.product-marketers {
+  margin-bottom: 100px;
+}
+
+.product-marketers .product-contentbox {
+  max-width: 486px;
+}
+
+    /**** Footers ****/
+
+.product-footer {
+  padding: 70px 0;
+  border-top: 1px solid rgba(188, 208, 229, 0.5);
+}
+
+.product-footer .product-contentbox {
+  max-width: 280px;
+}
+
+.product-footer .product-title {
+  font-size: 20px
+}
+
+.product-flex-top {
+  align-items: flex-start;
+}
+
+.product-footer-input {
+  min-width: 340px;
+  display: block;
+  border: 1px solid rgba(188, 208, 229, 0.5);
+  border-radius: 4px;
+  padding: 13px 10px 13px;
+}
