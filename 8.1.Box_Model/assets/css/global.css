@@ -1,0 +1,33 @@
+.product-container {
+  padding: 0 120px;
+}
+
+.product-flex-row, .product-flex-clmn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-flex-clmn {
+  flex-direction: column;
+}
+
+.product-center {
+  text-align: center;
+}
+
+   /**** Margins & Paddings ****/
+
+.product-mb-10 {margin-bottom: 10px;}
+.product-mb-15 {margin-bottom: 15px;}
+.product-mb-20 {margin-bottom: 20px;}
+.product-mb-30 {margin-bottom: 30px;}
+.product-mb-40 {margin-bottom: 40px;}
+.product-mb-50 {margin-bottom: 50px;}
+.product-mb-70 {margin-bottom: 70px;}
+
+.product-mr-30 {margin-right: 30px;}
+
+.product-pb-70 {padding-bottom: 70px;}
+
+.product-pt-20 {padding-top: 20px;}

@@ -1,0 +1,226 @@
+/**** Buttons ****/
+
+.product-button {
+  position: relative;
+  overflow: hidden;
+  padding: 13px 43.5px;
+  background-color: #FF9900;
+  border-radius: 4px;
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+.product-button::after {
+  position: absolute;
+  content: "";
+  background-color: #7955B8;
+  left: -30%;
+  right: -30%;
+  top: -1px;
+  bottom: 0;
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+
+.product-button::after {
+  transform: skewX(-45deg) scale(0, 1);
+}
+
+.product-button:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+}
+
+/**** Header ****/
+
+.product-header {
+  padding: 17px 0;
+}
+
+.product-active {
+  color: #FF9900;
+}
+
+/**** Navbar-links ****/
+
+.product-navbar-link {
+  margin: 0 10px;
+  padding: 5px 10px;
+  position: relative;
+  display: block;
+}
+
+.product-navbar-link:before, 
+.product-navbar-link:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 0%;
+  transition: all 0.4s ease;
+}
+
+.product-navbar-link::before {
+  right: 0;
+  bottom: 0;
+  border-bottom: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+.product-navbar-link::after {
+  top: 0;
+  left: 0;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+}
+
+.product-navbar-link:hover::before,
+.product-navbar-link:hover::after {
+  width: 10px;
+  height: 10px;
+  border-color: #FF9900;
+}
+
+/**** Navbar-buttons ****/
+
+.product-navbar-signin, .product-navbar-register {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 22.5px;
+  margin: 0 30px;
+  border-radius: 4px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.product-navbar-signin {
+  border: 2px solid rgba(188, 208, 229, 0.8);
+}
+.product-navbar-register {
+  border: 2px solid #FF9900;
+  background-color: #FF9900;
+  color: #FFF;
+}
+
+.product-navbar-signin:hover {
+  color: #FFF;
+  background-color: #05B857;
+  border: 2px solid #05B857;
+  box-shadow: 0 0 10px 0 inset #d4d1ce, 0 0 10px 6px #d4d1ce;
+}
+
+.product-navbar-register:hover {
+  color: #2F281E;
+  background-color: #FFF;
+  box-shadow: 0 0 10px 0 inset #FF9900, 0 0 10px 6px #FF9900;
+}
+
+    /**** Hero ****/
+
+.product-hero {
+  margin: 70px 0 100px;
+}
+
+.product-hero .product-contentbox {
+  max-width: 500px;
+}
+
+    /**** Features ****/
+
+.product-features {
+  margin: 100px 0;
+  position: relative;
+}
+
+.product-bg {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  z-index: -2;
+}
+
+.product-feature-box {
+  flex: 25%;
+  max-width: 270px;
+}
+
+.product-feature-box .product-title {
+  margin-bottom: 16px;
+}
+
+    /**** Design Professionals ****/
+
+.product-design {
+  margin-bottom: 100px;
+} 
+
+.product-design .product-contentbox {
+  max-width: 525px;
+}    
+
+.product-design h4 {
+  color: #2F281E;
+}
+
+    /**** Product Managers ****/
+
+.product-managers {
+  margin-bottom: 100px;
+}
+.product-managers .product-contentbox {
+  max-width: 440px;
+}
+
+    /**** Marketers ****/
+
+.product-marketers {
+  margin-bottom: 100px;
+}
+
+.product-marketers .product-contentbox {
+  max-width: 486px;
+}
+
+    /**** Footers ****/
+
+.product-footer {
+  padding: 70px 0;
+  border-top: 1px solid rgba(188, 208, 229, 0.5);
+}
+
+.product-footer .product-contentbox {
+  max-width: 280px;
+}
+
+.product-footer .product-title {
+  font-size: 20px
+}
+
+.product-flex-top {
+  align-items: flex-start;
+}
+
+.product-footer-input {
+  min-width: 340px;
+  display: block;
+  border: 1px solid rgba(188, 208, 229, 0.5);
+  border-radius: 4px;
+  padding: 13px 10px 13px;
+}
+
+.product-footer-link {
+  position: relative;
+}
+
+.product-footer-link::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #f79502;
+  bottom: -4px;
+  left: 0;
+  transition: all 0.4s;
+}
+
+.product-footer-link:hover::before {
+  width: 100%;
+}
