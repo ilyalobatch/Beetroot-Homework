@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Lucida Sans Unicode";
+  src: url("./fonts/Lucida_Sans_Unicode_Regular.ttf");
+  font-weight: 400;
+}
+
+* {
+  font-family: "Lucida Sans Unicode";
+}
+
+body {
+  min-width: 1440px;
+  border: 17px solid #2082A8 ;
+  background-color: #269AC8;
+  color: #FFF;
+}
+
+.weather-section {
+  padding: 50px 120px 0;
+}
+
+.weather-header {
+  margin-bottom: 40px;
+  font-size: 21px;
+  line-height: 25px;  
+}
+
+.weather-table {
+  width: 1170px;
+  font-size: 0;
+  margin-bottom: 37px;
+  border: 3px solid #FFF;
+  background-color: #FFF;
+}
+
+.weather-table-block {
+  position: relative;
+  display: inline-block;
+  border: 3px solid #FFF;
+  height: auto;
+  padding: 10px 0 15px;
+  text-align: center;
+  z-index: 1;
+}
+
+.weather-table:hover .weather-table-block {
+  opacity: .7;
+}
+
+.weather-table:hover .weather-table-block:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.weather-table-block:nth-child(1) {
+  background-color: #3399CC;
+}
+.weather-table-block:nth-child(2) {
+  background-color: #33CCCC;
+}
+.weather-table-block:nth-child(3) {
+  background-color: #996699;
+}
+.weather-table-block:nth-child(4) {
+  background-color: #C24747;
+}
+.weather-table-block:nth-child(5) {
+  background-color: #E2674A;
+}
+.weather-table-block:nth-child(6) {
+  background-color: #FFCC66;
+}
+.weather-table-block:nth-child(7) {
+  background-color: #99CC99;
+}
+.weather-table-block:nth-child(8) {
+  background-color: #669999;
+}
+.weather-table-block:nth-child(9) {
+  background-color: #CC6699;
+}
+.weather-table-block:nth-child(10) {
+  background-color: #339966;
+}
+.weather-table-block:nth-child(11) {
+  background-color: #666699;
+}
+
+.weather-subheader, .weather-text {
+  font-size: 22px;
+  line-height: 26px;
+  margin: 20px 0;
+}
+
+.weather-subheader {
+  display: block;
+}
+
+.weather-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.wi {
+  vertical-align: middle;
+  font-size: 42px;
+  margin-left: 15px;
+}
+
+.wi-header {
+  font-size: 27px;
+}
+
+.weather-text-footer {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 100px;
+}
+
+/**** Weather-block Width ****/
+
+.weather-quarter {width: 25%;}
+.weather-half {width: 50%;}
+.weather-full {width: 100%;}
