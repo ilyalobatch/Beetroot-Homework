@@ -1,0 +1,163 @@
+/**** Header ****/
+
+.itlife-header-section {
+  padding: 10px 0;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+/**** Header-button ****/
+
+.itlife-header-button {
+  padding: 8px 20px;
+  border: 1px solid #3C3C3C;
+  transition: all 0.4s;
+}
+
+.itlife-header-button:hover {
+  background-color: #18B5DC;
+  border-color: #18B5DC;
+  color: #FFF;
+}
+
+/**** Main ****/
+
+.itlife-main-section {
+  padding: 150px 0;
+  background-color: #F6F6F6;
+}
+
+.itlife-header {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+.itlife-header::before {
+  position: absolute;
+  content: "";
+  height: 4px;
+  bottom: 0;
+  margin: auto;
+  background-color: #DDDBDB;
+  width: 45px;
+}
+
+.itlife-lorem-text {
+  max-width: 570px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.itlife-author-image {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.itlife-author-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #18B5DC;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.itlife-author-image:hover .itlife-author-info {
+  opacity: 1;
+}
+
+.itlife-author-icon-box {
+  padding: 10px;
+  border: 1px solid #FFF;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.itlife-author-icon-box:hover {
+  background-color: #FFF;
+  transform: scale(1.15);
+}
+
+.itlife-author-icon-box:hover .itlife-author-icon {
+  transition: all 0.3s;
+  fill: #18B5DC;
+}
+
+/**** Footer ****/
+
+.itlife-footer-section {padding: 40px 0;}
+
+.itlife-footer-logo {margin-bottom: 25px;}
+
+.itlife-footer-links {margin-bottom: 28px;}
+
+.itlife-footer-icon-box {
+  padding: 10px;
+  border: 1px solid #18B5DC;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.itlife-footer-icon-box:hover {
+  background-color: #18B5DC;
+  transform: scale(1.15);
+}
+
+.itlife-footer-icon-box:hover .itlife-footer-icon {
+  transition: all 0.3s;
+  fill: #FFF;
+}
+
+
+/**** Logo ****/
+
+.itlife-logo {
+  width: 160px;
+}
+
+.itlife-logo:hover {
+  cursor: pointer;
+}
+
+.itlife-logo-img, .itlife-logo-text {
+  transition: all 0.4s;
+}
+
+.itlife-logo:hover .itlife-logo-text {
+  transform: scale(1.2);
+  color: #18B5DC;
+  margin-left: 15px;
+}
+
+
+/**** Nav Items ****/
+
+.itlife-nav-item {
+  position: relative;
+}
+
+.itlife-nav-item::before {
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 2px;
+  background-color: #18B5DC;
+  width: 0%;
+  transition: all 0.4s;
+}
+
+.itlife-nav-item:hover::before {
+  width: 100%;
+}
+
+.itlife-nav-link {
+  transition: all 0.3s;
+}
+.itlife-nav-link:hover {
+  color: #18B5DC;
+}
+
