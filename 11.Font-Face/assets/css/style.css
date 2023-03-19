@@ -31,7 +31,10 @@
 .konstruct-header__language {
   display: block;
   padding: 2px;
-  font: 600 22px/18px Tourney, Arial, sans-serif;
+  font-family: Tourney, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 18px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -44,7 +47,10 @@
 }
 
 .konstruct-header-nav__item {
-  font: 400 22px/28px Staatliches, Arial, sans-serif;
+  font-family: Staatliches, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
   letter-spacing: 0.03em;
 }
 
@@ -59,7 +65,10 @@
 
 .konstruct-heading {
   display: inline-block;
-  font: 400 36px/48px 'Francois One', Arial, sans-serif;
+  font-family: 'Francois One', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
   letter-spacing: 0.04em;
   margin-top: 30px;
   text-transform: uppercase;
@@ -67,7 +76,10 @@
 
 .konstruct-heading-caption {
   display: inline-block;
-  font: 300 20px/20px 'Farro', Arial, sans-serif;
+  font-family: 'Farro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 20px;
   text-transform: initial;
   letter-spacing: 0.04em;
   vertical-align: top;
@@ -75,7 +87,10 @@
 
 .konstruct-text {
   letter-spacing: 0em;
-  font: 400 28px/48px 'PT Sans', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 48px;
 }
 
 .konstruct-heading,
