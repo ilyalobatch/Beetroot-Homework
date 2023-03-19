@@ -1,0 +1,65 @@
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+.bubble-text-white {
+  color: #FFFFFF;
+}
+
+.bubble-text-dark {
+  color: #2A2C3D;
+}
+
+.bubble-logo-text, .bubble-navbar-text, .bubble-button-text {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.bubble-button-text {
+  font-weight: 700;
+}
+
+.bubble-logo-text {
+  font-weight: 600;
+}
+
+.bubble-navbar-text {
+  font-weight: 400;
+}
+
+.bubble-header {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 87px;
+}
+
+.bubble-subheader {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+}
+
+.bubble-header-rating {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.bubble-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.bubble-text, .bubble-text-bold {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.bubble-text-bold {
+  font-weight: 600;
+}
+
+.bubble-text {
+  font-weight: 400;
+}
