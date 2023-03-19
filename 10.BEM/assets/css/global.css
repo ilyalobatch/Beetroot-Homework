@@ -1,0 +1,22 @@
+.itlife-container {padding: 0 135px;}
+
+.itlife-center {text-align: center;}
+
+/**** Flex styles ****/
+
+.itlife-flex-row, .itlife-flex-clmn, .itlife-flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.itlife-flex-row {justify-content: space-between;}
+.itlife-flex-center {justify-content: center;}
+.itlife-flex-clmn {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/**** Flex Gap ****/
+
+.itlife-gap-sm {gap: 10px;}
+.itlife-gap-bg {gap: 30px;}

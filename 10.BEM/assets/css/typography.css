@@ -1,0 +1,26 @@
+* {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #3C3C3C;
+}
+
+.itlife-logo-text {
+  font: 400 30px/43px "Train One";
+}
+
+.itlife-header {
+  font-size: 34px;
+  line-height: 41px;
+  letter-spacing: 0.13em;
+}
+
+.itlife-uppercase {text-transform: uppercase;}
+
+.itlife-text-sm {font-size: 18px;}
+.itlife-text-md {font-size: 20px;}
+
+.itlife-text-regular {font-weight: 400;}
+.itlife-text-bold {font-weight: 700;}
+
