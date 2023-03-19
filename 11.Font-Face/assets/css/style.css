@@ -1,0 +1,109 @@
+:root {
+  --container-width: 1200px;
+  --color-black: #000;
+  --color-grey: #dadada;
+}
+
+.konstruct-grey-bg {
+  display: inline-block;
+  background-color: var(--color-grey);
+}
+
+.konstruct-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.konstruct-header {
+  min-height: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.konstruct-header .konstruct-container {
+  display: flex;
+  align-items: center;
+}
+
+.konstruct-header__language {
+  display: block;
+  padding: 2px;
+  font-family: Tourney, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.konstruct-header-nav {
+  padding: 12px 0;
+  margin: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+.konstruct-header-nav__item {
+  font-family: Staatliches, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+}
+
+.konstruct-header-nav__item--separator {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.konstruct-header-logo {
+  margin-left: auto;
+}
+
+.konstruct-heading {
+  display: inline-block;
+  font-family: 'Francois One', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.konstruct-heading-caption {
+  display: inline-block;
+  font-family: 'Farro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: initial;
+  letter-spacing: 0.04em;
+  vertical-align: top;
+}
+
+.konstruct-text {
+  letter-spacing: 0em;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 48px;
+}
+
+.konstruct-heading,
+.konstruct-text {
+  margin-bottom: 40px;
+}
+
+.konstruct-content a {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+.konstruct-content a:hover,
+.konstruct-content a:focus {
+  text-decoration: none;
+}
