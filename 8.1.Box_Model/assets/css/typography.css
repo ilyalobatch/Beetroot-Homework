@@ -1,0 +1,47 @@
+* {
+  font: 400 16px / 28px "Montserrat";
+  color:#544837;
+}
+
+  /**** Font-weight ****/
+
+.product-bold {
+  font-weight: 700;
+}  
+.product-semibold {
+  font-weight: 600;
+}  
+.product-medium {
+  font-weight: 500;
+}
+
+    /**** Heading & Text ****/
+
+.product-header, .product-subheader, .product-title, .product-subtitle {
+  color: #2F281E;
+}
+
+.product-header {
+  font-size: 44px;
+  line-height: 54px;
+}
+
+.product-subheader {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.product-title {
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.product-subtitle {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.product-text {
+  font-size: 18px;
+  line-height: 28px;
+}
