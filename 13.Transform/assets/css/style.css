@@ -1,0 +1,264 @@
+:root {
+  --container-width: 1200px;
+  --color-black: #000;
+  --color-grey: #dadada;
+  --color-grey-2: #bdbdbd;
+  --color-white: #fff;
+  --color-svg-hover-bg: #e6e6e6;
+  --spacing-large: 40px;
+  --spacing-medium: 30px;
+  --spacing-small: 10px;
+  --spacing-smaller: 8px;
+  --content-indent: 140px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: calc(var(--content-indent) - var(--spacing-large));
+  margin: calc(var(--content-indent) * -1 + var(--spacing-large)) 0 0;
+}
+
+.konstruct-grey-bg {
+  display: inline-block;
+  background-color: var(--color-grey);
+}
+
+.konstruct-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.konstruct-header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+.konstruct-header .konstruct-container {
+  display: flex;
+  align-items: center;
+}
+
+.konstruct-header__language {
+  display: block;
+  padding: 2px;
+  font-family: Tourney, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.konstruct-header-nav {
+  padding: 12px 0;
+  margin: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+.konstruct-header-nav__item {
+  font-family: Staatliches, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+}
+
+.konstruct-header-nav__item a {
+  color: inherit;
+  font: inherit;
+}
+
+.konstruct-header-nav__item a:hover,
+.konstruct-header-nav__item a:focus {
+  text-decoration: underline;
+}
+
+.konstruct-header-nav__item--separator {
+  margin-left: var(--spacing-small);
+  margin-right: var(--spacing-small);
+}
+
+.konstruct-header-logo {
+  margin-left: auto;
+}
+
+.konstruct-content-wrapper {
+  padding-top: var(--content-indent);
+}
+
+.konstruct-gear-bg {
+  background: url(../img/bg-picture.png) no-repeat right 150px fixed;
+}
+
+.konstruct-content-wrapper .konstruct-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.konstruct-sidebar {
+  position: sticky;
+  top: var(--content-indent);
+  width: 100%;
+  max-width: 385px;
+  padding: var(--spacing-smaller);
+  margin-bottom: auto;
+}
+
+.konstruct-sidebar-menu__item {
+  padding-top: var(--spacing-smaller);
+  padding-bottom: var(--spacing-smaller);
+  margin-bottom: 60px;
+  border-bottom: 1px solid var(--color-grey-2);
+}
+
+.konstruct-sidebar-menu__item a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.konstruct-content {
+  width: 100%;
+  padding-left: var(--spacing-medium);
+  padding-bottom: var(--spacing-large);
+}
+
+.konstruct-sidebar+.konstruct-content {
+  max-width: calc(100% - 400px);
+}
+
+.konstruct-content a {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+.konstruct-content a:hover,
+.konstruct-content a:focus {
+  text-decoration: none;
+}
+
+.konstruct-font-large {
+  font-family: 'Francois One', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.konstruct-heading {
+  position: relative;
+  display: inline-block;
+  padding-top: var(--spacing-medium);
+}
+
+.konstruct-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100px;
+  height: 8px;
+  background-color: var(--color-black);
+}
+
+.konstruct-heading-caption {
+  display: inline-block;
+  font-family: 'Farro', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: initial;
+  letter-spacing: 0.04em;
+  vertical-align: top;
+}
+
+.konstruct-text {
+  letter-spacing: 0em;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 48px;
+}
+
+.konstruct-heading,
+.konstruct-text {
+  margin-bottom: var(--spacing-large);
+}
+
+.konstruct-heading--alternate {
+  display: block;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  text-transform: initial;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--color-grey-2);
+  padding: var(--spacing-large) 0;
+  margin-bottom: 0;
+}
+
+.konstruct-heading--alternate::before {
+  position: relative;
+  display: inline-block;
+  left: auto;
+  top: auto;
+  vertical-align: middle;
+  margin-right: var(--spacing-small);
+}
+
+.konstruct-icon-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 20px;
+  padding: var(--spacing-small) 0;
+}
+
+.konstruct-icon-grid-item {
+  max-width: 280px;
+  height: 180px;
+}
+
+.konstruct-icon-grid-item a {
+  display: block;
+  transition: all 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.konstruct-icon-grid-item a:hover svg {
+  transform: scale(1, -1) rotateX(180deg);
+}
+
+.konstruct-icon-grid-item:hover svg,
+.konstruct-icon-grid-item:hover svg rect,
+.konstruct-icon-grid-item:focus svg path {
+  transform-style: preserve-3d;
+  transition: fill 0.2s ease 0.1s, transform 0.6s ease;
+}
+
+.konstruct-icon-grid-item:hover svg path:not(.stale),
+.konstruct-icon-grid-item:focus svg path:not(.stale) {
+  fill: var(--color-svg-hover-bg);
+}
+
+.konstruct-icon-grid-item:hover svg rect,
+.konstruct-icon-grid-item:focus svg rect,
+.konstruct-icon-grid-item:hover svg path.invert,
+.konstruct-icon-grid-item:focus svg path.invert {
+  fill: var(--color-black);
+}
