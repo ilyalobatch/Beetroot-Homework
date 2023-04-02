@@ -1,0 +1,64 @@
+@keyframes cardturn {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(0.5turn);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+$card-width: 300px;
+$card-height: 440px;
+$card-transition: all .7s ease-in-out;
+
+.container {
+  padding: 50px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.card {
+  position: relative;
+  width: $card-width;
+  height: $card-height;
+  transition: $card-transition;
+  transform-style: preserve-3d;
+  cursor: pointer;
+
+  .cardbox:hover & {
+    animation-name: cardturn;
+    animation-duration: 1s;
+    animation-direction: alternate;
+  }
+
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: $card-transition;
+    backface-visibility: hidden;
+
+    &-back {
+      transform: rotateY(0.5turn);
+      z-index: 100;
+    }
+  }
+
+  &__image {
+    width: $card-width;
+    height: $card-height;
+    object-fit: cover;
+  }
+}
