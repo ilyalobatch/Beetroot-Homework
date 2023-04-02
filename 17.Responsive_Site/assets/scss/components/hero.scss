@@ -1,0 +1,17 @@
+.manifest {
+  $ns: &;
+
+  &-hero {
+    background: url('../img/hero-bg-image.jpg') bottom center/cover no-repeat;
+
+    #{$ns}-container {
+      min-height: 600px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    &__title {
+      max-width: 770px;
+    }
+  }
+}
