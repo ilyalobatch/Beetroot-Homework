@@ -1,0 +1,135 @@
+* {
+  font-family: 'Delius Unicase', cursive;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+}
+
+.container {
+  padding: 120px 135px 0;
+}
+
+.title {
+  margin-bottom: 80px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  grid-gap: 30px;
+  padding-bottom: 120px;
+}
+
+.image-box {
+  min-width: 370px;
+  min-height: 370px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.6s;
+}
+
+.image-box:hover {
+  transition: 0.6s;
+  background: none;
+}
+
+.icon-box {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  padding: 20px 20px;
+  transform: scale(0);
+  transition: all .5s;
+}
+
+.image-box:hover .icon-box {
+  transform: scale(1);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(224, 224, 224, 0.5);
+  line-height: 0;
+  padding: 10px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.image-box:hover .icon {
+  opacity: 1;
+}
+
+.icon:hover {
+  background-color: rgba(224, 224, 224, 1);
+  ;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text-box {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  padding: 0px 20px 20px;
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFF;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.text-grey {
+  color: #E0E0E0;
+}
+
+.background-box {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+  transition: .4s;
+  z-index: -1;
+}
+
+.image-box:hover .background-box {
+  opacity: 0.5;
+}
+
+.span-2-clmn {
+  grid-column: span 2;
+}
+
+.span-2-row {
+  grid-row: span 2;
+}
+
+.center {
+  text-align: center;
+}
