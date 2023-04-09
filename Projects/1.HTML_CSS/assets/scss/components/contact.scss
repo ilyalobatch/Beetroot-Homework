@@ -1,0 +1,30 @@
+.solis__contact {
+  &-border {
+    padding: 60px 0 100px;
+    border-top: 1px solid $color_grey;
+    border-bottom: 1px solid $color_grey;
+
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      border-color: $color_grey-dark;
+    }
+  }
+
+  &-inputbox {
+    margin-bottom: 40px;
+    min-width: 470px;
+  }
+
+  &-input {
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $color_dark;
+
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      border-bottom: $color_white;
+    }
+  }
+
+  &-title {
+    margin: 20px 0 30px;
+  }
+}

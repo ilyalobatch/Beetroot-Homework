@@ -1,0 +1,28 @@
+.solis__trading {
+  margin-bottom: 120px;
+
+  &-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+    gap: 70px 100px;
+
+    margin-left: -170px;
+    padding: 75px 0 75px 70px;
+
+    background-color: $color_white;
+    opacity: .9;
+    
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      background-color: $color_blue-deep;
+    }
+  }
+
+  &-title {
+    margin-bottom: 15px;
+  }
+
+  &-text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

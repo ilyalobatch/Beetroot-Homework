@@ -1,0 +1,5 @@
+@mixin appearance($color) {
+  @media screen and (prefers-color-scheme: $color) {
+    @content;
+  }
+}

@@ -1,0 +1,683 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.chrome-picker {
+  position: absolute;
+}
+
+.solis {
+  /********* Header style *********/
+  /********* Text style *********/
+}
+.solis-title, .solis-subtitle {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #262A3F;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis-title, .solis-subtitle { /* Change style if appearance on system is 'Dark' */
+    color: #FFF;
+  }
+}
+.solis-title-italic, .solis-subtitle-italic {
+  font-style: italic;
+  color: #85BBB1;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis-title-italic, .solis-subtitle-italic { /* Change style if appearance on system is 'Dark' */
+    color: #689FF2;
+  }
+}
+.solis-title {
+  font-size: 44px;
+  line-height: 52px;
+}
+.solis-subtitle {
+  font-size: 40px;
+  line-height: 48px;
+  /***** Header style (Statistic section) *****/
+  /***** Header style (Trading section) *****/
+}
+.solis-subtitle--statistic {
+  font-size: 68px;
+  line-height: 72px;
+}
+.solis-subtitle--dollar {
+  font-size: 40px;
+}
+.solis-subtitle--trading {
+  font-size: 24px;
+}
+.solis-text {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  opacity: 0.8;
+  color: #262A3F;
+  /***** Text style (Navbar) *****/
+  /***** Text style (Button) *****/
+  /***** Text style (Quotes section) *****/
+  /***** Text style (Review section) *****/
+  /***** Text style (Input) *****/
+  /***** Text style (Footer) *****/
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis-text { /* Change style if appearance on system is 'Dark' */
+    color: #FFF;
+  }
+}
+.solis-text-navbar {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262A3F;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis-text-navbar { /* Change style if appearance on system is 'Dark' */
+    color: #FFF;
+  }
+}
+.solis-text-button {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #F1897B;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis-text-button { /* Change style if appearance on system is 'Dark' */
+    color: #53F3CD;
+  }
+}
+.solis-text-quotes {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 46px;
+  color: #FFF;
+}
+.solis-text-author {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  color: #FFF;
+}
+.solis-text--review {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.8;
+  color: #FFF;
+}
+.solis-text-input {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  color: #262A3F;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis-text-input { /* Change style if appearance on system is 'Dark' */
+    color: #FFF;
+  }
+}
+.solis-text-footer {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 26px;
+  opacity: 0.6;
+  color: #262A3F;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis-text-footer { /* Change style if appearance on system is 'Dark' */
+    color: #FFF;
+  }
+}
+.solis-text-footer--bold {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  opacity: 1;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: #161926;
+  }
+}
+
+.solis {
+  /** Flexbox styles **/
+  /** Gaps for Flexbox / Grid **/
+}
+.solis-container {
+  padding: 0 135px;
+}
+.solis-center {
+  text-align: center;
+}
+.solis-flex-center, .solis-flex-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.solis-flex-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.solis-flex-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.solis-gap-15 {
+  gap: 15px;
+}
+.solis-gap-30 {
+  gap: 30px;
+}
+
+.solis__button {
+  position: relative;
+  /** Button with borders **/
+  /** Line behind the button **/
+}
+.solis__button--border {
+  border: 1px solid #E4E4E4;
+  max-width: 300px;
+  max-height: 90px;
+  padding: 30px 0;
+  margin-top: 15px;
+  text-align: center;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__button--border { /* Change style if appearance on system is 'Dark' */
+    border-color: #515773;
+  }
+}
+.solis__button::before {
+  position: absolute;
+  content: "";
+  top: 11px;
+  left: 10px;
+  width: 100%;
+  height: 13px;
+  background-color: #F1897B;
+  opacity: 0.3;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__button::before { /* Change style if appearance on system is 'Dark' */
+    background-color: #53F3CD;
+  }
+}
+
+.solis__hero {
+  position: relative;
+  min-height: 1028px;
+  background-image: url(../imgs/hero-bg-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__hero {
+    background-image: url(../imgs/hero-bg-dark.jpg);
+    /** Blur background **/
+  }
+  .solis__hero::before {
+    position: absolute;
+    content: "";
+    top: 441px;
+    width: 100%;
+    height: 734px;
+    background: linear-gradient(183.11deg, rgba(22, 25, 38, 0) 46.73%, #161926 63.21%);
+  }
+}
+.solis__hero-title {
+  max-width: 523px;
+  margin-bottom: 20px;
+}
+.solis__hero-text {
+  max-width: 439px;
+  margin-bottom: 50px;
+}
+
+.solis__header {
+  height: 80px;
+  margin-bottom: 150px;
+  /** Blur Effect **/
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.5)), color-stop(24.1%, rgba(255, 255, 255, 0.244636)), color-stop(47.19%, rgba(255, 255, 255, 0))), rgba(255, 255, 255, 0.02);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.244636) 24.1%, rgba(255, 255, 255, 0) 47.19%), rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(4.5px);
+          backdrop-filter: blur(4.5px);
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__header { /* Change style if appearance on system is 'Dark' */
+    background: -webkit-gradient(linear, right top, left top, from(rgba(22, 25, 38, 0.5)), color-stop(24.1%, rgba(22, 25, 38, 0)), color-stop(47.19%, rgba(22, 25, 38, 0))), rgba(22, 25, 38, 0.02);
+    background: linear-gradient(270deg, rgba(22, 25, 38, 0.5) 0%, rgba(22, 25, 38, 0) 24.1%, rgba(22, 25, 38, 0) 47.19%), rgba(22, 25, 38, 0.02);
+  }
+}
+.solis__header-navbar {
+  height: 100%;
+}
+.solis__header-navbar-item {
+  position: relative;
+}
+.solis__header-navbar-item::after {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #F1897B;
+  opacity: 0.3;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__header-navbar-item::after { /* Change style if appearance on system is 'Dark' */
+    background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
+    opacity: 0.3;
+  }
+}
+.solis__header-navbar-item:hover::after, .solis__header-navbar-item:focus::after {
+  width: 100%;
+}
+
+.solis__statistic {
+  -webkit-transform: translateY(-310px);
+          transform: translateY(-310px);
+  margin-bottom: -310px;
+  padding-bottom: 120px;
+}
+.solis__statistic-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: -170px;
+  padding: 45px 0;
+  background-color: #FFF;
+  opacity: 0.9;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__statistic-block { /* Change style if appearance on system is 'Dark' */
+    background-color: #161926;
+  }
+}
+.solis__statistic-block-figures {
+  padding: 0 56px;
+}
+.solis__statistic-block-figures-item:not(:last-child) {
+  position: relative;
+  margin-bottom: 80px;
+}
+.solis__statistic-block-figures-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #85BBB1;
+}
+.solis__statistic-title {
+  margin-bottom: 12px;
+}
+.solis__statistic-text-1 {
+  margin-bottom: 30px;
+}
+.solis__statistic-text-2 {
+  margin-bottom: 50px;
+}
+
+.solis__features {
+  margin-bottom: 30px;
+}
+.solis__features-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.solis__features-block-item {
+  padding: 50px 0 112px;
+  border-top: 1px solid #E4E4E4;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__features-block-item { /* Change style if appearance on system is 'Dark' */
+    border-color: #515773;
+  }
+}
+.solis__features-title {
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+.solis__features-text {
+  max-width: 480px;
+}
+
+.solis__quotes {
+  margin-bottom: 120px;
+  /** Quotes icon **/
+}
+.solis__quotes-block {
+  min-height: 400px;
+  background-image: url(../imgs/quote-bg.jpg);
+  background-repeat: no-repeat;
+  padding: 100px 160px;
+}
+.solis__quotes-title {
+  position: relative;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+.solis__quotes-icon {
+  position: absolute;
+  -webkit-transform: translateX(-60px) translateY(-25px);
+          transform: translateX(-60px) translateY(-25px);
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__quotes-icon { /* Change style if appearance on system is 'Dark' */ }
+  .solis__quotes-icon path {
+    stroke: #53F3CD;
+  }
+}
+
+.solis__api {
+  margin-bottom: 120px;
+}
+.solis__api-tablet {
+  position: relative;
+  max-width: 970px;
+  padding: 31px 70px 31px 30px;
+  margin: 0 auto;
+  border: 1px solid #E4E4E4;
+  border-radius: 32px;
+  /** Tablet camera & button **/
+  /** Tablet camera **/
+  /** Tablet button **/
+  /** Video **/
+  /** Play Button **/
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__api-tablet { /* Change style if appearance on system is 'Dark' */
+    border-color: #515773;
+  }
+}
+.solis__api-tablet::before, .solis__api-tablet::after {
+  position: absolute;
+  content: "";
+  border: 1px solid #E4E4E4;
+  border-radius: 50%;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__api-tablet::before, .solis__api-tablet::after { /* Change style if appearance on system is 'Dark' */
+    border-color: #515773;
+  }
+}
+.solis__api-tablet::before {
+  left: 8px;
+  width: 13px;
+  height: 13px;
+}
+.solis__api-tablet::after {
+  right: 14px;
+  width: 35px;
+  height: 35px;
+}
+.solis__api-tablet-video {
+  border-radius: 8px;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__api-tablet-video { /* Change style if appearance on system is 'Dark' */ }
+}
+.solis__api-tablet-play {
+  position: absolute;
+  /** Play Button Hover Effect **/
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__api-tablet-play { /* Change style if appearance on system is 'Dark' */ }
+  .solis__api-tablet-play circle {
+    fill: #689FF2;
+  }
+  .solis__api-tablet-play path {
+    fill: #689FF2;
+  }
+}
+.solis__api-tablet-play:hover {
+  cursor: pointer;
+}
+.solis__api-tablet-play:hover circle {
+  fill: #262A3F;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.solis__api-tablet-play:hover path {
+  fill: #586291;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.solis__api-title {
+  margin: 50px 0 20px;
+}
+
+.solis__trading {
+  margin-bottom: 120px;
+}
+.solis__trading-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 100px 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-row-align: center;
+      align-self: center;
+  gap: 70px 100px;
+  margin-left: -170px;
+  padding: 75px 0 75px 70px;
+  background-color: #FFF;
+  opacity: 0.9;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__trading-block { /* Change style if appearance on system is 'Dark' */
+    background-color: #161926;
+  }
+}
+.solis__trading-title {
+  margin-bottom: 15px;
+}
+.solis__trading-text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.solis__reviews {
+  margin-bottom: 100px;
+  /** Review's dark background **/
+}
+.solis__reviews-block-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 370px;
+  min-height: 340px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 40px;
+  z-index: -1;
+  /** Review's images **/
+}
+.solis__reviews-block-item:nth-of-type(1) {
+  background-image: url(../imgs/review-1.jpg);
+}
+.solis__reviews-block-item:nth-of-type(2) {
+  background-image: url(../imgs/review-2.jpg);
+}
+.solis__reviews-block-item:nth-of-type(3) {
+  background-image: url(../imgs/review-3.jpg);
+}
+.solis__reviews-block-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 28, 41, 0.6);
+  -webkit-transform: translateX(-40px) translateY(-30px);
+          transform: translateX(-40px) translateY(-30px);
+  z-index: -1;
+}
+.solis__reviews-title {
+  margin-bottom: 20px;
+}
+.solis__reviews-text {
+  margin-bottom: 50px;
+}
+
+.solis__contact-border {
+  padding: 60px 0 100px;
+  border-top: 1px solid #E4E4E4;
+  border-bottom: 1px solid #E4E4E4;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__contact-border { /* Change style if appearance on system is 'Dark' */
+    border-color: #515773;
+  }
+}
+.solis__contact-inputbox {
+  margin-bottom: 40px;
+  min-width: 470px;
+}
+.solis__contact-input {
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #262A3F;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .solis__contact-input { /* Change style if appearance on system is 'Dark' */
+    border-bottom: #FFF;
+  }
+}
+.solis__contact-title {
+  margin: 20px 0 30px;
+}
+
+.solis__footer {
+  margin: 31px 0;
+}
