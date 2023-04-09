@@ -6,12 +6,12 @@
 
 @mixin maxbreakpoint($width) {
   @media screen and (max-width: $width) {
-    @content
+    @content;
   }
 }
 
 @mixin minbreakpoint($width) {
   @media screen and (min-width: $width) {
-    @content
+    @content;
   }
 }
