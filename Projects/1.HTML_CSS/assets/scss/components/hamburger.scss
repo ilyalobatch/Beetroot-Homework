@@ -17,12 +17,16 @@
   &-hamburger::before,
   &-hamburger::after {
     display: block;
-    background-color: $color_white;
+    background-color: $color_grey-dark;
     position: absolute;
     height: 4px;
     width: 30px;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
+
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      background-color: $color_white;
+    }
   }
   
   &-hamburger::before {
@@ -67,13 +71,21 @@
       align-self: flex-end;
       padding: 40px 0;
       width: 150px;
-      background-color: $color_blue-deep;
+      background-color: $color_white;
       transition: .3s;
       overflow: hidden;
       cursor: pointer;
   
       &:hover {
-        background-color: $color_grey-dark;
+        background-color: $color_grey;
+      }
+
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        background-color: $color_blue-deep;
+
+        &:hover {
+          background-color: $color_grey-dark;
+        }
       }
     }
     
