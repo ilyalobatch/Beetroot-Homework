@@ -1,0 +1,40 @@
+body {
+  @include appearance(dark) {
+    background-color: $color_blue-deep;
+  }
+}
+
+.solis {
+  &-container {
+    padding: 0 135px;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  /** Flexbox styles **/
+
+  &-flex-center,
+  &-flex-between {
+    display: flex;
+    align-items: center;
+  }
+
+  &-flex-center {
+    justify-content: center;
+  }
+  &-flex-between {
+    justify-content: space-between;
+  }
+
+  /** Gaps for Flexbox / Grid **/
+
+  &-gap-15 {
+    gap: 15px;
+  }
+
+  &-gap-30 {
+    gap: 30px;
+  }
+}

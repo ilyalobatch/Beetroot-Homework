@@ -1,0 +1,92 @@
+.solis__api {
+  margin-bottom: 120px;
+
+  &-tablet {
+    position: relative;
+    max-width: 970px;
+    padding: 31px 70px 31px 30px;
+    margin: 0 auto;
+    border: 1px solid $color_grey;
+    border-radius: 32px;
+
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      border-color: $color_grey-dark;
+    }
+
+    /** Tablet camera & button **/
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      border: 1px solid $color_grey;
+      border-radius: 50%;
+
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        border-color: $color_grey-dark;
+      }
+    }
+
+    /** Tablet camera **/
+
+    &::before {
+      left: 8px;
+      width: 13px;
+      height: 13px;
+    }
+
+    /** Tablet button **/
+
+    &::after {
+      right: 14px;
+      width: 35px;
+      height: 35px;
+    }
+
+    /** Video **/ 
+
+    &-video {
+      border-radius: 8px;
+
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        // opacity: 0.5;
+      }
+    }
+
+    /** Play Button **/ 
+
+    &-play {
+      position: absolute;
+
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        circle {
+          fill: #689FF2;
+        }
+
+        path {
+          fill: #689FF2;;
+        }
+      }
+
+      /** Play Button Hover Effect **/ 
+
+      &:hover {
+        cursor: pointer;
+
+        circle {
+          fill: #262A3F;
+          transition: .2s;
+        }
+
+        path {
+          fill: #586291;
+          transition: .2s;
+        }
+      }
+    }
+  }
+
+  &-title {
+    margin: 50px 0 20px;
+  }
+}

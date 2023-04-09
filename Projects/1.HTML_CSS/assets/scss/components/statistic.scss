@@ -1,0 +1,59 @@
+.solis {
+  &__statistic {
+    transform: translateY(-310px);
+    margin-bottom: -310px;
+    padding-bottom: 120px;
+
+    &-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-self: center;
+
+      margin-left: -170px;
+      padding: 45px 0;
+
+      background-color: $color_white;
+      opacity: .9;
+
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        background-color: $color_blue-deep;
+      }
+
+      &-figures {
+        padding: 0 56px;
+
+        &-item:not(:last-child) {
+          position: relative;
+          margin-bottom: 80px;
+
+          &::after {
+            position: absolute;
+            content: "";
+
+            bottom: -40px;
+            left: 0;
+            right: 0;
+
+            width: 100px;
+            height: 1px;
+            
+            margin: 0 auto;
+            background-color: $color_green;
+          }
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: 12px;
+    }
+
+    &-text-1 {
+      margin-bottom: 30px;
+    }
+
+    &-text-2 {
+      margin-bottom: 50px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.solis__quotes {
+  margin-bottom: 120px;
+
+  &-block {
+    min-height: 400px;
+    background-image: url(../imgs/quote-bg.jpg);
+    background-repeat: no-repeat;
+    padding: 100px 160px;
+  }
+
+  &-title {
+    position: relative;
+    margin-bottom: 40px;
+    z-index: 1;
+  }
+
+  /** Quotes icon **/
+
+  &-icon {
+    position: absolute;
+    transform: translateX(-60px) translateY(-25px); 
+
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      path {
+        stroke: $color_green-neon;
+      }
+    }
+  }
+}

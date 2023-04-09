@@ -1,0 +1,26 @@
+.solis__features {
+  margin-bottom: 30px;
+
+  &-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &-item {
+      padding: 50px 0 112px;
+      border-top: 1px solid $color_grey;
+
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        border-color: $color_grey-dark;
+      }
+    }
+  }
+
+  &-title {
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+
+  &-text {
+    max-width: 480px;
+  }
+}
