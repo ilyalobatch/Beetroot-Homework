@@ -16,9 +16,34 @@
     @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
       background-color: $color_blue-deep;
     }
+
+    @include maxbreakpoint($breakpoint_laptop-l) {      /* Change style if width on screen is different */
+      margin-left: -340px;
+    }
+
+    @include maxbreakpoint($breakpoint_laptop-s) {      /* Change style if width on screen is different */
+      margin-left: -480px;
+    }
+
+    @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+      margin: 0;
+    }
+
+    @include maxbreakpoint($breakpoint_tablet-s) {      /* Change style if width on screen is different */
+      grid-template-columns: 1fr;
+      padding: 75px 0;
+    }
+  }
+
+  &-image {
+
+    @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+      display: none;
+    }
   }
 
   &-title {
+    min-width: 255px;
     margin-bottom: 15px;
   }
 

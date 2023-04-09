@@ -3,3 +3,15 @@
     @content;
   }
 }
+
+@mixin maxbreakpoint($width) {
+  @media screen and (max-width: $width) {
+    @content
+  }
+}
+
+@mixin minbreakpoint($width) {
+  @media screen and (min-width: $width) {
+    @content
+  }
+}

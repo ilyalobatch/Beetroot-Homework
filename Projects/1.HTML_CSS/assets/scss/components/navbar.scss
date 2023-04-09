@@ -15,6 +15,13 @@
     &-navbar {
       height: 100%;
 
+      &-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+      }
+
       &-item {
         position: relative;
 

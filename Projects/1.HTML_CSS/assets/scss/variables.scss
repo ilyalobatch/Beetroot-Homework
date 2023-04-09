@@ -1,5 +1,11 @@
-$breakpoint_desktop: 1024px;
-$breakpoint_tablet: 768px;
+$breakpoint_laptop-l: 1280px;
+$breakpoint_laptop-s: 1024px;
+
+$breakpoint_tablet-l: 900px;
+$breakpoint_tablet-s: 768px;
+
+$breakpoint_mobile-l: 425px;
+$breakpoint_mobile-s: 320px;
 
 $color_white: #FFF;
 $color_dark: #262A3F;
@@ -8,8 +14,10 @@ $color_grey-dark: #515773;
 $color_blue: #689FF2;
 $color_blue-deep: #161926;
 $color_orange: #F1897B;
+$color_orange-dark: #E54F3A;
 $color_green: #85BBB1;
 $color_green-neon: #53F3CD;
+$color_green-neon-dark: #02E0AB;
 
 $font-playfair: 'Playfair Display', serif;
 $font-loto: 'Lato', sans-serif;

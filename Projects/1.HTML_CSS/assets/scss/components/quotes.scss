@@ -5,7 +5,17 @@
     min-height: 400px;
     background-image: url(../imgs/quote-bg.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     padding: 100px 160px;
+
+    @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+      padding: 50px 80px;
+      min-width: 250px
+    }
+
+    @include maxbreakpoint($breakpoint_tablet-s) {      /* Change style if width on screen is different */
+      padding: 50px 20px 50px 60px;
+    }
   }
 
   &-title {

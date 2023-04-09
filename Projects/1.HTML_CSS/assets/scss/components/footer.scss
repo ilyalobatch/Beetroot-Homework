@@ -1,3 +1,24 @@
 .solis__footer {
   margin: 31px 0;
+
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxbreakpoint($breakpoint_tablet-s) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include maxbreakpoint($breakpoint_tablet-l) {
+      gap: 15px;
+    }
+  }
 }
