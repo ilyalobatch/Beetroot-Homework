@@ -7,6 +7,18 @@ body {
 .solis {
   &-container {
     padding: 0 135px;
+
+    @include maxbreakpoint($breakpoint_laptop-l) {
+      padding: 0 70px;
+    }
+
+    @include maxbreakpoint($breakpoint_laptop-s) {
+      padding: 0 50px;
+    }
+
+    @include maxbreakpoint($breakpoint_tablet-l) {
+      padding: 0 50px;
+    }
   }
 
   &-center {

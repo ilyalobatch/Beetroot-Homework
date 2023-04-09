@@ -18,7 +18,7 @@
 
   <main class="solis__hero">
     <header class="solis__header">
-      <nav class="solis__header-navbar solis-container solis-flex-between">
+      <nav class="solis__header-navbar solis-container solis-flex-between solis-gap-30">
         <div class="solis-flex-center solis-gap-15">
           <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -39,7 +39,11 @@
               fill="white" />
           </svg>
         </div>
-        <ul class="solis-flex-between solis-gap-30">
+        <input class="solis__header-navbar-hamburger-toggle" id="menu-toggle" type="checkbox" />
+        <label class='solis__header-navbar-hamburger-container' for="menu-toggle">
+          <div class='solis__header-navbar-hamburger'></div>
+        </label>
+        <ul class="solis__header-navbar-list">
           <li class="solis__header-navbar-item">
             <a class="solis-text-navbar" href="">Home</a>
           </li>
@@ -69,57 +73,59 @@
       <p class="solis__hero-text solis-text">
         We are bringing real solutions to the payments world by leveraging public blockchains.
       </p>
-      <button class="solis__button solis-text-button">
+      <a class="solis__button solis-text-button">
         join now
-      </button>
+      </a>
     </div>
   </main>
 
   <section class="solis__statistic">
-    <div class="solis-container solis-flex-center">
-      <div>
-        <img class="solis__statistic-image" src="./assets/imgs/statistic-image.jpg" alt="statistic" />
-      </div>
-      <div class="solis__statistic-block">
-        <div class="solis__statistic-block-figures">
-          <div class="solis__statistic-block-figures-item solis-center">
-            <h2 class="solis__statistic-title solis-subtitle solis-subtitle--statistic">
-              <span class="solis-subtitle solis-subtitle--dollar">$</span> 1 tril
-            </h2>
-            <p class="solis-text">
-              Market cap potential
-            </p>
-          </div>
-          <div class="solis__statistic-block-figures-item solis-center">
-            <h2 class="solis__statistic-title solis-subtitle solis-subtitle--statistic">
-              <span class="solis-subtitle solis-subtitle--dollar">$</span> 3.65 mil
-            </h2>
-            <p class="solis-text">
-              Deposited to platform
-            </p>
-          </div>
-          <div class="solis__statistic-block-figures-item solis-center">
-            <h2 class="solis__statistic-title solis-subtitle solis-subtitle--statistic">
-              12
-            </h2>
-            <p class="solis-text">
-              Stablecoins
-            </p>
-          </div>
-        </div>
+    <div class="solis-container">
+      <div class="solis-flex-center">
         <div>
-          <p class="solis-text solis__statistic-text-1">
-            Solis group is a new venture created with investments from and collaboration with XBTO International, XBTO
-            Ventures and Phil Potter, formerly of bitfinex. Stablehouse is intended to launch a first-of-its-kind
-            clearing house for stablecoins that seeks to promote the next phase of the market’s development.
-          </p>
-          <p class="solis-text solis__statistic-text-2">
-            The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and
-            accessibility which are currently preventing the stablecoin market from reaching critical mass.
-          </p>
-          <button class="solis__button solis-text-button">
-            contact sales
-          </button>
+          <img class="solis__statistic-image" src="./assets/imgs/statistic-image.jpg" alt="statistic" />
+        </div>
+        <div class="solis__statistic-block">
+          <div class="solis__statistic-block-figures">
+            <div class="solis__statistic-block-figures-item solis-center">
+              <h2 class="solis__statistic-title solis-subtitle solis-subtitle--statistic">
+                <span class="solis-subtitle solis-subtitle--dollar">$</span> 1 tril
+              </h2>
+              <p class="solis-text">
+                Market cap potential
+              </p>
+            </div>
+            <div class="solis__statistic-block-figures-item solis-center">
+              <h2 class="solis__statistic-title solis-subtitle solis-subtitle--statistic">
+                <span class="solis-subtitle solis-subtitle--dollar">$</span> 3.65 mil
+              </h2>
+              <p class="solis-text">
+                Deposited to platform
+              </p>
+            </div>
+            <div class="solis__statistic-block-figures-item solis-center">
+              <h2 class="solis__statistic-title solis-subtitle solis-subtitle--statistic">
+                12
+              </h2>
+              <p class="solis-text">
+                Stablecoins
+              </p>
+            </div>
+          </div>
+          <div class="solis__statistic-textbox">
+            <p class="solis-text solis__statistic-text-1">
+              Solis group is a new venture created with investments from and collaboration with XBTO International, XBTO
+              Ventures and Phil Potter, formerly of bitfinex. Stablehouse is intended to launch a first-of-its-kind
+              clearing house for stablecoins that seeks to promote the next phase of the market’s development.
+            </p>
+            <p class="solis-text solis__statistic-text-2">
+              The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and
+              accessibility which are currently preventing the stablecoin market from reaching critical mass.
+            </p>
+            <a class="solis__button solis-text-button">
+              contact sales
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -199,7 +205,7 @@
   <section class="solis__api">
     <div class="solis-container">
       <div class="solis__api-tablet solis-flex-center">
-        <img class="solis__api-tablet-video" src="./assets/imgs/video-screen.jpg" alt="video" />
+        <img class="solis__api-tablet-video" src="./assets/imgs/screensaver-video.png" alt="video" />
         <svg class="solis__api-tablet-play" width="120" height="120" viewBox="0 0 120 120" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <circle opacity="0.3" cx="60" cy="60" r="60" fill="#586291" />
@@ -221,7 +227,7 @@
   <section class="solis__trading">
     <div class="solis-container solis-flex-center">
       <div>
-        <img src="./assets/imgs/trading-image.jpg" alt="trading" />
+        <img class="solis__trading-image" src="./assets/imgs/trading-image.jpg" alt="trading" />
       </div>
       <div class="solis__trading-block">
         <div>
@@ -254,11 +260,11 @@
             LBTC / Lightning and other sidechain swaps
           </p>
         </div>
-        <div class="solis__button--border">
+        <a class="solis__button--border">
           <button class="solis__button solis-text-button">
             join now
           </button>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -271,7 +277,7 @@
       <p class="solis__reviews-text solis-text">
         Happy clients, happy us. Read our client reviews about the work process and results.
       </p>
-      <div class="solis__reviews-block solis-flex-center solis-gap-30">
+      <div class="solis__reviews-block solis-gap-30">
         <div class="solis__reviews-block-item">
           <div class="solis__reviews-block-bg"></div>
           <p class="solis-text solis-text--review">
@@ -311,7 +317,7 @@
 
   <section class="solis__contact">
     <div class="solis-container">
-      <div class="solis__contact-border solis-flex-between">
+      <div class="solis__contact-block">
         <div>
           <h2 class="solis__contact-title solis-subtitle">
             Contact <span class="solis-subtitle-italic">our sales team</span>
@@ -331,7 +337,7 @@
               <input class="solis__contact-input solis-text-input" type="text" placeholder="Email" required />
             </div>
             <div class="solis__contact-inputbox">
-              <input class="solis__contact-input solis-text-input" type="text" placeholder="Tell more" />
+              <input class="solis__contact-input solis-text-input" type="text" placeholder="Tell more" required />
             </div>
             <button class="solis__button solis-text-button" type="submit">
               send request
@@ -343,19 +349,20 @@
   </section>
 
   <footer class="solis__footer">
-    <div class="solis-container solis-flex-between">
+    <div class="solis__footer-block solis-container">
       <div>
         <p class="solis-text-footer">
           © 2020 Solisgroup. All Rights Reserved.
         </p>
       </div>
-      <div>
+      <div class="solis-flex-center">
         <p class="solis-text-footer">
-          made by <span class="solis-text-footer--bold">Zgraya.digital</span>
+          made by
         </p>
+        <span class="solis-text-footer solis-text-footer--bold">Zgraya.digital</span>
       </div>
       <div>
-        <ul class="solis-flex-between solis-gap-30">
+        <ul class="solis__footer-list">
           <li>
             <a class="solis-text-footer solis-text-footer--bold" href="">User Agreement</a>
           </li>

@@ -1,5 +1,8 @@
 .solis__contact {
-  &-border {
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 60px 0 100px;
     border-top: 1px solid $color_grey;
     border-bottom: 1px solid $color_grey;
@@ -7,11 +10,24 @@
     @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
       border-color: $color_grey-dark;
     }
+
+    @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+      flex-direction: column;
+      gap: 60px;
+    }
   }
 
   &-inputbox {
     margin-bottom: 40px;
     min-width: 470px;
+
+    @include maxbreakpoint($breakpoint_laptop-l) {      /* Change style if width on screen is different */
+      min-width: 370px;
+    }
+
+    @include maxbreakpoint($breakpoint_laptop-s) {      /* Change style if width on screen is different */
+      min-width: 300px;
+    }
   }
 
   &-input {
@@ -20,7 +36,7 @@
     border-bottom: 1px solid $color_dark;
 
     @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
-      border-bottom: $color_white;
+      border-color: $color_white;
     }
   }
 

@@ -91,9 +91,19 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: $color_orange;
+      transition: .4s;
 
       @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */
         color: $color_green-neon;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color_orange-dark;
+
+        @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */
+          color: $color_green-neon-dark;
+        }
       }
     }
 
@@ -106,6 +116,10 @@
       font-size: 32px;
       line-height: 46px;
       color: $color_white;
+
+      @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+        font-size: 24px;
+      }
     }
 
      /***** Text style (Review section) *****/ 
@@ -119,6 +133,10 @@
       line-height: 20px;
       letter-spacing: 0.08em;
       color: $color_white;
+
+      @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+        font-size: 18px;
+      }
     }
 
     &--review {
@@ -165,6 +183,7 @@
         line-height: 24px;
         letter-spacing: 0.08em;
         opacity: 1;
+        margin-left: 12px;
       }
     }
   }

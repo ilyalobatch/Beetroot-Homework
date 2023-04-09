@@ -19,10 +19,26 @@
         background-color: $color_blue-deep;
       }
 
+      @include maxbreakpoint($breakpoint_laptop-l) {      /* Change style if width on screen is different */
+        margin-left: -340px;
+      }
+
+      @include maxbreakpoint($breakpoint_laptop-s) {      /* Change style if width on screen is different */
+        margin-left: -480px;
+      }
+
+      @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+        margin: 0;
+      }
+
+      @include maxbreakpoint($breakpoint_tablet-s) {      /* Change style if width on screen is different */
+        grid-template-columns: 1fr;
+      }
+
       &-figures {
         padding: 0 56px;
 
-        &-item:not(:last-child) {
+        &-item {
           position: relative;
           margin-bottom: 80px;
 
@@ -40,12 +56,38 @@
             margin: 0 auto;
             background-color: $color_green;
           }
+
+          &:last-child {
+            @include minbreakpoint($breakpoint_tablet-s) {      /* Change style if width on screen is different */
+              margin: 0;
+            }
+
+            &::after {
+              @include minbreakpoint($breakpoint_tablet-s) {      /* Change style if width on screen is different */
+                content: none;
+              }
+            }
+          }
         }
       }
     }
 
+    &-image {
+
+      @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+        display: none;
+      }
+    }
+
     &-title {
+      min-width: 270px;
       margin-bottom: 12px;
+    }
+
+    &-textbox {
+      @include maxbreakpoint($breakpoint_tablet-s) {      /* Change style if width on screen is different */
+        padding: 0 20px;
+      }
     }
 
     &-text-1 {
