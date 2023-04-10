@@ -1,0 +1,62 @@
+html,
+body {
+  cursor: url('../assets/img/cursor.svg');
+}
+
+body,
+p,
+h6 {
+  font-family: $font_body;
+  font-size: 16px;
+}
+
+p {
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.1rem;
+  color: $color_darkgray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font_display;
+}
+
+h1,
+h2 {
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0.1em;
+}
+
+h6 {
+  letter-spacing: 0.1em;
+}
+
+a {
+  color: $color_black;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
