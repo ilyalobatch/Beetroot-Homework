@@ -1,0 +1,27 @@
+.manifest {
+  &-container {
+    width: 100%;
+    max-width: $container_width;
+    padding: 0 $indent_container;
+    margin: 0 auto;
+  }
+
+  &-arrow-link {
+    color: $color_gray;
+    letter-spacing: 0.1em;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 12px;
+      background: url('../img/arrow-right.svg') no-repeat;
+      margin-left: 20px;
+    }
+    
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
