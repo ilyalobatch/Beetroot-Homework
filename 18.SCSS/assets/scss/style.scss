@@ -1,0 +1,172 @@
+.team__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-subtitle {
+    margin-bottom: 15px;
+  }
+
+  &-title {
+    margin-bottom: 50px;
+  }
+
+  &-icon {
+    position: relative;
+    margin-bottom: 50px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 210px;
+      top: 9px;
+      background-color: var(--color-gold);
+    }
+
+    &::before {
+      left: 25px;
+    }
+
+    &::after {
+      right: 25px;
+    }
+  }
+}
+
+.team__profile {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 85px;
+
+  &-container {
+    padding: 65px 0;
+  }
+
+  &-photo {
+    position: relative;
+    padding: 15px;
+
+    &-border {
+      position: absolute;
+      border: 1px solid var(--color-gold);
+      width: 100px;
+      height: 100px;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        top: 0;
+        border-bottom: none;
+      }
+
+      &:nth-of-type(1) {
+        left: 0;
+        border-right: none;
+      }
+
+      &:nth-of-type(2) {
+        right: 0;
+        border-left: none;
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        bottom: 0;
+        border-top: none;
+      }
+
+      &:nth-of-type(3) {
+        left: 0;
+        border-right: none;
+      }
+
+      &:nth-of-type(4) {
+        right: 0;
+        border-left: none;
+      }
+    }
+  }
+
+  &-divider {
+    height: 570px;
+    width: 1px;
+    background-color: var(--color-gold);
+  }
+
+  &-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      position: relative;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        height: 1px;
+        width: 100px;
+        background-color: var(--color-gold);
+      }
+    }
+
+    &-subtitle {
+      margin-bottom: 30px;
+    }
+
+    &-social-media {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 50px;
+    }
+
+    &-text {
+      text-align: center;
+      max-width: 430px;
+      margin-bottom: 20px;
+    }
+
+    &-divider {
+      position: relative;
+      width: 20px;
+      height: 4px;
+      background-color: var(--color-gold);
+      margin-bottom: 25px;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 4px;
+        background-color: var(--color-gold);
+      }
+
+      &::before {
+        left: -15px;
+      }
+
+      &::after {
+        right: -15px;
+      }
+    }
+
+    &-button {
+      padding: 5px 10px;
+      border: 1px solid var(--color-gold);
+      transition: .4s;
+
+      &:hover {
+        background-color: var(--color-gold);
+      }
+    }
+  }
+}

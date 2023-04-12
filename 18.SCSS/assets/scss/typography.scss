@@ -1,0 +1,54 @@
+.team {
+  &-title-header,
+  &-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+  }
+
+  &-title-header {
+    font-size: 60px;
+    line-height: 66px;
+    color: var(--color-gold);
+  }
+
+  &-title {
+    font-size: 36px;
+    line-height: 42px;
+    color: var(--color-grey-300);
+  }
+
+  &-subtitle-header,
+  &-subtitle,
+  &-text {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  &-subtitle-header {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--color-grey-200);
+  }
+
+  &-subtitle {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--color-grey-300);
+  }
+
+  &-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-grey-400);
+  }
+
+  &-button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-grey-300);
+  }
+}
