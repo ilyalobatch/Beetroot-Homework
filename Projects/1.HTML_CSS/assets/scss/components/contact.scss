@@ -13,7 +13,6 @@
 
     @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
       flex-direction: column;
-      gap: 60px;
     }
   }
 
@@ -21,12 +20,17 @@
     margin-bottom: 40px;
     min-width: 470px;
 
-    @include maxbreakpoint($breakpoint_laptop-l) {      /* Change style if width on screen is different */
+    @include maxbreakpoint($breakpoint_laptop-l) {
+      margin-top: 60px;      /* Change style if width on screen is different */
       min-width: 370px;
     }
 
     @include maxbreakpoint($breakpoint_laptop-s) {      /* Change style if width on screen is different */
       min-width: 300px;
+    }
+
+    @include maxbreakpoint($breakpoint_mobile-l) {      /* Change style if width on screen is different */
+      min-width: 225px;
     }
   }
 

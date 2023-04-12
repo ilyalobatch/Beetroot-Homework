@@ -12,10 +12,15 @@
       @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
         border-color: $color_grey-dark;
       }
+
+      @include maxbreakpoint($breakpoint_tablet-s) {      /* Change style if width on screen is different */
+        padding: 50px 0 30px;
+      }
     }
 
     @include maxbreakpoint($breakpoint_tablet-s) {      /* Change style if width on screen is different */
       grid-template-columns: 1fr;
+      margin-bottom: 80px;
     }
   }
 
