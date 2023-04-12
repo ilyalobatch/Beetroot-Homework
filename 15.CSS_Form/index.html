@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <title>Account</title>
+</head>
+
+<body>
+  <main class="account">
+    <section class="account__container">
+      <h1 class="account-header account-mb-20">
+        Create an Account
+      </h1>
+      <form class="account__form">
+        <div class="account__form-inputbox account-mb-20">
+          <label class="account__form-inputbox-label account-label" for="firstname">
+            First Name
+          </label>
+          <input 
+            class="account__form-inputbox-input account-label" 
+            id="firstname" 
+            name="firstname" 
+            type="text"
+            required 
+          />
+        </div>
+        <div class="account__form-inputbox account-mb-20">
+          <label class="account__form-inputbox-label account-label" for="lastname">
+            Last Name
+          </label>
+          <input 
+            class="account__form-inputbox-input account-label" 
+            id="lastname"
+            name="lastname"
+            type="text"
+            required
+          />
+        </div>
+        <div class="account__form-inputbox account-mb-20 account-span-2">
+          <label class="account__form-inputbox-label account-label" for="email">
+            E-mail
+          </label>
+          <input 
+            class="account__form-inputbox-input account-label" 
+            id="email" 
+            name="email" 
+            type="email" 
+            required
+          />
+          <p class="account-text">
+            We'll never share your email with anyone else.
+          </p>
+        </div>
+        <div class="account__form-radiobox account-mb-20 account-span-2">
+          <div class="account__form-radiobox-item">
+            <input 
+              class="account__form-radiobox-radio account-label" 
+              id="male" 
+              name="gender" 
+              type="radio" 
+              required 
+            />
+            <label class="account__form-radiobox-label account-label" for="male">
+              Male
+            </label>
+          </div>
+          <div class="account__form-radiobox-item">
+            <input 
+              class="account__form-radiobox-radio account-label" 
+              id="female" 
+              name="gender" 
+              type="radio" 
+              required 
+            />
+            <label class="account__form-radiobox-label account-label" for="female">
+              Female
+            </label>
+          </div>
+        </div>
+        <div class="account__form-selectbox account-mb-20">
+          <label class="account__form-inputbox-label account-label" for="country">
+            Country
+          </label>
+          <div class="account__form-selectbox-block">
+            <svg class="account__form-selectbox-block-icon" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0.25L0.75 5.5H11.25L6 0.25ZM6 13.75L0.75 8.5H11.25L6 13.75Z" fill="#969696"/>
+            </svg>
+            <select 
+              class="account__form-selectbox-block-select account-label" 
+              id="country" 
+              name="country" 
+              required
+            >
+              <option disabled=“disabled” selected=“selected” required>Select</option>
+              <option value="country-1">Ukraine</option>
+              <option value="country-2">Germany</option>
+              <option value="country-3">Poland</option>
+              <option value="country-4">Sweden</option>
+            </select>
+          </div>
+        </div>
+        <div class="account__form-inputbox account-mb-20">
+          <label class="account__form-inputbox-label account-label" for="city">
+            City
+          </label>
+          <input class="account__form-inputbox-input account-label" 
+            id="city" 
+            name="city" 
+            type="text" 
+            required 
+          />
+        </div>
+        <button class="account__form-button account-label account-label--button account-mb-20 account-span-2"
+          type="submit">
+          Sign Up
+        </button>
+        </div>
+      </form>
+      <div class="account__policybox account-mb-20">
+        <p class="account__policybox-text account-text">
+          By clicking the 'Sign Up' button, you confirm that you accept our
+          <a class="account-text--link" href="">
+            Terms of Use
+          </a>
+          and
+          <a class="account-text--link" href="">
+            Privacy Policy
+          </a>
+        </p>
+      </div>
+      <div class="account__footer">
+        <p class="account-label">
+          Have an account?
+        </p>
+        <p class="account-label">
+          <a class="account-label--login" href="">
+            Log In
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

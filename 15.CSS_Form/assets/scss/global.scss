@@ -1,0 +1,9 @@
+.account {
+  &-span-2 {
+    grid-column: span 2;
+  }
+
+  &-mb-20 {
+    margin-bottom: 20px;
+  }
+}

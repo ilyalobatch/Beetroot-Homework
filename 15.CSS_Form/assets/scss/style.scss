@@ -1,0 +1,111 @@
+.account {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    min-width: 570px;
+    min-height: 590px;
+    background-color: $color_white-100;
+    border: 1px solid $color_grey-100;
+    border-radius: 6px;
+    padding: 35px 35px 15px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 12px;
+
+    &-inputbox,
+    &-selectbox {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    &-radiobox {
+      display: flex;
+      gap: 20px;
+
+      &-radio {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
+
+      &-label {
+        &::before {
+          display: inline-block;
+          vertical-align: top;
+          text-align: center;
+          content: '';
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+          background-color: $color_white-100;
+          border: 1px solid $color_grey-100;
+          border-radius: 100%;
+          transition: .3s ease;
+          cursor: pointer;
+        }
+      }
+      
+      &-radio:checked + &-label::before {
+        background-color: $color_blue-100;
+        border-color: $color_blue-100;
+        box-shadow: inset 0 0 0 4px $color_white-100;
+      }
+    }
+
+    &-selectbox {
+      &-block {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &-select {
+          width: 100%;
+          appearance: none;
+        }
+  
+        &-icon {
+          position: absolute;
+          right: 15px;
+        }
+      }
+    }
+
+    &-selectbox-block-select,
+    &-inputbox-input {
+        border: 1px solid $color_grey-100;
+        border-radius: 6px;
+        padding: 8px 10px;
+    }
+
+    &-button {
+      border: 1px solid $color_grey-100;
+      border-radius: 6px;
+      padding: 8px 10px;
+      background-color: $color_blue-100;
+    }
+  }
+
+  &__policybox {
+    text-align: center;
+    border-bottom: 1px solid $color_grey-100;
+    padding-bottom: 20px;
+
+    &-text {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+}

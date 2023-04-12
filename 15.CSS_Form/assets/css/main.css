@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.chrome-picker {
+  position: absolute;
+}
+
+.account-span-2 {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+.account-mb-20 {
+  margin-bottom: 20px;
+}
+
+.account-header, .account-label, .account-text {
+  font-family: "Roboto", sans-serif;
+}
+.account-header {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1C1C1C;
+}
+.account-label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #545454;
+}
+.account-label--button {
+  color: #FFFFFF;
+}
+.account-label--login {
+  font-weight: 500;
+  color: #007BFF;
+}
+.account-text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #969696;
+}
+.account-text--link {
+  font-family: "Inter", sans-serif;
+  color: #007BFF;
+  margin: 0 5px;
+}
+
+.account {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.account__container {
+  min-width: 570px;
+  min-height: 590px;
+  background-color: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  padding: 35px 35px 15px;
+}
+.account__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 12px 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+}
+.account__form-inputbox, .account__form-selectbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+.account__form-radiobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.account__form-radiobox-radio {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.account__form-radiobox-label::before {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.account__form-radiobox-radio:checked + .account__form-radiobox-label::before {
+  background-color: #007BFF;
+  border-color: #007BFF;
+  -webkit-box-shadow: inset 0 0 0 4px #FFFFFF;
+          box-shadow: inset 0 0 0 4px #FFFFFF;
+}
+.account__form-selectbox-block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.account__form-selectbox-block-select {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.account__form-selectbox-block-icon {
+  position: absolute;
+  right: 15px;
+}
+.account__form-selectbox-block-select, .account__form-inputbox-input {
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+.account__form-button {
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background-color: #007BFF;
+}
+.account__policybox {
+  text-align: center;
+  border-bottom: 1px solid #E4E4E4;
+  padding-bottom: 20px;
+}
+.account__policybox-text {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.account__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
