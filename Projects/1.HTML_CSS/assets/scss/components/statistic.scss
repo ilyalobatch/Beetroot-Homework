@@ -38,6 +38,10 @@
       &-figures {
         padding: 0 56px;
 
+        @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+          padding: 0 20px;
+        }
+
         &-item {
           position: relative;
           margin-bottom: 80px;

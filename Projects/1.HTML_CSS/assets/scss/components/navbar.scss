@@ -13,17 +13,26 @@
     }
 
     &-navbar {
+      position: relative;
       height: 100%;
+
+      &-logo-icon {
+        margin-right: 15px;
+      }
 
       &-list {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 30px;
       }
 
       &-item {
         position: relative;
+        margin-right: 30px;
+
+        &:last-child {
+          margin: 0;
+        }
 
         &::after {
           position: absolute;
