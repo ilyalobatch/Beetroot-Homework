@@ -1,0 +1,18 @@
+.manifest {
+  &-container {
+    padding: 0 135px;
+
+    @include max-breakpoint($width_desktop) {
+      padding: 0 35px;
+    }
+
+    @include max-breakpoint($width_tablet) {
+      padding: 0 10px;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
