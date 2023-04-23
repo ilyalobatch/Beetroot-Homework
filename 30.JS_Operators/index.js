@@ -44,7 +44,7 @@
 // const memoryConverter = (memory) => {
 //   return Math.floor(memory / fileCapacity);
 // };
-// let flashMemory = Number(
+// const flashMemory = Number(
 //   prompt("Please tell me what is your Flash Memory (in Gb)")
 // );
 
@@ -73,8 +73,8 @@
 //   return pocketAmount % chocolatePrice;
 // };
 //
-// let price = null;
-// let pocket = Number(prompt("How much money you have? (in $)"));
+// const price = null;
+// const pocket = Number(prompt("How much money you have? (in $)"));
 //
 // if (isNaN(pocket)) {
 //   alert(`Please enter the number without any letters and symbols`);
@@ -113,7 +113,7 @@
 //   return parseFloat(number.toString().split("").reverse().join(""));
 // };
 
-// let number = Number(prompt("Choose random 3-digit number (from 100 to 999)"));
+// const number = Number(prompt("Choose random 3-digit number (from 100 to 999)"));
 
 // if (isNaN(number)) {
 //   alert(`Please enter the number without any letters and symbols`);
@@ -142,7 +142,7 @@
 //   return amount + amount * ((yearRate / year) * twoMonthPlan);
 // };
 //
-// let depositAmount = Number(
+// const depositAmount = Number(
 //   prompt("What is the amount you would like to deposit for 2 Month Plan?")
 // );
 //
