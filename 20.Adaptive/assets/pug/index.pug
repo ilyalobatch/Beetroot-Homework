@@ -1,0 +1,47 @@
+include ./layouts/mixins
+doctype html
+html(lang="en")
+  include ./layouts/head
+  body
+    header.manifest__header
+      div.manifest-container
+        p.manifest-header-text Case study
+    main 
+      section.manifest__fashion.manifest-container 
+        h1.manifest__fashion-title.manifest-title AI Fashion Platform
+        div.manifest__fashion-picture
+          picture 
+            +source("fashion-mobile", 768)
+            +source("fashion-tablet", 1440)
+            +image("fashion-desktop")
+        h2.manifest__fashion-subtitle.manifest-subtitle Project Overview
+        p.manifest__fashion-text.manifest-text FashHanger is a bespoke sustainable high-fashion accessory company based out of Berlin, currently operated by Siesly and her sister Ashely. They needed help for a big rebrand and wanted to relaunch their website.
+        p.manifest__fashion-text.manifest-text Their goals were simple, create a unique e-commerce store that bring a wonderful shopping experience at every stage of the buyer’s journey.
+      section.manifest__research.manifest-container
+        h2.manifest__research-subtitle.manifest-subtitle User Research and Personas
+        div.manifest__research-picture
+          picture
+            +source("research-mobile", 768)
+            +source("research-tablet", 1440)
+            +image("research-desktop")
+        p.manifest__research-text.manifest-text Who is your user? Indicate her KEY personality traits and help round out her overall image.
+        p.manifest__research-text.manifest-text Originally, the personality section of this persona was based off the Myers Briggs personality test. According to the Myers Briggs, there are 16 potential user personality types. Our template integrates questions from this online personality test example into a series of sliding bar graphics. If you’re confused as to what the sliders mean, check out the Myers Briggs basics article.
+      section.manifest__sketch.manifest-container
+        h2.manifest__sketch-subtitle.manifest-subtitle Initial Sketches
+        div.manifest__sketch-picture
+          picture
+            +source("sketch-mobile", 768)
+            +source("sketch-tablet", 1440)
+            +image("sketch-desktop")   
+        p.manifest__sketch-text.manifest-text In the beginning, It’s just about brainstorming.
+        p.manifest__sketch-text.manifest-text I list out a jumble of words and draw tiny sketches related to what I’m working on (and find the parallels later). Personally, I prefer paper with a grid so I can convey things responsively. Most of the time perfection isn’t an issue and the sketches are just for me.
+      section.manifest__design.manifest-container
+        h2.manifest__design-subtitle.manifest-subtitle Final Design
+        div.manifest__design-picture
+          picture
+            +source("design-mobile", 768)
+            +source("design-tablet", 1440)
+            +image("design-desktop")  
+        p.manifest__design-text.manifest-text I played with adding a wireframe of the website flow that would lead you in to each screen. For each of those screens I added a floating footer that allows users to see where they are in that particular flow and jump around as needed.” We’re digging this InVision-made wireframe.
+    include ./layouts/footer
+           

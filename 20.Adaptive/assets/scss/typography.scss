@@ -1,0 +1,110 @@
+.manifest {
+  /****  Titles  ****/
+
+  &-title,
+  &-subtitle,
+  &-footer-title {
+    font-family: "Red Hat Display", sans-serif;
+    color: $color_black;
+  }
+
+  &-title,
+  &-footer-title {
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+  }
+
+  &-title {
+    font-weight: 600;
+
+    @include max-breakpoint($width_desktop) {
+      font-size: 33px;
+      line-height: 50px;
+    }
+
+    @include max-breakpoint($width_tablet) {
+      font-size: 30px;
+      line-height: 50px;
+    }
+  }
+
+  &-footer-title {
+    font-weight: 400;
+
+    @include max-breakpoint($width_tablet) {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  &-subtitle {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 166%;
+    letter-spacing: 0.1em;
+
+    @include max-breakpoint($width_tablet) {
+      font-size: 26px;
+    }
+  }
+
+  /****  Text  ****/
+
+  &-text,
+  &-header-text,
+  &-footer-text {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+  }
+
+  &-text {
+    font-size: 19px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    color: $color_grey;
+
+    @include max-breakpoint($width_tablet) {
+      font-size: 16px;
+    }
+  }
+
+  &-header-text,
+  &-footer-text {
+    font-size: 16px;
+    color: #000000;
+
+    @include max-breakpoint($width_tablet) {
+      font-size: 18px;
+    }
+  }
+
+  &-header-text {
+    line-height: 150%;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+  }
+
+  &-footer-text {
+    line-height: 166%;
+    letter-spacing: 0.1em;
+
+    &--copy {
+      @extend .manifest-footer-text;
+      font-size: 12px;
+      text-align: center;
+
+      @include max-breakpoint($width_tablet) {
+        font-size: 16px;
+      }
+    }
+
+    &--copy span {
+      display: inline;
+
+      @include max-breakpoint($width_tablet) {
+        display: block;
+      }
+    }
+  }
+}
