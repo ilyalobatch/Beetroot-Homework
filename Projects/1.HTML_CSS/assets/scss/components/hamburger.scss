@@ -1,0 +1,114 @@
+.solis__header-navbar {
+  &-hamburger-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &-hamburger-toggle {
+    display: none;
+  }
+  
+  &-hamburger,
+  &-hamburger::before,
+  &-hamburger::after {
+    display: block;
+    background-color: $color_grey-dark;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      background-color: $color_white;
+    }
+  }
+  
+  &-hamburger::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  &-hamburger::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  &-hamburger-toggle:checked + .solis__header-navbar-hamburger-container .solis__header-navbar-hamburger::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  &-hamburger-toggle:checked + .solis__header-navbar-hamburger-container .solis__header-navbar-hamburger {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  &-hamburger-toggle:checked + .solis__header-navbar-hamburger-container .solis__header-navbar-hamburger::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+  @include maxbreakpoint($breakpoint_tablet-s) {
+    &-hamburger-container {
+      display: flex;
+    }
+    &-list {
+      position: absolute;
+      flex-direction: column;
+      top: 30px;
+      right: 20px;
+      width: 100%;
+      margin-top: 50px;
+      gap: 0;
+    }
+  
+    &-item {
+      align-self: flex-end;
+      padding: 40px 0;
+      width: 150px;
+      background-color: $color_white;
+      transition: .3s;
+      margin: 0;
+      overflow: hidden;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $color_grey;
+      }
+
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        background-color: $color_blue-deep;
+
+        &:hover {
+          background-color: $color_grey-dark;
+        }
+      }
+    }
+    
+    &-hamburger-toggle ~ .solis__header-navbar-list li {
+      height: 0;
+      padding: 0 20px;
+      border: 0;
+      transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    &-hamburger-toggle:checked ~ .solis__header-navbar-list li {
+      height: 50px;
+      padding: 10px 20px;
+      border-bottom: 1px solid $color_grey;
+      transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  
+      &:last-child{
+        border: none;
+      }
+  
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        border-color: $color_grey-dark;
+      }
+    }
+  }
+}

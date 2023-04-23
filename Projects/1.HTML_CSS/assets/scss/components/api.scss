@@ -1,0 +1,119 @@
+.solis__api {
+  margin-bottom: 120px;
+
+  &-tablet {
+    position: relative;
+    padding: 31px 70px 31px 30px;
+    margin: 0 auto;
+    border: 1px solid $color_grey;
+    border-radius: 32px;
+
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      border-color: $color_grey-dark;
+    }
+
+    @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+      padding: 20px 40px 20px 20px;;
+      border-radius: 16px;
+    }
+
+    // @include maxbreakpoint($breakpoint_mobile-s) {      /* Change style if width on screen is different */
+    //   padding: 5px 10px 5px 5px;;
+    // }
+
+    /** Tablet camera & button **/
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      border: 1px solid $color_grey;
+      border-radius: 50%;
+
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        border-color: $color_grey-dark;
+      }
+
+      @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+        transform: scale(0.8);
+      }
+    }
+
+    /** Tablet camera **/
+
+    &::before {
+      left: 8px;
+      width: 13px;
+      height: 13px;
+
+      @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+        left: 5px;
+      }
+    }
+
+    /** Tablet button **/
+
+    &::after {
+      right: 14px;
+      width: 35px;
+      height: 35px;
+
+      @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+        right: 4px;
+      }
+    }
+
+    /** Video **/ 
+
+    &-video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    /** Play Button **/ 
+
+    &-play {
+      position: absolute;
+
+      @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+        transform: scale(0.8);
+      }
+
+      @include maxbreakpoint($breakpoint_mobile-l) {      /* Change style if width on screen is different */
+        transform: scale(0.5);
+      }
+
+      @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+        circle {
+          fill: #689FF2;
+        }
+
+        path {
+          fill: #689FF2;;
+        }
+      }
+
+      /** Play Button Hover Effect **/ 
+
+      &:hover {
+        cursor: pointer;
+
+        circle {
+          fill: #262A3F;
+          transition: .2s;
+        }
+
+        path {
+          fill: #586291;
+          transition: .2s;
+        }
+      }
+    }
+  }
+
+  &-title {
+    margin: 50px 0 20px;
+  }
+}

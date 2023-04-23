@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <main class="solis__hero">
+    <header class="solis__header">
+      <nav class="solis__header-navbar solis-container solis-flex-between solis-gap-30">
+        <div class="solis-flex-center">
+          <svg class="solis__header-navbar-logo-icon" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M21.0937 4.75L23.5201 7.17431L30.7006 0H25.7852L21.0937 4.75ZM32.0274 8.11181L28.6001 4.75L32.0274 1.32568V8.11181ZM6.07855 19.7489L12.2572 13.5755L14.6832 15.9994L8.50457 22.1728L6.07855 19.7489ZM21.0898 19.7505L27.2684 13.5771L29.6944 16.0011L23.5158 22.1745L21.0898 19.7505ZM16.0097 17.326L13.5837 19.7499L19.7624 25.9233L22.1884 23.4994L16.0097 17.326ZM12.2605 21.0757L18.4401 27.25L16.0137 29.7368L9.83409 23.5L12.2605 21.0757ZM31.0891 17.3257L32.0274 18.2632V23.1118L28.6001 19.75L31.0891 17.3257ZM2.32615 15.9989L8.50483 9.8255L10.9308 12.2494L4.75218 18.4228L2.32615 15.9989ZM23.516 9.82713L17.3374 16.0005L19.7634 18.4245L25.9421 12.2511L23.516 9.82713ZM27.2733 6.07568L32.0274 10.7632V15.6118L24.8469 8.5L27.2733 6.07568ZM13.5873 4.75L19.7669 10.9243L22.1933 8.5L16.0137 2.26318L13.5873 4.75ZM12.2582 6.07672L9.83214 8.50067L16.0108 14.6741L18.4368 12.2501L12.2582 6.07672ZM25.9465 27.25L23.5201 24.8257L16.4022 32H21.255L25.9465 27.25ZM12.2605 28.5757L14.6869 31.0625L13.7486 32H8.89579L12.2605 28.5757ZM10.9337 27.25L8.50728 24.8257L1.32683 32H6.24215L10.9337 27.25ZM24.8469 23.5L27.2733 21.0757L32.0274 25.7632V30.6743L24.8469 23.5ZM0 23.8882V30.6743L3.42724 27.25L0 23.8882ZM23.9086 32L27.2733 28.5757L30.7006 32H23.9086ZM17.3405 0.9375L19.7669 3.42431L23.1316 0H18.2788L17.3405 0.9375ZM8.11876 0L4.75407 3.42431L1.32683 0H8.11876ZM4.75406 25.9243L7.18045 23.5L0 16.3882V21.2368L4.75406 25.9243ZM8.50727 7.17431L6.08088 4.75L10.7724 0H15.6252L8.50727 7.17431ZM4.75406 10.9243L7.18045 8.5L0 1.32568V6.23681L4.75406 10.9243ZM3.42724 12.25L0.938302 14.6743L0 13.7368V8.88818L3.42724 12.25Z"
+              fill="white" />
+          </svg>
+          <svg width="61" height="15" viewBox="0 0 61 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.04786 2.94C8.95445 3.09333 8.8577 3.20667 8.75761 3.28C8.6642 3.34667 8.54076 3.38 8.3873 3.38C8.2405 3.38 8.08037 3.33 7.90689 3.23C7.74008 3.12333 7.54324 3.01 7.31638 2.89C7.08952 2.77 6.8293 2.66 6.53571 2.56C6.24213 2.45333 5.8985 2.4 5.50483 2.4C4.81091 2.4 4.29046 2.55667 3.9435 2.87C3.59653 3.17667 3.42305 3.58 3.42305 4.08C3.42305 4.4 3.51647 4.66667 3.70329 4.88C3.89679 5.08667 4.14701 5.26667 4.45393 5.42C4.76754 5.57333 5.12117 5.71 5.51484 5.83C5.90851 5.95 6.31219 6.08333 6.72588 6.23C7.13956 6.37 7.54324 6.53667 7.93691 6.73C8.33058 6.92333 8.68088 7.16667 8.98781 7.46C9.30141 7.75333 9.55162 8.11333 9.73845 8.54C9.93195 8.96 10.0287 9.47333 10.0287 10.08C10.0287 10.74 9.91193 11.36 9.6784 11.94C9.45154 12.5133 9.12126 13.0167 8.68755 13.45C8.25385 13.8767 7.71672 14.2133 7.07618 14.46C6.4423 14.7067 5.72168 14.83 4.91433 14.83C4.45393 14.83 3.99354 14.7833 3.53315 14.69C3.07943 14.5967 2.63905 14.4667 2.21202 14.3C1.79166 14.1333 1.39465 13.9333 1.021 13.7C0.647347 13.4667 0.320401 13.2067 0.0401611 12.92L0.920914 11.5C0.99431 11.3933 1.09106 11.3067 1.21116 11.24C1.33126 11.1667 1.45804 11.13 1.59149 11.13C1.77164 11.13 1.9618 11.1967 2.16197 11.33C2.36215 11.4633 2.59234 11.61 2.85256 11.77C3.11279 11.93 3.41304 12.0767 3.75333 12.21C4.1003 12.3433 4.51399 12.41 4.9944 12.41C5.69499 12.41 6.23546 12.25 6.61578 11.93C7.00278 11.61 7.19628 11.1333 7.19628 10.5C7.19628 10.1333 7.09953 9.83667 6.90603 9.61C6.7192 9.38333 6.47233 9.19333 6.1654 9.04C5.85847 8.88667 5.50817 8.75667 5.1145 8.65C4.72083 8.53667 4.31715 8.41333 3.90346 8.28C3.48978 8.14667 3.0861 7.98667 2.69243 7.8C2.29876 7.61333 1.94846 7.36667 1.64153 7.06C1.3346 6.75333 1.08439 6.37333 0.890888 5.92C0.704062 5.46667 0.610649 4.90333 0.610649 4.23C0.610649 3.69 0.717407 3.16667 0.930922 2.66C1.14444 2.15333 1.45804 1.70333 1.87173 1.31C2.28541 0.916667 2.79251 0.6 3.39303 0.36C4.00021 0.12 4.69414 0 5.47481 0C6.34889 0 7.15624 0.136667 7.89688 0.41C8.64418 0.676667 9.27472 1.05 9.78849 1.53L9.04786 2.94Z"
+              fill="white" />
+            <path
+              d="M27.8395 7.41C27.8395 8.47 27.6594 9.45333 27.2991 10.36C26.9455 11.2667 26.4417 12.05 25.7878 12.71C25.1406 13.37 24.3599 13.89 23.4458 14.27C22.5317 14.6433 21.5175 14.83 20.4032 14.83C19.2889 14.83 18.2747 14.6433 17.3606 14.27C16.4465 13.89 15.6625 13.37 15.0086 12.71C14.3547 12.05 13.8476 11.2667 13.4873 10.36C13.1336 9.45333 12.9568 8.47 12.9568 7.41C12.9568 6.35 13.1336 5.37 13.4873 4.47C13.8476 3.56333 14.3547 2.78 15.0086 2.12C15.6625 1.46 16.4465 0.943334 17.3606 0.57C18.2747 0.19 19.2889 0 20.4032 0C21.5175 0 22.5317 0.19 23.4458 0.57C24.3599 0.943334 25.1406 1.46333 25.7878 2.13C26.4417 2.79 26.9455 3.57333 27.2991 4.48C27.6594 5.38 27.8395 6.35667 27.8395 7.41ZM24.7669 7.41C24.7669 6.65 24.6668 5.97 24.4667 5.37C24.2665 4.76333 23.9762 4.25 23.5959 3.83C23.2223 3.40333 22.7652 3.08 22.2247 2.86C21.691 2.63333 21.0838 2.52 20.4032 2.52C19.7226 2.52 19.1121 2.63333 18.5716 2.86C18.0312 3.08 17.5708 3.40333 17.1904 3.83C16.8168 4.25 16.5299 4.76333 16.3297 5.37C16.1295 5.97 16.0295 6.65 16.0295 7.41C16.0295 8.17667 16.1295 8.86333 16.3297 9.47C16.5299 10.07 16.8168 10.58 17.1904 11C17.5708 11.42 18.0312 11.7433 18.5716 11.97C19.1121 12.19 19.7226 12.3 20.4032 12.3C21.0838 12.3 21.691 12.19 22.2247 11.97C22.7652 11.7433 23.2223 11.42 23.5959 11C23.9762 10.58 24.2665 10.07 24.4667 9.47C24.6668 8.86333 24.7669 8.17667 24.7669 7.41Z"
+              fill="white" />
+            <path d="M40.2511 12.23V14.67H31.6337V0.16H34.6363V12.23H40.2511Z" fill="white" />
+            <path d="M46.7158 14.67H43.6933V0.16H46.7158V14.67Z" fill="white" />
+            <path
+              d="M59.2212 2.94C59.1278 3.09333 59.0311 3.20667 58.931 3.28C58.8376 3.34667 58.7141 3.38 58.5606 3.38C58.4139 3.38 58.2537 3.33 58.0802 3.23C57.9134 3.12333 57.7166 3.01 57.4897 2.89C57.2629 2.77 57.0026 2.66 56.7091 2.56C56.4155 2.45333 56.0719 2.4 55.6782 2.4C54.9843 2.4 54.4638 2.55667 54.1168 2.87C53.7699 3.17667 53.5964 3.58 53.5964 4.08C53.5964 4.4 53.6898 4.66667 53.8766 4.88C54.0701 5.08667 54.3204 5.26667 54.6273 5.42C54.9409 5.57333 55.2945 5.71 55.6882 5.83C56.0819 5.95 56.4855 6.08333 56.8992 6.23C57.3129 6.37 57.7166 6.53667 58.1103 6.73C58.5039 6.92333 58.8542 7.16667 59.1612 7.46C59.4748 7.75333 59.725 8.11333 59.9118 8.54C60.1053 8.96 60.2021 9.47333 60.2021 10.08C60.2021 10.74 60.0853 11.36 59.8518 11.94C59.6249 12.5133 59.2946 13.0167 58.8609 13.45C58.4272 13.8767 57.8901 14.2133 57.2495 14.46C56.6157 14.7067 55.895 14.83 55.0877 14.83C54.6273 14.83 54.1669 14.7833 53.7065 14.69C53.2528 14.5967 52.8124 14.4667 52.3854 14.3C51.965 14.1333 51.568 13.9333 51.1944 13.7C50.8207 13.4667 50.4938 13.2067 50.2135 12.92L51.0943 11.5C51.1677 11.3933 51.2644 11.3067 51.3845 11.24C51.5046 11.1667 51.6314 11.13 51.7648 11.13C51.945 11.13 52.1352 11.1967 52.3353 11.33C52.5355 11.4633 52.7657 11.61 53.0259 11.77C53.2861 11.93 53.5864 12.0767 53.9267 12.21C54.2737 12.3433 54.6873 12.41 55.1678 12.41C55.8684 12.41 56.4088 12.25 56.7891 11.93C57.1761 11.61 57.3696 11.1333 57.3696 10.5C57.3696 10.1333 57.2729 9.83667 57.0794 9.61C56.8926 9.38333 56.6457 9.19333 56.3387 9.04C56.0318 8.88667 55.6815 8.75667 55.2879 8.65C54.8942 8.53667 54.4905 8.41333 54.0768 8.28C53.6631 8.14667 53.2594 7.98667 52.8658 7.8C52.4721 7.61333 52.1218 7.36667 51.8149 7.06C51.508 6.75333 51.2577 6.37333 51.0642 5.92C50.8774 5.46667 50.784 4.90333 50.784 4.23C50.784 3.69 50.8908 3.16667 51.1043 2.66C51.3178 2.15333 51.6314 1.70333 52.0451 1.31C52.4588 0.916667 52.9659 0.6 53.5664 0.36C54.1736 0.12 54.8675 0 55.6482 0C56.5222 0 57.3296 0.136667 58.0702 0.41C58.8175 0.676667 59.4481 1.05 59.9618 1.53L59.2212 2.94Z"
+              fill="white" />
+          </svg>
+        </div>
+        <input class="solis__header-navbar-hamburger-toggle" id="menu-toggle" type="checkbox" />
+        <label class='solis__header-navbar-hamburger-container' for="menu-toggle">
+          <div class='solis__header-navbar-hamburger'></div>
+        </label>
+        <ul class="solis__header-navbar-list">
+          <li class="solis__header-navbar-item">
+            <a class="solis-text-navbar" href="">Home</a>
+          </li>
+          <li class="solis__header-navbar-item">
+            <a class="solis-text-navbar" href="">About</a>
+          </li>
+          <li class="solis__header-navbar-item">
+            <a class="solis-text-navbar" href="">Products</a>
+          </li>
+          <li class="solis__header-navbar-item">
+            <a class="solis-text-navbar" href="">Use Cases</a>
+          </li>
+          <li class="solis__header-navbar-item">
+            <a class="solis-text-navbar" href="">Pricing</a>
+          </li>
+          <li class="solis__header-navbar-item">
+            <a class="solis-text-navbar" href="">Resources</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="solis-container">
+      <h1 class="solis__hero-title solis-title">
+        A peer-to-peer stablecoin <span class="solis-title-italic">clearinghouse</span> for the new economy
+      </h1>
+      <p class="solis__hero-text solis-text">
+        We are bringing real solutions to the payments world by leveraging public blockchains.
+      </p>
+      <a class="solis__button solis-text-button">
+        join now
+      </a>
+    </div>
+  </main>
+
+  <section class="solis__statistic">
+    <div class="solis-container">
+      <div class="solis-flex-center">
+        <div>
+          <img class="solis__statistic-image" src="./assets/imgs/statistic-image.jpg" alt="statistic" />
+        </div>
+        <div class="solis__statistic-block">
+          <div class="solis__statistic-block-figures">
+            <div class="solis__statistic-block-figures-item solis-center">
+              <h2 class="solis__statistic-title solis-subtitle solis-subtitle--statistic">
+                <span class="solis-subtitle solis-subtitle--dollar">$</span> 1 tril
+              </h2>
+              <p class="solis-text">
+                Market cap potential
+              </p>
+            </div>
+            <div class="solis__statistic-block-figures-item solis-center">
+              <h2 class="solis__statistic-title solis-subtitle solis-subtitle--statistic">
+                <span class="solis-subtitle solis-subtitle--dollar">$</span> 3.65 mil
+              </h2>
+              <p class="solis-text">
+                Deposited to platform
+              </p>
+            </div>
+            <div class="solis__statistic-block-figures-item solis-center">
+              <h2 class="solis__statistic-title solis-subtitle solis-subtitle--statistic">
+                12
+              </h2>
+              <p class="solis-text">
+                Stablecoins
+              </p>
+            </div>
+          </div>
+          <div class="solis__statistic-textbox">
+            <p class="solis-text solis__statistic-text-1">
+              Solis group is a new venture created with investments from and collaboration with XBTO International, XBTO
+              Ventures and Phil Potter, formerly of bitfinex. Stablehouse is intended to launch a first-of-its-kind
+              clearing house for stablecoins that seeks to promote the next phase of the market’s development.
+            </p>
+            <p class="solis-text solis__statistic-text-2">
+              The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and
+              accessibility which are currently preventing the stablecoin market from reaching critical mass.
+            </p>
+            <a class="solis__button solis-text-button">
+              contact sales
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solis__features">
+    <div class="solis-container">
+      <div class="solis__features-block solis-gap-30">
+        <div class="solis__features-block-item">
+          <h2 class="solis__features-title solis-subtitle">
+            Qualified <span class="solis-subtitle-italic">traders</span> and <span
+              class="solis-subtitle-italic">liquidty</span> solutions
+          </h2>
+          <p class="solis__features-text solis-text">
+            Trade easily and efficiently between 12 stablecoins, including USDT, TrueUSD, Dai, Eurs and Gemini Dollar.
+          </p>
+        </div>
+        <div class="solis__features-block-item">
+          <h2 class="solis__features-title solis-subtitle">
+            Settlement/OTC API and <span class="solis-subtitle-italic">integration</span>
+          </h2>
+          <p class="solis__features-text solis-text">
+            Integrate OTC operations and settlements using our efficient API.
+          </p>
+        </div>
+        <div class="solis__features-block-item">
+          <h2 class="solis__features-title solis-subtitle">
+            The best <span class="solis-subtitle-italic">payments solutions</span>
+          </h2>
+          <p class="solis__features-text solis-text">
+            For all stablecoin payments, from point-of-sale transactions to website solutions. If you use stablecoins in
+            your business, Stablehouse is for you.
+          </p>
+        </div>
+        <div class="solis__features-block-item">
+          <h2 class="solis__features-title solis-subtitle">
+            <span class="solis-subtitle-italic">Treasury</span> and <span class="solis-subtitle-italic">returns</span>
+            for
+            stablecoin stores
+          </h2>
+          <p class="solis__features-text solis-text">
+            Automate your stablecoin store with instant payments and on-the-fly conversion between different
+            stablecoins.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solis__quotes">
+    <div class="solis-container">
+      <div class="solis__quotes-block">
+        <svg class="solis__quotes-icon" width="102" height="84" viewBox="0 0 102 84" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M68.6832 45.1953C68.198 43.4828 67.9516 41.5149 67.9516 39.2857C67.9516 33.2091 70.2619 27.2093 74.9378 21.278C79.8355 15.3381 85.5761 10.9984 92.1605 8.24707L92.655 8.04045L92.4146 7.56148L89.5114 1.77575L89.2947 1.34382L88.8556 1.54574C77.6047 6.71993 69.1369 13.6332 63.4845 22.2983L63.4844 22.2982L63.4797 22.3058C58.0504 30.9616 55.3387 40.6975 55.3387 51.5C55.3387 59.9307 57.1833 67.0997 60.8999 72.9814C65.2964 79.9897 71.8038 83.5 80.3549 83.5C86.2844 83.5 91.2529 81.5253 95.2239 77.5685C99.4044 73.4029 101.5 68.3468 101.5 62.4286C101.5 56.0983 99.4146 51.0291 95.2141 47.279C91.2448 43.3286 86.2796 41.3571 80.3549 41.3571C75.9772 41.3571 72.081 42.6371 68.6832 45.1953ZM13.8445 45.1953C13.3593 43.4828 13.1129 41.5149 13.1129 39.2857C13.1129 33.2091 15.4232 27.2094 20.0989 21.2782C24.9967 15.3381 30.7374 10.9984 37.3218 8.24707L37.8163 8.04045L37.5759 7.56148L34.6727 1.77575L34.456 1.34382L34.0169 1.54574C22.766 6.71993 14.2982 13.6332 8.64574 22.2983L8.64568 22.2982L8.64095 22.3058C3.21167 30.9616 0.5 40.6975 0.5 51.5C0.5 59.9306 2.34459 67.0996 6.0611 72.9812C10.4576 79.9896 16.965 83.5 25.5161 83.5C31.4457 83.5 36.4142 81.5253 40.3852 77.5685C44.5657 73.4029 46.6613 68.3468 46.6613 62.4286C46.6613 56.0983 44.5758 51.0291 40.3754 47.2789C36.406 43.3286 31.4408 41.3571 25.5161 41.3571C21.1385 41.3571 17.2423 42.6371 13.8445 45.1953Z"
+            stroke="url(#paint0_linear_3303_109)" />
+          <defs>
+            <linearGradient id="paint0_linear_3303_109" x1="0.750061" y1="55.4086" x2="121.357" y2="72.9687"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F1897B" />
+              <stop offset="1" stop-color="#F1897B" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <p class="solis__quotes-title solis-text-quotes">
+          Solis Group serves as a liquidity nexus that gives stablecoin issuers, holders and exchanges certainty over
+          access and liquidity
+        </p>
+        <p class="solis-text-author">
+          Lennon Burnett, Solis Group CEO
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="solis__api">
+    <div class="solis-container">
+      <div class="solis__api-tablet solis-flex-center">
+        <img class="solis__api-tablet-video" src="./assets/imgs/screensaver-video.png" alt="video" />
+        <svg class="solis__api-tablet-play" width="120" height="120" viewBox="0 0 120 120" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle opacity="0.3" cx="60" cy="60" r="60" fill="#586291" />
+          <path
+            d="M81.3175 58.615C82.0301 58.9898 82.0301 60.0102 81.3175 60.385L50.7155 76.4826C50.0496 76.8329 49.25 76.35 49.25 75.5976L49.25 43.4024C49.25 42.65 50.0496 42.1671 50.7155 42.5174L81.3175 58.615Z"
+            fill="#262A3F" />
+        </svg>
+      </div>
+      <h2 class="solis__api-title solis-subtitle">
+        A <span class="solis-subtitle-italic">powerful API</span> , easy to use user interface
+      </h2>
+      <p class="solis-text">
+        Our API allows all members to interact with Stablehouse’s platform, from effecting transfers to deposits,
+        withdrawals, creation and redemption and reporting.
+      </p>
+    </div>
+  </section>
+
+  <section class="solis__trading">
+    <div class="solis-container solis-flex-center">
+      <div>
+        <img class="solis__trading-image" src="./assets/imgs/trading-image.jpg" alt="trading" />
+      </div>
+      <div class="solis__trading-block">
+        <div>
+          <h3 class="solis__trading-title solis-subtitle solis-subtitle--trading">
+            On-Exchange Trading
+          </h3>
+          <p class="solis__trading-text solis-text">
+            Instant
+          </p>
+          <p class="solis__trading-text solis-text">
+            Passive Inventory earns fees
+          </p>
+        </div>
+        <div>
+          <h3 class="solis__trading-title solis-subtitle solis-subtitle--trading">
+            On-Chain Swaps
+          </h3>
+          <p class="solis__trading-text solis-text">
+            Low Counterparty risk
+          </p>
+          <p class="solis__trading-text solis-text">
+            Direct transfers
+          </p>
+        </div>
+        <div>
+          <h3 class="solis__trading-title solis-subtitle solis-subtitle--trading">
+            Time Settlement Swaps
+          </h3>
+          <p class="solis__trading-text solis-text">
+            LBTC / Lightning and other sidechain swaps
+          </p>
+        </div>
+        <a class="solis__button--border">
+          <button class="solis__button solis-text-button">
+            join now
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="solis__reviews">
+    <div class="solis-container">
+      <h2 class="solis__reviews-title solis-subtitle">
+        Client <span class="solis-subtitle-italic">reviews</span>
+      </h2>
+      <p class="solis__reviews-text solis-text">
+        Happy clients, happy us. Read our client reviews about the work process and results.
+      </p>
+      <div class="solis__reviews-block">
+        <div class="solis__reviews-block-item">
+          <div class="solis__reviews-block-bg"></div>
+          <p class="solis-text solis-text--review">
+            Solis did a great job. Whether providing direct development support or giving us the opportunity to make our
+            development updates, Solis's web design expertise and support services were top notch! It didn't take long
+            to stand up our website, and we were pleased with the design and layout of the graphics and information.
+          </p>
+          <p class="solis-text-author">
+            Dr. Jamika Burge
+          </p>
+        </div>
+        <div class="solis__reviews-block-item">
+          <div class="solis__reviews-block-bg"></div>
+          <p class="solis-text solis-text--review">
+            Solis is a cutting edge company and knows the importance of excellence. Having been in business for 21
+            years, I know when I’ve found a competent professional and more importantly a company with integrity. I
+            highly recommend this company and am available for further reference if needed.
+          </p>
+          <p class="solis-text-author">
+            Evie-Rose Prosse
+          </p>
+        </div>
+        <div class="solis__reviews-block-item">
+          <div class="solis__reviews-block-bg"></div>
+          <p class="solis-text solis-text--review">
+            I can’t say enough about how knowledgeable Toinette Rorie is in the area of Web Development. She indeed is a
+            developer and can build a site from scratch. She understands functionality and is great at constructing a
+            site that is robust and fully functioning.
+          </p>
+          <p class="solis-text-author">
+            Elvis Mooney
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solis__contact">
+    <div class="solis-container">
+      <div class="solis__contact-block">
+        <div>
+          <h2 class="solis__contact-title solis-subtitle">
+            Contact <span class="solis-subtitle-italic">our sales team</span>
+          </h2>
+          <p class="solis-text">
+            Our team is happy to answer your sales questions.
+            <br />
+            Fill out the form and we’ll be in touch as soon as possible.
+          </p>
+        </div>
+        <div>
+          <form action="">
+            <div class="solis__contact-inputbox">
+              <input class="solis__contact-input solis-text-input" type="text" placeholder="Your name" required />
+            </div>
+            <div class="solis__contact-inputbox">
+              <input class="solis__contact-input solis-text-input" type="text" placeholder="Email" required />
+            </div>
+            <div class="solis__contact-inputbox">
+              <input class="solis__contact-input solis-text-input" type="text" placeholder="Tell more" required />
+            </div>
+            <button class="solis__button solis-text-button" type="submit">
+              send request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="solis__footer">
+    <div class="solis__footer-block solis-container">
+      <div>
+        <p class="solis-text-footer">
+          © 2020 Solisgroup. All Rights Reserved.
+        </p>
+      </div>
+      <div class="solis-flex-center">
+        <p class="solis-text-footer">
+          made by
+        </p>
+        <span class="solis-text-footer solis-text-footer--bold">Zgraya.digital</span>
+      </div>
+      <div>
+        <ul class="solis__footer-list">
+          <li>
+            <a class="solis-text-footer solis-text-footer--bold" href="">User Agreement</a>
+          </li>
+          <li>
+            <a class="solis-text-footer solis-text-footer--bold" href="">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

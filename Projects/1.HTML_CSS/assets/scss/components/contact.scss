@@ -1,0 +1,50 @@
+.solis__contact {
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0 100px;
+    border-top: 1px solid $color_grey;
+    border-bottom: 1px solid $color_grey;
+
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      border-color: $color_grey-dark;
+    }
+
+    @include maxbreakpoint($breakpoint_tablet-l) {      /* Change style if width on screen is different */
+      flex-direction: column;
+    }
+  }
+
+  &-inputbox {
+    margin-bottom: 40px;
+    min-width: 470px;
+
+    @include maxbreakpoint($breakpoint_laptop-l) {
+      margin-top: 60px;      /* Change style if width on screen is different */
+      min-width: 370px;
+    }
+
+    @include maxbreakpoint($breakpoint_laptop-s) {      /* Change style if width on screen is different */
+      min-width: 300px;
+    }
+
+    @include maxbreakpoint($breakpoint_mobile-l) {      /* Change style if width on screen is different */
+      min-width: 225px;
+    }
+  }
+
+  &-input {
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $color_dark;
+
+    @include appearance(dark) {      /* Change style if appearance on system is 'Dark' */ 
+      border-color: $color_white;
+    }
+  }
+
+  &-title {
+    margin: 20px 0 30px;
+  }
+}
