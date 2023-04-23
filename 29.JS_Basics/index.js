@@ -58,12 +58,12 @@ Tempora, excepturi eveniet quos molestiae necessitatibus deleniti itaque maiores
 // ----- II. Normal
 
 // 1.
-// let name = prompt("What is your name?");
+// const name = prompt("What is your name?");
 // alert(`Hello, ${name}`);
 
 // 2.
 // const currentYear = 2023;
-// let age = Number(prompt("What is your date of birth?"));
+// const age = Number(prompt("What is your date of birth?"));
 
 // if (isNaN(age)) {
 //   alert(`Please enter the number without any letters and symbols`);
@@ -76,12 +76,12 @@ Tempora, excepturi eveniet quos molestiae necessitatibus deleniti itaque maiores
 // }
 
 // 3.
-// const squarePerimeter = (x) => {
-//   Perimeter = x * 4;
-//   return Perimeter;
+// const squarePerimeter = (side) => {
+//   perimeter = side * 4;
+//   return perimeter;
 // };
 
-// let length = Number(prompt("Tell me the length of the square"));
+// const length = Number(prompt("Tell me the length of the square"));
 
 // if (isNaN(length)) {
 //   alert(`Please enter the number without any letters and symbols`);
@@ -99,12 +99,12 @@ Tempora, excepturi eveniet quos molestiae necessitatibus deleniti itaque maiores
 
 // 1.
 // const PI = 3.14;
-// const circleArea = (r) => {
-//   S = PI * r ** 2;
-//   return S;
+// const circleArea = (radius) => {
+//   area = PI * radius ** 2;
+//   return radius;
 // };
 
-// let radius = Number(prompt("Tell me the radius length of the circle"));
+// const radius = Number(prompt("Tell me the radius length of the circle"));
 
 // if (isNaN(radius)) {
 //   alert(`Please enter the number without any letters and symbols`);
@@ -121,15 +121,15 @@ Tempora, excepturi eveniet quos molestiae necessitatibus deleniti itaque maiores
 // }
 
 // 2.
-// const speed = (S, t) => {
-//   V = S / t;
-//   return V;
+// const speedCalc = (distance, time) => {
+//   speed = distance / time;
+//   return speed;
 // };
 
-// let distance = Number(
+// const distance = Number(
 //   prompt("Tell me what is the distance (in meters) to your destination?")
 // );
-// let time = null;
+// const time = null;
 
 // if (isNaN(distance)) {
 //   alert(`Please enter the number without any letters and symbols`);
@@ -149,7 +149,7 @@ Tempora, excepturi eveniet quos molestiae necessitatibus deleniti itaque maiores
 //     );
 //   } else {
 //     alert(
-//       `Your distance is ${distance} and travelling time is ${time}, so you should travel with the ${speed(
+//       `Your distance is ${distance} and travelling time is ${time}, so you should travel with the ${speedCalc(
 //         distance,
 //         time
 //       )} m/s speed`
