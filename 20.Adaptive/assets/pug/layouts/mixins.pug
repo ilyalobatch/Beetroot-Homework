@@ -1,0 +1,5 @@
+mixin source(name, width)
+  source(srcset="./assets/imgs/" + name + ".jpg" type="image/jpg" media="(max-width:" + width + "px)")
+
+mixin image(name)
+  img(src="./assets/imgs/" + name + ".jpg" alt=name)

@@ -1,0 +1,185 @@
+.manifest {
+  &-section-margin {
+    margin-bottom: 90px;
+
+    @include max-breakpoint($width_desktop) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &-subtitle-margin {
+    margin-bottom: 50px;
+
+    @include max-breakpoint($width_tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
+  /****  Header   ****/
+
+  &__header {
+    padding: 30px 0;
+
+    @include max-breakpoint($width_desktop) {
+      padding: 10px 0 60px;
+    }
+
+    @include max-breakpoint($width_tablet) {
+      padding: 10px 0;
+    }
+  }
+
+  /****  Fashion section   ****/
+
+  &__fashion {
+    @extend .manifest-section-margin;
+
+    &-title {
+      margin-bottom: 70px;
+
+      @include max-breakpoint($width_desktop) {
+        margin-bottom: 50px;
+      }
+
+      @include max-breakpoint($width_tablet) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-picture {
+      margin-bottom: 90px;
+
+      @include max-breakpoint($width_tablet) {
+        margin-bottom: 70px;
+      }
+    }
+
+    &-subtitle {
+      @extend .manifest-subtitle-margin;
+    }
+
+    &-text {
+      max-width: 570px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  /****  Research section   ****/
+
+  &__research {
+    @extend .manifest-section-margin;
+
+    &-subtitle {
+      @extend .manifest-subtitle-margin;
+    }
+
+    &-picture {
+      margin-bottom: 20px;
+    }
+
+    &-text:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  /****  Sketch section   ****/
+
+  &__sketch {
+    @extend .manifest-section-margin;
+
+    &-subtitle {
+      @extend .manifest-subtitle-margin;
+    }
+
+    &-picture {
+      margin-bottom: 20px;
+    }
+
+    &-text:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  /****  Design section   ****/
+
+  &__design {
+    @extend .manifest-section-margin;
+
+    @include max-breakpoint($width_tablet) {
+      margin-bottom: 70px;
+    }
+
+    &-subtitle {
+      @extend .manifest-subtitle-margin;
+    }
+
+    &-picture {
+      margin-bottom: 20px;
+    }
+
+    &-text:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  /****  Design section   ****/
+
+  &__footer {
+    padding: 70px 0 30px;
+    background-color: $color_white-200;
+
+    @include max-breakpoint($width_desktop) {
+      padding: 50px 0;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      @include max-breakpoint($width_desktop) {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 30px;
+
+      @include max-breakpoint($width_desktop) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-text:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+
+    &-socialmedia {
+      display: flex;
+      gap: 23px;
+    }
+
+    &-socialmedia-item {
+      rect,
+      path {
+        transition: 0.2s;
+      }
+
+      &:hover {
+        rect {
+          fill: $color_grey;
+        }
+
+        path {
+          fill: $color_white-100;
+        }
+      }
+    }
+  }
+}
