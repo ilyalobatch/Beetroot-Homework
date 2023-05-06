@@ -55,12 +55,12 @@
 // else if (number >= 0 && number <= 9)
 //   alert(`Here is your symbol - "${symbols[number]}"`);
 
-// 3. -----------------------------------------------
+// 3.
 // const firstNumber = prompt("Please enter 1st number!");
 // const secondNumber = prompt(
 //   "Please enter 2nd number (should be greater than 1st number)!"
 // );
-
+//
 // if (isNaN(Number(firstNumber || secondNumber)))
 //   alert("Please enter the number without any letters and symbols");
 // else if (!firstNumber || !secondNumber)
@@ -72,15 +72,51 @@
 // else if (secondNumber < firstNumber)
 //   alert("No no no sweetpie, 2nd number should be greater than 1st number");
 // else if (secondNumber > firstNumber) {
-//   let result = Number(firstNumber);
+//   let result = 0;
 //   for (let num = Number(firstNumber); num <= Number(secondNumber); num++) {
 //     result += num;
 //   }
-//   console.log(result);
+//   alert(`Your total number in that diaposon is ${result}`);
 // }
 
-// 4.-----------------------------
-// 5.-----------------------------
+// 4.
+// const firstPrompt = prompt("Please enter 1st random number!");
+// const secondPrompt = prompt("Please enter 2nd random number!");
+// let firstNumber = Number(firstPrompt);
+// let secondNumber = Number(secondPrompt);
+//
+// if (isNaN(firstNumber || secondNumber))
+//   alert("Please enter the number without any letters and symbols");
+// else if (!firstPrompt || !secondPrompt)
+//   alert("You forgot to fill one of the numbers or both of them");
+// else {
+//   while (firstNumber !== secondNumber) {
+//     if (firstNumber > secondNumber) {
+//       firstNumber = firstNumber - secondNumber;
+//     } else {
+//       secondNumber = secondNumber - firstNumber;
+//     }
+//   }
+//   alert(`Your biggest divider between numbers is ${firstNumber}`);
+// }
+
+// 5.
+// const randomPrompt = prompt("Please enter random number!");
+// const randomNumber = Number(randomPrompt);
+// const randomNumberDividers = [];
+//
+// if (isNaN(randomNumber))
+//   alert("Please enter the number without any letters and symbols");
+// else if (!randomPrompt) alert("You forgot to fill the number");
+// else if (randomNumber === 0) alert("INFINITYYY");
+// else {
+//   for (let num = 1; num <= randomNumber; num++) {
+//     if (randomNumber % num === 0) {
+//       randomNumberDividers.push(num);
+//     }
+//   }
+//   alert(`Your number has dividers: ${randomNumberDividers}`);
+// }
 
 // ----- II. Normal
 
@@ -149,7 +185,25 @@
 //
 // numberFilter();
 
-// 4. -----------------------------
+// 4.
+// const weekDays = [
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday",
+//   "Sunday",
+// ];
+// let index = 0;
+//
+// while (true) {
+//   alert(`${weekDays[index]}! Would you like to see next day?`);
+//   index++;
+//   if (index === weekDays.length) {
+//     index = 0;
+//   }
+// }
 
 // ----- III. Normal
 
@@ -208,15 +262,31 @@
 //
 // numberFinder();
 
-// 2. ----------------------------------------
-// const array = [2, 3, 4, 5, 6, 7, 8, 9];
-// const array2 = [];
+// 2.
+// const digitSet = [...Array(11).keys()];
+// const arrangedTable = digitSet.map((digit) => {
+//   return digitSet.map((multiplier) => digit * multiplier);
+// });
+//
+// console.table(arrangedTable);
 
-// function calc() {
-//   for (let i = 0; i <= 10; i++) {
-//     array2.push(array[0] * i);
-//   }
-//   console.table(array2);
+// 3.
+// const dayPrompt = prompt("What is the day? (in number)");
+// const monthPrompt = prompt("What is the month? (in number)");
+// const yearPrompt = prompt("What is the year? (in number)");
+// const dayNumber = parseFloat(dayPrompt);
+// const monthNumber = parseFloat(monthPrompt);
+// const yearNumber = parseFloat(yearPrompt);
+
+// const date = new Date(yearNumber, monthNumber - 1, dayNumber); // the month is 0-indexed
+// const nextDate = new Date(yearNumber, monthNumber - 1, dayNumber + 1); // the month is 0-indexed
+
+// if (!dayPrompt || !monthPrompt || !yearPrompt) {
+//   alert(`You forgot to fill the number`);
+// } else if (isNaN(dayNumber) || isNaN(monthNumber) || isNaN(yearNumber)) {
+//   alert(`Please fill the number appropriately`);
+// } else {
+//   alert(
+//     `You chose: ${date.toLocaleDateString()}. The next day will be: ${nextDate.toLocaleDateString()}`
+//   );
 // }
-
-// calc();
