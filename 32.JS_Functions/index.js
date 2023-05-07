@@ -22,15 +22,15 @@
 // ----- I. Minimun
 
 // 1.
-// 1) Function expression = function myFunf() {};
-// 2) Function declaration = const myFunc = function() {} || const myFunc = () => {};
+// 1) Function expression = function myFunf() {} || const myFunc = () => {};
+// 2) Function declaration = const myFunc = function() {}
 // 3) IIFE (Immediately invoked function expression) = (function() {
 // ******
 // })();
 
 // 2.
-// const myFunc = (...args) => {
-//   console.log(`I counted ${args.length} arguments in function`);
+// const myFunc = function () {
+//   return `I counted ${arguments.length} arguments in function`;
 // };
 
 // 3.
@@ -46,10 +46,13 @@
 // 4.
 // const factorialize = (number) => {
 //   if (number < 0) {
+
 //     return "Number should be positive!";
 //   } else if (number === 0 || number === 1) {
+
 //     return 1;
 //   }
+
 //   return number * factorialize(number - 1);
 // };
 
@@ -58,14 +61,17 @@
 //   const concatNumber = parseFloat(
 //     [firstNumber, secondNumber, thirdNumber].join("")
 //   );
+
 //   return concatNumber;
 // };
 
 // 6.
 // const areaCalc = (length, width = null) => {
 //   if (width !== null) {
+
 //     return length * width;
 //   }
+
 //   return length * length;
 // };
 
@@ -80,8 +86,10 @@
 //     }
 //   }
 //   if (sum !== inputNumber) {
+
 //     return false;
 //   }
+
 //   return true;
 // };
 
@@ -89,6 +97,7 @@
 // const perfectNumberSet = (minNumber, maxNumber) => {
 //   const numberSet = [];
 //   if (minNumber > maxNumber) {
+
 //     return `Min Number should be less than Max Number`;
 //   }
 //   for (let index = minNumber; index <= maxNumber; index++) {
@@ -98,7 +107,9 @@
 //     }
 //   }
 //   if (!numberSet.length) {
+
 //     return `No any perfect numbers in that diaposon`;
 //   }
+
 //   return numberSet;
 // };
