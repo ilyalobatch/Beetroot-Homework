@@ -34,44 +34,65 @@
 // const age = prompt("Please enter your age!");
 // const personIs = "You are";
 // console.log(`Number is (${age})`);
-//
-// if (isNaN(Number(age)))
-//   alert("Please enter the number without any letters and symbols");
-// else if (!age) alert("Please enter something");
-// else if (age < 0) alert("Oh my God! You are from the past!");
-// else if (age >= 0 && age <= 11) alert(`${personIs} child!`);
-// else if (age >= 12 && age <= 17) alert(`${personIs} kid!`);
-// else if (age >= 18 && age <= 59) alert(`${personIs} adult!`);
-// else if (age >= 60) alert(`${personIs} senior!`);
+
+// switch (age) {
+//   case isNaN(Number(age)):
+//     alert("Please enter the number without any letters and symbols");
+//     break;
+//   case !age:
+//     alert("Please enter something");
+//     break;
+//   case age < 0:
+//     alert("Oh my God! You are from the past!");
+//     break;
+//   case age >= 0 && age <= 11:
+//     alert(`${personIs} child!`);
+//     break;
+//   case age >= 12 && age <= 17:
+//     alert(`${personIs} kid!`);
+//     break;
+//   case age >= 18 && age <= 59:
+//     alert(`${personIs} adult!`);
+//     break;
+//   case age >= 60:
+//     alert(`${personIs} senior!`);
+//     break;
+// }
 
 // 2.
 // const number = prompt("Please enter number between 0-9!");
 // const symbols = [")", "!", "@", "#", "$", "%", "^", "&", "*", "("];
-//
-// if (isNaN(Number(number)))
-//   alert("Please enter the number without any letters and symbols");
-// else if (!number) alert("Please enter something");
-// else if (number < 0 || number > 9) alert("No no no honey, choose between 0-9!");
-// else if (number >= 0 && number <= 9)
-//   alert(`Here is your symbol - "${symbols[number]}"`);
+
+// if (isNaN(Number(number))) {
+//     alert("Please enter the number without any letters and symbols");
+// }
+// else if (!number) {
+//   alert("Please enter something");
+// }
+// else if (number < 0 || number > 9) {
+//   alert("No no no honey, choose between 0-9!");
+// }
+// else if (number >= 0 && number <= 9) {
+//     alert(`Here is your symbol - "${symbols[number]}"`);
+// }
 
 // 3.
 // const firstNumber = prompt("Please enter 1st number!");
 // const secondNumber = prompt(
 //   "Please enter 2nd number (should be greater than 1st number)!"
 // );
-//
-// if (isNaN(Number(firstNumber || secondNumber)))
+
+// if (isNaN(Number(firstNumber || secondNumber))) {
 //   alert("Please enter the number without any letters and symbols");
-// else if (!firstNumber || !secondNumber)
+// } else if (!firstNumber || !secondNumber) {
 //   alert("You forgot to fill one of the numbers or both of them");
-// else if (secondNumber === firstNumber)
+// } else if (secondNumber === firstNumber) {
 //   alert(
 //     `No calculations done. Your number is same in both options - ${firstNumber}`
 //   );
-// else if (secondNumber < firstNumber)
+// } else if (secondNumber < firstNumber) {
 //   alert("No no no sweetpie, 2nd number should be greater than 1st number");
-// else if (secondNumber > firstNumber) {
+// } else if (secondNumber > firstNumber) {
 //   let result = 0;
 //   for (let num = Number(firstNumber); num <= Number(secondNumber); num++) {
 //     result += num;
@@ -84,12 +105,12 @@
 // const secondPrompt = prompt("Please enter 2nd random number!");
 // let firstNumber = Number(firstPrompt);
 // let secondNumber = Number(secondPrompt);
-//
-// if (isNaN(firstNumber || secondNumber))
+
+// if (isNaN(firstNumber || secondNumber)) {
 //   alert("Please enter the number without any letters and symbols");
-// else if (!firstPrompt || !secondPrompt)
+// } else if (!firstPrompt || !secondPrompt) {
 //   alert("You forgot to fill one of the numbers or both of them");
-// else {
+// } else {
 //   while (firstNumber !== secondNumber) {
 //     if (firstNumber > secondNumber) {
 //       firstNumber = firstNumber - secondNumber;
@@ -104,12 +125,14 @@
 // const randomPrompt = prompt("Please enter random number!");
 // const randomNumber = Number(randomPrompt);
 // const randomNumberDividers = [];
-//
-// if (isNaN(randomNumber))
+
+// if (isNaN(randomNumber)) {
 //   alert("Please enter the number without any letters and symbols");
-// else if (!randomPrompt) alert("You forgot to fill the number");
-// else if (randomNumber === 0) alert("INFINITYYY");
-// else {
+// } else if (!randomPrompt) {
+//   alert("You forgot to fill the number");
+// } else if (randomNumber === 0) {
+//   alert("INFINITYYY");
+// } else {
 //   for (let num = 1; num <= randomNumber; num++) {
 //     if (randomNumber % num === 0) {
 //       randomNumberDividers.push(num);
@@ -123,12 +146,14 @@
 // 1.
 // const fiveDigitNumber = prompt("Please enter 5-digit Number");
 // const array = Math.abs(Number(fiveDigitNumber)).toString().split("");
-//
-// if (isNaN(Number(fiveDigitNumber)))
+
+// if (isNaN(Number(fiveDigitNumber))) {
 //   alert("Please enter the number without any letters and symbols");
-// else if (!fiveDigitNumber) alert("Please enter something");
-// else if (array.length !== 5) alert("No no no my love, it should be 5-digit");
-// else if (array.length === 5) {
+// } else if (!fiveDigitNumber) {
+//   alert("Please enter something");
+// } else if (array.length !== 5) {
+//   alert("No no no my love, it should be 5-digit");
+// } else if (array.length === 5) {
 //   array[0] === array[4] && array[1] === array[3]
 //     ? alert("This is Palindrome")
 //     : alert("This is not Palindrome");
@@ -138,25 +163,29 @@
 // const purchase = prompt("What is the amount of your purchase?");
 // const purchaseAmount = Number(purchase);
 // function discountCalculator(discount) {
-//   return `You have discount of ${discount}%! Your check was ${purchaseAmount}$, now it is ${
-//     purchaseAmount - purchaseAmount * (discount / 100)
-//   }$ `;
+//   const purchaseWithDiscount =
+//     purchaseAmount - purchaseAmount * (discount / 100);
+//   return `You have discount of ${discount}%! Your check was ${purchaseAmount}$, now it is ${purchaseWithDiscount}$ `;
 // }
-//
+
 // if (isNaN(Number(purchase)))
 //   alert("Please enter the number without any letters and symbols");
-// else if (!purchase) alert("Please enter something");
-// else if (purchaseAmount <= 0) alert("Poor guy...");
-// else if (purchaseAmount < 200)
+// else if (!purchase) {
+//   alert("Please enter something");
+// } else if (purchaseAmount <= 0) {
+//   alert("Poor guy...");
+// } else if (purchaseAmount < 200) {
 //   alert(`No any discounts! Your check is ${purchaseAmount}$!`);
-// else if (purchaseAmount >= 200 && purchaseAmount < 300)
+// } else if (purchaseAmount >= 200 && purchaseAmount < 300) {
 //   alert(discountCalculator(3));
-// else if (purchaseAmount >= 300 && purchaseAmount < 500)
+// } else if (purchaseAmount >= 300 && purchaseAmount < 500) {
 //   alert(discountCalculator(5));
-// else if (purchaseAmount >= 500) alert(discountCalculator(7));
+// } else if (purchaseAmount >= 500) {
+//   alert(discountCalculator(7));
+// }
 
 // 3.
-// function numberFilter() {
+// const numberFilter = () => {
 //   let promptValue = null;
 //   let number = null;
 //   const array = [];
@@ -182,7 +211,7 @@
 //   alert(`You have ${arrayEvens.length} Even numbers`);
 //   alert(`You have ${arrayOdds.length} Odd numbers`);
 // }
-//
+
 // numberFilter();
 
 // 4.
@@ -196,7 +225,7 @@
 //   "Sunday",
 // ];
 // let index = 0;
-//
+
 // while (true) {
 //   alert(`${weekDays[index]}! Would you like to see next day?`);
 //   index++;
@@ -211,43 +240,39 @@
 // const correctAnswer = prompt("Please choose random number between 0-100!");
 // const correctNumber = Number(correctAnswer);
 // const liarMessage = `You are a liar :c`;
-// let question = null;
-// let startNumber = 0;
-// let endNumber = 101;
-// let middleNumber = null;
-//
+
 // function numberFinder() {
-//   middleNumber = Math.floor((startNumber + endNumber) / 2);
-//   //--- When customer enter symbols
-//   if (isNaN(correctNumber))
+//   let question = null;
+//   let startNumber = 0;
+//   let endNumber = 101;
+//   const middleNumber = Math.floor((startNumber + endNumber) / 2);
+//   if (isNaN(correctNumber)) {
 //     return alert("Please enter the number without any letters and symbols");
-//   //--- When customer doesn't enter anything
-//   if (!correctAnswer) return alert("Please enter something");
-//   //--- When customer enter number NOT between 0-100
-//   if (correctNumber > 100 || correctNumber < 0)
+//   }
+//   if (!correctAnswer) {
+//     return alert("Please enter something");
+//   }
+//   if (correctNumber > 100 || correctNumber < 0) {
 //     return alert("No no no baby, it should be between 0-100!");
-//   //--- When customer enter number
+//   }
 //   if (correctNumber !== middleNumber) {
 //     question = prompt(
 //       `Is it greater than ${middleNumber}? (Y or N)`
 //     ).toLowerCase();
-//     //--- When customer answer YES and it us true
 //     if (question === "y" && correctNumber > middleNumber) {
 //       startNumber = middleNumber;
+
 //       return numberFinder();
-//       //--- When customer answer YES and it us false
 //     } else if (question === "y" && correctNumber < middleNumber) {
 //       return alert(liarMessage);
 //     }
-//     //--- When customer answer NO and it us true
 //     if (question === "n" && correctNumber < middleNumber) {
 //       endNumber = middleNumber;
+
 //       return numberFinder();
-//       //--- When customer answer NO and it us false
 //     } else if (question === "n" && correctNumber > middleNumber) {
 //       return alert(liarMessage);
 //     }
-//     //--- When customer number is the same as middleNumber
 //   } else {
 //     question = prompt(
 //       `Correct number is ${middleNumber}? (Y or N)`
@@ -259,7 +284,7 @@
 //     }
 //   }
 // }
-//
+
 // numberFinder();
 
 // 2.
@@ -267,7 +292,7 @@
 // const arrangedTable = digitSet.map((digit) => {
 //   return digitSet.map((multiplier) => digit * multiplier);
 // });
-//
+
 // console.table(arrangedTable);
 
 // 3.
