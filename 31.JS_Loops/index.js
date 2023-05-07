@@ -165,6 +165,7 @@
 // function discountCalculator(discount) {
 //   const purchaseWithDiscount =
 //     purchaseAmount - purchaseAmount * (discount / 100);
+
 //   return `You have discount of ${discount}%! Your check was ${purchaseAmount}$, now it is ${purchaseWithDiscount}$ `;
 // }
 
@@ -193,10 +194,13 @@
 //     promptValue = prompt(`Please enter random number No. ${i}`);
 //     number = Number(promptValue);
 //     if (isNaN(number)) {
+
 //       return alert("Please enter the number without any letters and symbols");
 //     } else if (!promptValue) {
+
 //       return alert("Ooops, you forgot to enter number. Start again :(");
 //     } else {
+
 //       array.push(number);
 //     }
 //   }
@@ -247,12 +251,15 @@
 //   let endNumber = 101;
 //   const middleNumber = Math.floor((startNumber + endNumber) / 2);
 //   if (isNaN(correctNumber)) {
+
 //     return alert("Please enter the number without any letters and symbols");
 //   }
 //   if (!correctAnswer) {
+
 //     return alert("Please enter something");
 //   }
 //   if (correctNumber > 100 || correctNumber < 0) {
+
 //     return alert("No no no baby, it should be between 0-100!");
 //   }
 //   if (correctNumber !== middleNumber) {
@@ -264,6 +271,7 @@
 
 //       return numberFinder();
 //     } else if (question === "y" && correctNumber < middleNumber) {
+
 //       return alert(liarMessage);
 //     }
 //     if (question === "n" && correctNumber < middleNumber) {
@@ -271,6 +279,7 @@
 
 //       return numberFinder();
 //     } else if (question === "n" && correctNumber > middleNumber) {
+
 //       return alert(liarMessage);
 //     }
 //   } else {
@@ -278,8 +287,10 @@
 //       `Correct number is ${middleNumber}? (Y or N)`
 //     ).toLowerCase();
 //     if (question === "y") {
+
 //       return alert("Hooray! I figured out your number :3");
 //     } else if (question === "n") {
+
 //       return alert(liarMessage);
 //     }
 //   }
