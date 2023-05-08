@@ -228,15 +228,19 @@
 //   "Saturday",
 //   "Sunday",
 // ];
-// let index = 0;
 
-// while (true) {
-//   alert(`${weekDays[index]}! Would you like to see next day?`);
+// let index = 0;
+// let question = null;
+
+// do {
+//   question = window.confirm(
+//     `${weekDays[index]}! Would you like to see next day?`
+//   );
 //   index++;
 //   if (index === weekDays.length) {
 //     index = 0;
 //   }
-// }
+// } while (question);
 
 // ----- III. Normal
 
