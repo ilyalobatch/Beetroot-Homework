@@ -22,3 +22,90 @@
 // --------- ANSWERS ---------
 
 // ----- I. Minimun
+
+const shopItem = (title, quantity, isPurchased, price = 1) => ({
+  title,
+  quantity,
+  isPurchased,
+  price,
+
+  get totalSum() {
+    return this.price * this.quantity;
+  },
+});
+
+const shopList = [
+  shopItem("milk", 2, true, 2.5),
+  shopItem("bread", 2, false, 1),
+  shopItem("chocolate", 4, false, 2),
+  shopItem("water", 3, true, 0.5),
+  shopItem("apple", 6, true, 0.25),
+];
+
+// Function used in other Tasks
+const findItem = (productName) => {
+  return shopList.find(({ title }) => title === productName);
+};
+
+// TASK No. 1
+const sortedListByPurchase = () => {
+  return shopList.sort((item) => (item.isPurchased ? 1 : -1));
+};
+
+// TASK No. 2
+const purchaseProduct = (productName) => {
+  const targetItem = findItem(productName);
+
+  if (!targetItem) {
+    return `There is no such product as ${productName} in your list`;
+  }
+
+  targetItem.isPurchased = true;
+
+  return `${productName} is purchased`;
+};
+
+// ----- II. Normal
+
+// TASK No. 1
+const deleteProduct = (productName) => {
+  const targetIndex = shopList.findIndex(({ title }) => title === productName);
+  shopList.splice(targetIndex, 1);
+
+  return `${productName} was removed from list`;
+};
+
+// TASK No. 2
+const addProduct = (productName) => {
+  const targetItem = findItem(productName);
+
+  if (!targetItem) {
+    shopList.push(shopItem(`${productName}`, 1, false));
+    return `${productName} was added to your list`;
+  }
+
+  targetItem.quantity += 1;
+
+  return `One more ${productName} is added to list`;
+};
+
+// ----- III. Maximum
+
+// TASK No. 1
+const totalListAmount = () => {
+  return shopList.reduce((acc, cur) => acc + cur.totalSum, 0);
+};
+
+// TASK No. 2
+const totalRemainingProductsAmount = () => {
+  const nonPurchasedItems = shopList.filter((item) => !item.isPurchased);
+
+  return nonPurchasedItems.reduce((acc, cur) => acc + cur.totalSum, 0);
+};
+
+// TASK No. 3
+const sortedListBySum = () => {
+  return shopList.sort((next, prev) => {
+    return prev.totalSum - next.totalSum;
+  });
+};
