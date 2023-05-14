@@ -44,15 +44,40 @@ const car = {
 
   // TASK No. 1
   generalInfo() {
-    console.table(this);
+    const {
+      manufacturer,
+      model,
+      year,
+      averageSpeed,
+      fuelTankCapacity,
+      fuelConsumption,
+      drivers,
+    } = car;
+    console.log(`Manufacturer - ${manufacturer}`);
+    console.log(`Model - ${model}`);
+    console.log(`Build year - ${year}`);
+    console.log(`Average speed - ${averageSpeed} km/h`);
+    console.log(`Fuel Tank Capacity - ${fuelTankCapacity} ltr`);
+    console.log(`Fuel Consumption per 100 km - ${fuelConsumption} ltr`);
+    console.log(
+      `All Drivers - ${
+        !drivers.length ? "Nobody used this before" : `${drivers}`
+      }`
+    );
+
+    return;
   },
 
   // TASK No. 2
   addNewDriver(driverName) {
     if (!driverName) {
       return `Please enter driver's name`;
+    } else if (this.drivers.includes(driverName)) {
+      return `This driver already in the list`;
     }
+
     this.drivers.push(driverName);
+
     return `${driverName} was added to list`;
   },
 
@@ -61,6 +86,7 @@ const car = {
     if (!driverName) {
       return `Please enter driver's name`;
     }
+
     return this.drivers.includes(driverName);
   },
 
@@ -77,6 +103,7 @@ const car = {
     if (this.fuelTankCapacity < totalTravellingFuel) {
       return `This trip will consume more fuel than your Fuel Tank Capacity`;
     }
+
     return `Your full travelling time will take ${
       totalTravellingTime + breakTime
     } hrs. Travelling by car will take ${totalTravellingTime} hrs and break will take ${breakTime} hrs. Total fuel consumed during this trip will be ${totalTravellingFuel} ltr`;
@@ -261,6 +288,7 @@ const fraction = {
       }
       index++;
     }
+
     return `${numerator}/${denominator}`;
   },
 };
