@@ -69,10 +69,18 @@ const purchaseProduct = (productName) => {
 
 // TASK No. 1
 const deleteProduct = (productName) => {
-  const targetIndex = shopList.findIndex(({ title }) => title === productName);
-  shopList.splice(targetIndex, 1);
+  // const targetIndex = shopList.findIndex(({ title }) => title === productName);
+  // if (targetIndex === -1) {
+  //   return `No such product in the list`;
+  // }
 
-  return `${productName} was removed from list`;
+  // shopList.splice(targetIndex, 1);
+
+  // return `${productName} was removed from list`;
+
+  const correctedList = shopList.filter(({ title }) => title !== productName);
+
+  return correctedList;
 };
 
 // TASK No. 2
