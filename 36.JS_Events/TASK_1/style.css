@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
+
+.text-display {
+  font-size: 30px;
+}
+
+.text-edit {
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
