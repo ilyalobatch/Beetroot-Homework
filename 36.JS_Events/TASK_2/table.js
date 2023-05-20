@@ -45,25 +45,11 @@ const newTableRow = (personSet) => {
 };
 
 const ascendSorting = (current, next) => {
-  if (current[sortingProperty] < next[sortingProperty]) {
-    return -1;
-  }
-  if (current[sortingProperty] > next[sortingProperty]) {
-    return 1;
-  }
-
-  return 0;
+  return current[sortingProperty] < next[sortingProperty] ? -1 : 1;
 };
 
 const descendSorting = (next, current) => {
-  if (current[sortingProperty] < next[sortingProperty]) {
-    return -1;
-  }
-  if (current[sortingProperty] > next[sortingProperty]) {
-    return 1;
-  }
-
-  return 0;
+  return current[sortingProperty] < next[sortingProperty] ? -1 : 1;
 };
 
 newHeadRow(personList[0]); //Creates Header Elements in Table

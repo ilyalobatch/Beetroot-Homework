@@ -2,7 +2,7 @@ const textContainerElement = document.querySelector(".text-container");
 const hintElement = document.querySelector(".text-hint");
 
 document.addEventListener("keydown", function (event) {
-  if (event.ctrlKey && event.key === "e") {
+  if (event.ctrlKey && event.key.toLowerCase() === "e") {
     event.preventDefault();
     const displayElement = document.querySelector(".text-display");
 
@@ -15,7 +15,7 @@ document.addEventListener("keydown", function (event) {
       hintElement.innerText = "Press Ctrl+S to save";
     }
   }
-  if (event.ctrlKey && event.key === "s") {
+  if (event.ctrlKey && event.key.toLowerCase() === "s") {
     event.preventDefault();
     const editElement = document.querySelector(".text-edit");
 
