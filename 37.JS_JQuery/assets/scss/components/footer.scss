@@ -1,0 +1,65 @@
+.onwave {
+  &-footer {
+    padding: 70px 0 20px;
+    background-color: var(--brown-dark);
+
+    &-logo {
+      grid-area: logo;
+      margin-bottom: 35px;
+    }
+
+    &-menu {
+      grid-area: menu;
+    }
+
+    &-contact {
+      grid-area: contact;
+    }
+
+    &-content {
+      display: grid;
+      grid-template-areas:
+        "logo logo logo logo contact"
+        "menu menu menu menu contact"
+        "menu menu menu menu contact";
+    }
+
+    &-menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &-media-list {
+      display: flex;
+      gap: 35px;
+      margin: 50px 0 35px;
+    }
+
+    &-media-icon {
+      cursor: pointer;
+
+      & svg path {
+        transition: 0.25s;
+      }
+
+      &:hover {
+        &:nth-of-type(1) svg path,
+        &:nth-of-type(2) svg path,
+        &:nth-of-type(3) svg path {
+          fill: var(--tomato-light);
+        }
+
+        &:nth-of-type(4) svg path,
+        &:nth-of-type(5) svg path {
+          stroke: var(--tomato-light);
+        }
+      }
+    }
+
+    &-copyright {
+      margin-top: 50px;
+      text-align: center;
+    }
+  }
+}

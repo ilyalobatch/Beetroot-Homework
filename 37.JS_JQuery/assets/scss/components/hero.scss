@@ -1,0 +1,53 @@
+.onwave {
+  &-hero {
+    position: relative;
+
+    &-content {
+      position: absolute;
+      right: 0;
+      text-align: center;
+      z-index: 2;
+    }
+
+    &-content-title {
+      margin: 120px 0 50px;
+    }
+
+    &-image {
+      position: relative;
+      width: 100%;
+      z-index: 1;
+
+      &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--image-gradient);
+      }
+    }
+
+    &-image img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.onwave-hero-swiper .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.onwave-hero-swiper .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background-color: var(--dot-inactive);
+}
+
+.onwave-hero-swiper .swiper-pagination-bullet-active {
+  background-color: var(--tomato-light);
+}
