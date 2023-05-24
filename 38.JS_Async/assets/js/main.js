@@ -1,34 +1,27 @@
 const API_KEY = "7a4aabbe";
 const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}`;
 
+const searchForm = document.querySelector(".search-form");
+const paginationContainer = document.querySelector(".pagination-container");
+const searchResultsContainer = document.querySelector(".search-results");
+const detailsContainer = document.querySelector(".details-container");
+
 const fetchData = async (query, type, page = 1) => {
-  return await fetch(`${API_URL}&s=${query}&type=${type}&page=${page}`).then(
-    (response) => response.json()
+  const response = await fetch(
+    `${API_URL}&s=${query}&type=${type}&page=${page}`
   );
+
+  return response.json();
 };
 
 const fetchDetails = async (id) => {
-  return await fetch(`${API_URL}&i=${id}`).then((response) => response.json());
+  const response = await fetch(`${API_URL}&i=${id}`);
+
+  return response.json();
 };
 
-const getSearchForm = () => {
-  return document.querySelector(".search-form");
-};
-
-const getPaginationContainer = () => {
-  return document.querySelector(".pagination-container");
-};
-
-const getSearchResultsContainer = () => {
-  return document.querySelector(".search-results");
-};
-
-const getDetailsContainer = () => {
-  return document.querySelector(".details-container");
-};
-
-const getFormValues = (formEl) => {
-  const formData = new FormData(formEl);
+const getFormValues = () => {
+  const formData = new FormData(searchForm);
 
   return {
     title: formData.get("title"),
@@ -36,16 +29,7 @@ const getFormValues = (formEl) => {
   };
 };
 
-const getSearchProps = () => {
-  const formValues = getFormValues(getSearchForm());
-
-  return {
-    query: formValues.title,
-    type: formValues.type,
-  };
-};
-
-const createElementWithProp = (tagName, propNames, propValues) => {
+const createElementWithProps = (tagName, propNames, propValues) => {
   const element = document.createElement(tagName);
 
   propNames.forEach((property, index) => {
@@ -55,7 +39,7 @@ const createElementWithProp = (tagName, propNames, propValues) => {
   return element;
 };
 
-const searchResultItem = (itemData) => {
+const renderSearchItem = (itemData) => {
   const item = document.createElement("div");
   item.classList.add("search-results-item");
 
@@ -63,18 +47,18 @@ const searchResultItem = (itemData) => {
     return item;
   }
 
-  const image = createElementWithProp("img", ["src"], [itemData?.Poster]);
-  const title = createElementWithProp("h3", ["innerText"], [itemData?.Title]);
+  const image = createElementWithProps("img", ["src"], [itemData?.Poster]);
+  const title = createElementWithProps("h3", ["innerText"], [itemData?.Title]);
 
-  const itemMeta = createElementWithProp(
+  const itemMeta = createElementWithProps(
     "div",
     ["className"],
     ["search-results-item__meta"]
   );
 
-  const type = createElementWithProp("span", ["innerText"], [itemData?.Type]);
-  const year = createElementWithProp("span", ["innerText"], [itemData?.Year]);
-  const details = createElementWithProp(
+  const type = createElementWithProps("span", ["innerText"], [itemData?.Type]);
+  const year = createElementWithProps("span", ["innerText"], [itemData?.Year]);
+  const details = createElementWithProps(
     "button",
     ["innerText", "type"],
     ["Details", "button"]
@@ -83,9 +67,9 @@ const searchResultItem = (itemData) => {
     fetchAndLoadDetails(itemData?.imdbID)
   );
 
-  itemMeta.append(...[type, year, details]);
+  itemMeta.append(type, year, details);
 
-  item.append(...[image, title, itemMeta]);
+  item.append(image, title, itemMeta);
 
   return item;
 };
@@ -96,21 +80,21 @@ const prepareSearchResults = (data) => {
   return {
     searchResultElements: error
       ? []
-      : Search.map((dataItem) => searchResultItem(dataItem)),
+      : Search.map((dataItem) => renderSearchItem(dataItem)),
     totalResults,
     error,
   };
 };
 
 const paginationBtn = (page) => {
-  const searchProps = getSearchProps();
-  const paginationBtn = document.createElement("button");
+  const paginationBtn = createElementWithProps("button", ["type"], ["button"]);
 
   paginationBtn.innerText = page;
 
-  paginationBtn.addEventListener("click", () =>
-    fetchAndLoadData(searchProps.query, searchProps.type, page)
-  );
+  paginationBtn.addEventListener("click", async () => {
+    const searchProps = getFormValues();
+    await fetchAndLoadData(searchProps.title, searchProps.type, page);
+  });
 
   return paginationBtn;
 };
@@ -119,7 +103,6 @@ const preparePagination = (totalResults) => {
   const availablePagesCount = Math.ceil(totalResults / 10);
   const availablePages = [...Array(availablePagesCount + 1).keys()].slice(1);
 
-  const paginationContainer = getPaginationContainer();
   const paginationItems = availablePages.map((page) => paginationBtn(page));
 
   paginationContainer.innerHTML = "";
@@ -127,35 +110,31 @@ const preparePagination = (totalResults) => {
 };
 
 const fetchAndLoadData = async (query, type, page) => {
-  const searchResultsContainer = getSearchResultsContainer();
-  const detailsContainer = getDetailsContainer();
+  if (!searchResultsContainer) {
+    return;
+  }
 
   searchResultsContainer.innerHTML = "";
   detailsContainer.innerHTML = "";
 
-  const paginationContainer = getPaginationContainer();
+  if (page < 2) {
+    paginationContainer.innerHTML = "";
+  }
 
   const data = await fetchData(query, type, page);
   const { searchResultElements, totalResults, error } =
     prepareSearchResults(data);
 
-  if (!searchResultsContainer) {
-    return;
-  }
-
-  if (error) {
-    searchResultsContainer.innerHTML = error;
-    paginationContainer.innerHTML = "";
-  } else {
-    searchResultsContainer.innerHTML = "";
+  if (!error && searchResultElements.length) {
     searchResultsContainer.append(...searchResultElements);
     preparePagination(totalResults);
+  } else {
+    paginationContainer.innerHTML = "";
   }
 };
 
 const fetchAndLoadDetails = async (id) => {
   const data = await fetchDetails(id);
-  const detailsContainer = getDetailsContainer();
 
   detailsContainer.innerHTML = "";
 
@@ -169,14 +148,14 @@ const fetchAndLoadDetails = async (id) => {
       }
 
       const tableRow = document.createElement("tr");
-      const property = createElementWithProp("td", ["innerText"], [prop]);
-      const propDescription = createElementWithProp(
+      const property = createElementWithProps("td", ["innerText"], [prop]);
+      const propDescription = createElementWithProps(
         "td",
         ["innerText"],
         [dataValues[index]]
       );
 
-      tableRow.append(...[property, propDescription]);
+      tableRow.append(property, propDescription);
 
       return tableRow;
     });
@@ -192,10 +171,10 @@ const fetchAndLoadDetails = async (id) => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const searchForm = getSearchForm();
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  searchForm.addEventListener("submit", () => {
-    const searchProps = getSearchProps(searchForm);
-    fetchAndLoadData(searchProps.query, searchProps.type, 1);
+    const searchProps = getFormValues();
+    fetchAndLoadData(searchProps.title, searchProps.type, 1);
   });
 });
