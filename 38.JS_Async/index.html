@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OMDB Movie Search</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <form class="search-form">
+        <fieldset>
+            <legend>Search</legend>
+
+            <label for="title">By title:</label>
+            <input type="text" id="title" name="title">
+
+            <label for="type">By type:</label>
+            <select id="type" name="type">
+                <option value="" selected="">All</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+            </select>
+            <button type="submit">Search</button>
+        </fieldset>
+        <div class="search-results-wrapper">
+            <div class="pagination-container"></div>
+            <div class="search-results"></div>
+            <div class="details-container"></div>
+        </div>
+    </form>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
