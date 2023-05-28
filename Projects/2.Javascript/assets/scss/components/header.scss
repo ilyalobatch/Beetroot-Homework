@@ -1,0 +1,86 @@
+.monticello {
+  &-header {
+    position: relative;
+    background: linear-gradient(251.06deg, #7e5aff -2.19%, #55b7ff 103.21%);
+
+    &-container {
+      padding: 50px var(--container-bg);
+
+      @include maxbreakpoint($desktop-laptop) {
+        padding: 50px var(--container-sm);
+      }
+    }
+
+    &-bg-image {
+      background-image: url(../assets/imgs/hero-bg.png);
+    }
+
+    &-navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 230px;
+    }
+
+    &-menu {
+      display: flex;
+      gap: 70px;
+    }
+
+    &-menu-item:hover .monticello-header-menu-item-dot {
+      background-color: var(--color_white);
+    }
+
+    &-menu-item-dot {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      margin-right: 14px;
+      border: 1px solid var(--color_white);
+      border-radius: 50%;
+      transition: 0.15s;
+
+      &--active {
+        background-color: var(--color_white);
+      }
+    }
+
+    &-content {
+      text-align: center;
+    }
+
+    &-title {
+      margin-bottom: 20px;
+    }
+
+    &-button {
+      margin-top: 200px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    &-swiper-container .swiper-pagination {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 0 0 350px 700px;
+      transform: rotate(90deg);
+
+      @include maxbreakpoint($desktop-laptop) {
+        margin: 0 0 350px 570px;
+      }
+    }
+
+    &-swiper-container .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border: 1px solid var(--color_white);
+      opacity: 1;
+      background: none;
+    }
+
+    &-swiper-container .swiper-pagination-bullet-active {
+      background-color: var(--color_white);
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.monticello {
+  &-portfolio {
+    padding: 100px 0 150px;
+
+    &-title {
+      position: relative;
+      text-align: center;
+      padding: 30px 0 150px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 100px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color_dark-blue);
+      }
+    }
+
+    &-project {
+      display: flex;
+      gap: 60px;
+
+      &:last-child {
+        flex-direction: row-reverse;
+        margin-top: 177px;
+      }
+
+      &:nth-of-type(1) .monticello-portfolio-project-imagebox:before {
+        left: calc(0px - var(--container-bg));
+        background-color: var(--color_blue);
+
+        @include maxbreakpoint($desktop-laptop) {
+          left: calc(0px - var(--container-sm));
+        }
+      }
+
+      &:nth-of-type(2) .monticello-portfolio-project-imagebox:before {
+        right: calc(0px - var(--container-bg));
+        background-color: var(--color_purple);
+
+        @include maxbreakpoint($desktop-laptop) {
+          right: calc(0px - var(--container-sm));
+        }
+      }
+    }
+
+    &-project-imagebox {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: -57px;
+        z-index: -1;
+      }
+    }
+
+    &-project-contentbox {
+      padding-top: 80px;
+    }
+
+    &-project-title {
+      margin-bottom: 20px;
+    }
+
+    &-project-text {
+      margin-bottom: 40px;
+    }
+
+    &-project-button {
+      padding: 16px 41px;
+      margin-bottom: 60px;
+    }
+  }
+}

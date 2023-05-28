@@ -1,0 +1,80 @@
+.monticello {
+  &-gallery {
+    padding: 150px 0;
+    text-align: center;
+
+    &-title {
+      position: relative;
+      text-align: center;
+      padding: 30px 0 90px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 100px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color_dark-blue);
+      }
+    }
+
+    &-imagebox {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 60px;
+    }
+
+    &-image {
+      position: relative;
+      background-color: var(--color_black);
+    }
+
+    &-image {
+      &:before {
+        transition: 0.3s;
+      }
+
+      & img {
+        transition: 0.3s;
+      }
+    }
+
+    &-image:hover {
+      &:before {
+        position: absolute;
+        content: url(../assets/imgs/icons/zoom.svg);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.7;
+        z-index: 1;
+        cursor: pointer;
+      }
+      & img {
+        opacity: 0.7;
+      }
+    }
+
+    &-image-bg img {
+      width: 580px;
+      height: 438px;
+    }
+
+    &-image-sm img {
+      width: 285px;
+      height: 214px;
+    }
+
+    &-image-sm {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    &-button {
+      padding: 16px 57px;
+    }
+  }
+}

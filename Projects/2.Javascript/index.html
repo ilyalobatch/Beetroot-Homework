@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital@0;1&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="./assets/imgs/icons/favicon.ico">
+  <link rel="stylesheet" href="./build/index.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script type="module" src="./assets/js/mapInit.js"></script>
+
+  <title>Monticello</title>
+</head>
+
+<body>
+  <header class="monticello-header">
+    <div class="monticello-header-bg-image">
+      <div class="monticello-header-container">
+        <nav class="monticello-header-navigation">
+          <span>
+            <img src="./assets/imgs/logo.png" alt="logo" />
+          </span>
+          <ul class="monticello-header-menu">
+            <li class="monticello-header-menu-item monticello-header-menu-item--active">
+              <a href="#" class="monticello-menu-text">
+                <span class="monticello-header-menu-item-dot monticello-header-menu-item-dot--active"></span>
+                ABOUT US
+              </a>
+            </li>
+            <li class="monticello-header-menu-item">
+              <a href="#projects" class="monticello-menu-text">
+                <span class="monticello-header-menu-item-dot"></span>
+                PROJECTS
+              </a>
+            </li>
+            <li class="monticello-header-menu-item">
+              <a href="#news" class="monticello-menu-text">
+                <span class="monticello-header-menu-item-dot"></span>
+                NEWS
+              </a>
+            </li>
+            <li class="monticello-header-menu-item">
+              <a href="#contact" class="monticello-menu-text">
+                <span class="monticello-header-menu-item-dot"></span>
+                CONTACT
+              </a>
+            </li>
+          </ul>
+          <ul class="monticello-media-list">
+            <li class="monticello-media-list-item">
+              <a href="https://www.facebook.com/">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23.7188 21H21.375V28H18.25V21H15.7188V18.0938H18.25V15.9062C18.25 15.0729 18.4062 14.3646 18.7188 13.7812C19.0312 13.1979 19.4688 12.7604 20.0312 12.4688C20.6146 12.1562 21.2812 12 22.0312 12C22.3646 12 22.7188 12.0208 23.0938 12.0625C23.4688 12.0833 23.7604 12.1146 23.9688 12.1562L24.2812 12.1875V14.6562H23.0312C22.4479 14.6562 22.0208 14.8125 21.75 15.125C21.5 15.4167 21.375 15.7812 21.375 16.2188V18.0938H24.1562L23.7188 21Z"
+                    fill="white" />
+                  <circle opacity="0.4" cx="20" cy="20" r="19.5" stroke="white" />
+                </svg>
+              </a>
+            </li>
+            <li class="monticello-media-list-item">
+              <a href="https://www.twitter.com/">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M26.3438 16.75C26.3646 16.8333 26.375 16.9688 26.375 17.1562C26.375 18.2604 26.1667 19.3646 25.75 20.4688C25.3333 21.5521 24.7396 22.5521 23.9688 23.4688C23.2188 24.3646 22.2396 25.0938 21.0312 25.6562C19.8229 26.2188 18.4896 26.5 17.0312 26.5C15.1979 26.5 13.5208 26.0104 12 25.0312C12.2292 25.0521 12.4896 25.0625 12.7812 25.0625C14.3021 25.0625 15.6667 24.5938 16.875 23.6562C16.1458 23.6562 15.5 23.4479 14.9375 23.0312C14.3958 22.5938 14.0208 22.0521 13.8125 21.4062C14.0208 21.4271 14.2188 21.4375 14.4062 21.4375C14.6979 21.4375 14.9896 21.4062 15.2812 21.3438C14.7812 21.2396 14.3333 21.0312 13.9375 20.7188C13.5417 20.4062 13.2292 20.0312 13 19.5938C12.7708 19.1354 12.6562 18.6458 12.6562 18.125V18.0625C13.1146 18.3333 13.6042 18.4792 14.125 18.5C13.1458 17.8333 12.6562 16.9167 12.6562 15.75C12.6562 15.1667 12.8125 14.6146 13.125 14.0938C13.9375 15.1146 14.9271 15.9271 16.0938 16.5312C17.2812 17.1354 18.5417 17.4688 19.875 17.5312C19.8333 17.2812 19.8125 17.0312 19.8125 16.7812C19.8125 15.8854 20.125 15.1146 20.75 14.4688C21.3958 13.8229 22.1667 13.5 23.0625 13.5C24.0208 13.5 24.8229 13.8438 25.4688 14.5312C26.2188 14.3854 26.9167 14.125 27.5625 13.75C27.3125 14.5208 26.8333 15.125 26.125 15.5625C26.75 15.4792 27.375 15.3021 28 15.0312C27.5417 15.6979 26.9896 16.2708 26.3438 16.75Z"
+                    fill="white" />
+                  <circle opacity="0.4" cx="20" cy="20" r="19.5" stroke="white" />
+                </svg>
+              </a>
+            </li>
+            <li class="monticello-media-list-item">
+              <a href="https://www.instagram.com/">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.4688 17.4688C18.1771 16.7604 19.0312 16.4062 20.0312 16.4062C21.0312 16.4062 21.875 16.7604 22.5625 17.4688C23.2708 18.1562 23.625 19 23.625 20C23.625 21 23.2708 21.8542 22.5625 22.5625C21.875 23.25 21.0312 23.5938 20.0312 23.5938C19.0312 23.5938 18.1771 23.25 17.4688 22.5625C16.7812 21.8542 16.4375 21 16.4375 20C16.4375 19 16.7812 18.1562 17.4688 17.4688ZM18.375 21.6562C18.8333 22.1146 19.3854 22.3438 20.0312 22.3438C20.6771 22.3438 21.2292 22.1146 21.6875 21.6562C22.1458 21.1979 22.375 20.6458 22.375 20C22.375 19.3542 22.1458 18.8021 21.6875 18.3438C21.2292 17.8854 20.6771 17.6562 20.0312 17.6562C19.3854 17.6562 18.8333 17.8854 18.375 18.3438C17.9167 18.8021 17.6875 19.3542 17.6875 20C17.6875 20.6458 17.9167 21.1979 18.375 21.6562ZM24.3438 15.6875C24.5104 15.8333 24.5938 16.0208 24.5938 16.25C24.5938 16.4792 24.5104 16.6771 24.3438 16.8438C24.1979 17.0104 24.0104 17.0938 23.7812 17.0938C23.5521 17.0938 23.3542 17.0104 23.1875 16.8438C23.0208 16.6771 22.9375 16.4792 22.9375 16.25C22.9375 16.0208 23.0208 15.8333 23.1875 15.6875C23.3542 15.5208 23.5521 15.4375 23.7812 15.4375C24.0104 15.4375 24.1979 15.5208 24.3438 15.6875ZM27 17.125C27.0208 17.6875 27.0312 18.6458 27.0312 20C27.0312 21.3542 27.0208 22.3125 27 22.875C26.9375 24.1458 26.5521 25.1354 25.8438 25.8438C25.1562 26.5312 24.1771 26.8958 22.9062 26.9375C22.3438 26.9792 21.3854 27 20.0312 27C18.6771 27 17.7188 26.9792 17.1562 26.9375C15.8854 26.875 14.9062 26.5 14.2188 25.8125C13.9479 25.5625 13.7292 25.2708 13.5625 24.9375C13.3958 24.6042 13.2708 24.2812 13.1875 23.9688C13.125 23.6562 13.0938 23.2917 13.0938 22.875C13.0521 22.3125 13.0312 21.3542 13.0312 20C13.0312 18.6458 13.0521 17.6771 13.0938 17.0938C13.1562 15.8438 13.5312 14.875 14.2188 14.1875C14.9062 13.4792 15.8854 13.0938 17.1562 13.0312C17.7188 13.0104 18.6771 13 20.0312 13C21.3854 13 22.3438 13.0104 22.9062 13.0312C24.1771 13.0938 25.1562 13.4792 25.8438 14.1875C26.5521 14.875 26.9375 15.8542 27 17.125ZM25.5 24.125C25.5625 23.9583 25.6146 23.75 25.6562 23.5C25.6979 23.2292 25.7292 22.9167 25.75 22.5625C25.7708 22.1875 25.7812 21.8854 25.7812 21.6562C25.7812 21.4271 25.7812 21.1042 25.7812 20.6875C25.7812 20.2708 25.7812 20.0417 25.7812 20C25.7812 19.9375 25.7812 19.7083 25.7812 19.3125C25.7812 18.8958 25.7812 18.5729 25.7812 18.3438C25.7812 18.1146 25.7708 17.8229 25.75 17.4688C25.7292 17.0938 25.6979 16.7812 25.6562 16.5312C25.6146 16.2604 25.5625 16.0417 25.5 15.875C25.25 15.2292 24.8021 14.7812 24.1562 14.5312C23.9896 14.4688 23.7708 14.4167 23.5 14.375C23.25 14.3333 22.9375 14.3021 22.5625 14.2812C22.2083 14.2604 21.9167 14.25 21.6875 14.25C21.4792 14.25 21.1562 14.25 20.7188 14.25C20.3021 14.25 20.0729 14.25 20.0312 14.25C19.9896 14.25 19.7604 14.25 19.3438 14.25C18.9271 14.25 18.6042 14.25 18.375 14.25C18.1458 14.25 17.8438 14.2604 17.4688 14.2812C17.1146 14.3021 16.8021 14.3333 16.5312 14.375C16.2812 14.4167 16.0729 14.4688 15.9062 14.5312C15.2604 14.7812 14.8125 15.2292 14.5625 15.875C14.5 16.0417 14.4479 16.2604 14.4062 16.5312C14.3646 16.7812 14.3333 17.0938 14.3125 17.4688C14.2917 17.8229 14.2812 18.1146 14.2812 18.3438C14.2812 18.5521 14.2812 18.875 14.2812 19.3125C14.2812 19.7292 14.2812 19.9583 14.2812 20C14.2812 20.0833 14.2812 20.2812 14.2812 20.5938C14.2812 20.8854 14.2812 21.1354 14.2812 21.3438C14.2812 21.5312 14.2812 21.7812 14.2812 22.0938C14.3021 22.4062 14.3229 22.6771 14.3438 22.9062C14.3646 23.1146 14.3958 23.3333 14.4375 23.5625C14.4792 23.7917 14.5208 23.9792 14.5625 24.125C14.8333 24.7708 15.2812 25.2188 15.9062 25.4688C16.0729 25.5312 16.2812 25.5833 16.5312 25.625C16.8021 25.6667 17.1146 25.6979 17.4688 25.7188C17.8438 25.7396 18.1354 25.75 18.3438 25.75C18.5729 25.75 18.8958 25.75 19.3125 25.75C19.75 25.75 19.9896 25.75 20.0312 25.75C20.0938 25.75 20.3229 25.75 20.7188 25.75C21.1354 25.75 21.4583 25.75 21.6875 25.75C21.9167 25.75 22.2083 25.7396 22.5625 25.7188C22.9375 25.6979 23.25 25.6667 23.5 25.625C23.7708 25.5833 23.9896 25.5312 24.1562 25.4688C24.8021 25.1979 25.25 24.75 25.5 24.125Z"
+                    fill="white" />
+                  <circle opacity="0.4" cx="20" cy="20" r="19.5" stroke="white" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="monticello-header-swiper-container">
+          <div class="monticello-header-swiper swiper">
+            <div class="monticello-header-content swiper-wrapper">
+              <div class="monticello-header-slide swiper-slide">
+                <h1 class="monticello-header-title monticello-hero-title"></h1>
+                <p class="monticello-header-text monticello-hero-text"></p>
+              </div>
+            </div>
+          </div>
+          <div class="monticello-header-swiper-pagination swiper-pagination"></div>
+        </div>
+
+        <div class="monticello-header-button">
+          <svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24.9048 19.111C24.9606 19.1669 24.9885 19.231 24.9885 19.3036C24.9885 19.3761 24.9606 19.4403 24.9048 19.4961L21.0041 23.3968C20.9483 23.4526 20.8841 23.4805 20.8116 23.4805C20.7391 23.4805 20.6749 23.4526 20.6191 23.3968L16.7184 19.4961C16.6626 19.4403 16.6347 19.3761 16.6347 19.3036C16.6347 19.231 16.6626 19.1669 16.7184 19.111L17.1369 18.6925C17.1927 18.6367 17.2569 18.6088 17.3295 18.6088C17.402 18.6088 17.4662 18.6367 17.522 18.6925L20.8116 21.9821L24.1012 18.6925C24.157 18.6367 24.2212 18.6088 24.2937 18.6088C24.3663 18.6088 24.4305 18.6367 24.4863 18.6925L24.9048 19.111Z"
+              fill="white" />
+            <path opacity="0.7"
+              d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z"
+              stroke="white" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="monticello-portfolio" id="projects">
+    <div class="monticello-container">
+      <h2 class="monticello-portfolio-title monticello-subtitle">
+        WHAT WE DO
+      </h2>
+      <div class="monticello-portfolio-wrapper">
+        <div class="monticello-portfolio-project">
+          <div class="monticello-portfolio-project-imagebox">
+            <img src="./assets/imgs/trade-center.jpg" alt="trade-center" />
+          </div>
+          <div class="monticello-portfolio-project-contentbox">
+            <p class="monticello-portfolio-subheader">ONE WORLD</p>
+            <h3 class="monticello-portfolio-project-title monticello-subtitle">
+              TRADE CENTER
+            </h3>
+            <p class="monticello-portfolio-project-text monticello-text">
+              Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is,
+              our thoughts are very powerful.
+            </p>
+            <button class="monticello-portfolio-project-button monticello-button-text monticello-button">
+              MORE DETAILS
+            </button>
+            <p class="monticello-text-italic">
+              <svg viewBox="0 0 500 1000" fill="#000" height="15px" width="15px">
+                <path
+                  d="M250 100c69.333 0 128.333 24.333 177 73s73 107.667 73 177c0 70.667-20.667 151.667-62 243s-83.333 165.667-126 223l-62 84c-6.667-8-15.667-19.667-27-35-11.333-15.333-31.333-45-60-89s-54-87.333-76-130-42-91.667-60-147S0 394 0 350c0-69.333 24.333-128.333 73-177s107.667-73 177-73m0 388c37.333 0 69.333-13.333 96-40s40-58.667 40-96-13.333-69-40-95-58.667-39-96-39-69 13-95 39-39 57.667-39 95 13 69.333 39 96 57.667 40 95 40">
+                </path>
+              </svg>
+              <span>
+                New York City, United States - 1776 feet
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="monticello-portfolio-project">
+          <div class="monticello-portfolio-project-imagebox">
+            <img src="./assets/imgs/commerce-center.jpg" alt="trade-center" />
+          </div>
+          <div class="monticello-portfolio-project-contentbox">
+            <p class="monticello-portfolio-subheader">INTERNATIONAL</p>
+            <h3 class="monticello-portfolio-project-title monticello-subtitle">
+              COMMERCE CENTRE
+            </h3>
+            <p class="monticello-portfolio-project-text monticello-text">
+              Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a
+              digital advertising network may help.
+            </p>
+            <button class="monticello-portfolio-project-button monticello-button monticello-button-text">
+              MORE DETAILS
+            </button>
+            <p class="monticello-text-italic">
+              <svg viewBox="0 0 500 1000" fill="#000" height="15px" width="15px">
+                <path
+                  d="M250 100c69.333 0 128.333 24.333 177 73s73 107.667 73 177c0 70.667-20.667 151.667-62 243s-83.333 165.667-126 223l-62 84c-6.667-8-15.667-19.667-27-35-11.333-15.333-31.333-45-60-89s-54-87.333-76-130-42-91.667-60-147S0 394 0 350c0-69.333 24.333-128.333 73-177s107.667-73 177-73m0 388c37.333 0 69.333-13.333 96-40s40-58.667 40-96-13.333-69-40-95-58.667-39-96-39-69 13-95 39-39 57.667-39 95 13 69.333 39 96 57.667 40 95 40">
+                </path>
+              </svg>
+              <span>
+                Hong Kong - 1588 feet
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="monticello-news" id="news">
+    <div class="monticello-news-bg-image monticello-bg">
+      <div class="monticello-news-container">
+        <h2 class="monticello-news-title monticello-subtitle">
+          LATEST NEWS
+        </h2>
+        <div class="monticello-news-swiper-container">
+          <div class="monticello-news-swiper swiper">
+            <div class="monticello-news-wrapper swiper-wrapper">
+              <div class="monticello-news-card swiper-slide">
+                <div class="monticello-news-card-imagebox">
+                  <img src="" alt="" />
+                </div>
+                <div class="monticello-news-card-contentbox">
+                  <h4 class="monticello-news-card-title monticello-news-header"></h4>
+                  <p class="monticello-news-card-text monticello-text"></p>
+                  <div class="monticello-news-card-author">
+                    <div class="monticello-news-card-author-imagebox">
+                      <img src="" alt="" />
+                    </div>
+                    <span>
+                      <p class="monticello-news-card-author-name monticello-author-name-text"></p>
+                      <p class="monticello-news-card-author-date monticello-author-date-text"></p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev">
+            <svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24.9048 19.111C24.9606 19.1669 24.9885 19.231 24.9885 19.3036C24.9885 19.3761 24.9606 19.4403 24.9048 19.4961L21.0041 23.3968C20.9483 23.4526 20.8841 23.4805 20.8116 23.4805C20.7391 23.4805 20.6749 23.4526 20.6191 23.3968L16.7184 19.4961C16.6626 19.4403 16.6347 19.3761 16.6347 19.3036C16.6347 19.231 16.6626 19.1669 16.7184 19.111L17.1369 18.6925C17.1927 18.6367 17.2569 18.6088 17.3295 18.6088C17.402 18.6088 17.4662 18.6367 17.522 18.6925L20.8116 21.9821L24.1012 18.6925C24.157 18.6367 24.2212 18.6088 24.2937 18.6088C24.3663 18.6088 24.4305 18.6367 24.4863 18.6925L24.9048 19.111Z"
+                fill="white" />
+              <path opacity="0.7"
+                d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z"
+                stroke="white" />
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24.9048 19.111C24.9606 19.1669 24.9885 19.231 24.9885 19.3036C24.9885 19.3761 24.9606 19.4403 24.9048 19.4961L21.0041 23.3968C20.9483 23.4526 20.8841 23.4805 20.8116 23.4805C20.7391 23.4805 20.6749 23.4526 20.6191 23.3968L16.7184 19.4961C16.6626 19.4403 16.6347 19.3761 16.6347 19.3036C16.6347 19.231 16.6626 19.1669 16.7184 19.111L17.1369 18.6925C17.1927 18.6367 17.2569 18.6088 17.3295 18.6088C17.402 18.6088 17.4662 18.6367 17.522 18.6925L20.8116 21.9821L24.1012 18.6925C24.157 18.6367 24.2212 18.6088 24.2937 18.6088C24.3663 18.6088 24.4305 18.6367 24.4863 18.6925L24.9048 19.111Z"
+                fill="white" />
+              <path opacity="0.7"
+                d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z"
+                stroke="white" />
+            </svg>
+          </div>
+          <div class="monticello-news-swiper-pagination swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="monticello-gallery">
+    <div class="monticello-container">
+      <h2 class="monticello-gallery-title monticello-subtitle">
+        GALLERY
+      </h2>
+      <div class="monticello-gallery-imagebox">
+        <div class="monticello-gallery-image-bg monticello-gallery-image">
+          <img src="./assets/imgs/gallery-1.png" />
+        </div>
+        <div class="monticello-gallery-image-sm">
+          <div class="monticello-gallery-image">
+            <img src="./assets/imgs/gallery-2.png" />
+          </div>
+          <div class="monticello-gallery-image">
+            <img src="./assets/imgs/gallery-3.png" />
+          </div>
+          <div class="monticello-gallery-image">
+            <img src="./assets/imgs/gallery-4.png" />
+          </div>
+          <div class="monticello-gallery-image">
+            <img src="./assets/imgs/gallery-5.jpg" />
+          </div>
+        </div>
+      </div>
+      <button class="monticello-gallery-button monticello-button monticello-button-text">
+        SEE MORE
+      </button>
+    </div>
+  </section>
+
+  <section class="monticello-contact" id="contact">
+    <div id="map"></div>
+  </section>
+
+  <footer class="monticello-footer">
+    <div class="monticello-footer-bg-image monticello-bg">
+      <div class="monticello-footer-container monticello-container">
+        <div class="monticello-footer-contactbox monticello-footer-contactbox-bg-image monticello-bg">
+          <h2 class="monticello-footer-contactbox-title monticello-subtitle">
+            GET IN TOUCH
+          </h2>
+          <div class="monticello-footer-contactbox-wrapper">
+            <ul class="monticello-footer-contactbox-info-list">
+              <li class="monticello-footer-contactbox-info-item monticello-text">
+                <svg viewBox="0 0 500 1000" fill="#7e5aff" height="15px" width="15px">
+                  <path
+                    d="M250 100c69.333 0 128.333 24.333 177 73s73 107.667 73 177c0 70.667-20.667 151.667-62 243s-83.333 165.667-126 223l-62 84c-6.667-8-15.667-19.667-27-35-11.333-15.333-31.333-45-60-89s-54-87.333-76-130-42-91.667-60-147S0 394 0 350c0-69.333 24.333-128.333 73-177s107.667-73 177-73m0 388c37.333 0 69.333-13.333 96-40s40-58.667 40-96-13.333-69-40-95-58.667-39-96-39-69 13-95 39-39 57.667-39 95 13 69.333 39 96 57.667 40 95 40">
+                  </path>
+                </svg>
+                <span>
+                  91 Nolan Extensions Suite 670
+                </span>
+              </li>
+              <li class="monticello-footer-contactbox-info-item monticello-text">
+                <svg fill="#7e5aff" viewBox="0 0 16 16" height="15px" width="15px">
+                  <path fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 012.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 00.178.643l2.457 2.457a.678.678 0 00.644.178l2.189-.547a1.745 1.745 0 011.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 01-7.01-4.42 18.634 18.634 0 01-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z">
+                  </path>
+                </svg>
+                <span>
+                  +001 356-868-2454
+                </span>
+              </li>
+              <li class="monticello-footer-contactbox-info-item monticello-text">
+                <svg viewBox="0 0 24 24" fill="#7e5aff" height="15px" width="15px">
+                  <path
+                    d="M20 8l-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2z">
+                  </path>
+                </svg>
+                <span>
+                  montichello@service.com
+                </span>
+              </li>
+              <li class="monticello-footer-contactbox-info-item monticello-text">
+                <svg viewBox="0 0 24 24" fill="#7e5aff" height="15px" width="15px">
+                  <path
+                    d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm1-8.41l2.54 2.53a1 1 0 01-1.42 1.42L11.3 12.7a1 1 0 01-.3-.7V8a1 1 0 012 0v3.59z">
+                  </path>
+                </svg>
+                <span>
+                  From 07:05AM to 19:30PM
+                </span>
+              </li>
+            </ul>
+            <div class="monticello-footer-contactbox-form-container">
+              <form class="monticello-footer-contactbox-form">
+                <div class="monticello-footer-contactbox-form-input">
+                  <input class="monticello-text" type="text" name="name" placeholder="Name" required />
+                </div>
+                <div class="monticello-footer-contactbox-form-input">
+                  <input class="monticello-text" type="email" name="email" placeholder="Email" required />
+                </div>
+                <button class="monticello-footer-contactbox-form-button monticello-button monticello-button-text"
+                  type="submit">
+                  SUBMIT
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="monticello-footer-menu-container">
+          <div class="monticello-footer-menu">
+            <span>
+              <img src="./assets/imgs/logo.png" alt="logo" />
+            </span>
+            <ul class="monticello-media-list">
+              <li class="monticello-media-list-item">
+                <a href="https://www.facebook.com/">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M23.7188 21H21.375V28H18.25V21H15.7188V18.0938H18.25V15.9062C18.25 15.0729 18.4062 14.3646 18.7188 13.7812C19.0312 13.1979 19.4688 12.7604 20.0312 12.4688C20.6146 12.1562 21.2812 12 22.0312 12C22.3646 12 22.7188 12.0208 23.0938 12.0625C23.4688 12.0833 23.7604 12.1146 23.9688 12.1562L24.2812 12.1875V14.6562H23.0312C22.4479 14.6562 22.0208 14.8125 21.75 15.125C21.5 15.4167 21.375 15.7812 21.375 16.2188V18.0938H24.1562L23.7188 21Z"
+                      fill="white" />
+                    <circle opacity="0.4" cx="20" cy="20" r="19.5" stroke="white" />
+                  </svg>
+                </a>
+              </li>
+              <li class="monticello-media-list-item">
+                <a href="https://www.twitter.com/">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M26.3438 16.75C26.3646 16.8333 26.375 16.9688 26.375 17.1562C26.375 18.2604 26.1667 19.3646 25.75 20.4688C25.3333 21.5521 24.7396 22.5521 23.9688 23.4688C23.2188 24.3646 22.2396 25.0938 21.0312 25.6562C19.8229 26.2188 18.4896 26.5 17.0312 26.5C15.1979 26.5 13.5208 26.0104 12 25.0312C12.2292 25.0521 12.4896 25.0625 12.7812 25.0625C14.3021 25.0625 15.6667 24.5938 16.875 23.6562C16.1458 23.6562 15.5 23.4479 14.9375 23.0312C14.3958 22.5938 14.0208 22.0521 13.8125 21.4062C14.0208 21.4271 14.2188 21.4375 14.4062 21.4375C14.6979 21.4375 14.9896 21.4062 15.2812 21.3438C14.7812 21.2396 14.3333 21.0312 13.9375 20.7188C13.5417 20.4062 13.2292 20.0312 13 19.5938C12.7708 19.1354 12.6562 18.6458 12.6562 18.125V18.0625C13.1146 18.3333 13.6042 18.4792 14.125 18.5C13.1458 17.8333 12.6562 16.9167 12.6562 15.75C12.6562 15.1667 12.8125 14.6146 13.125 14.0938C13.9375 15.1146 14.9271 15.9271 16.0938 16.5312C17.2812 17.1354 18.5417 17.4688 19.875 17.5312C19.8333 17.2812 19.8125 17.0312 19.8125 16.7812C19.8125 15.8854 20.125 15.1146 20.75 14.4688C21.3958 13.8229 22.1667 13.5 23.0625 13.5C24.0208 13.5 24.8229 13.8438 25.4688 14.5312C26.2188 14.3854 26.9167 14.125 27.5625 13.75C27.3125 14.5208 26.8333 15.125 26.125 15.5625C26.75 15.4792 27.375 15.3021 28 15.0312C27.5417 15.6979 26.9896 16.2708 26.3438 16.75Z"
+                      fill="white" />
+                    <circle opacity="0.4" cx="20" cy="20" r="19.5" stroke="white" />
+                  </svg>
+                </a>
+              </li>
+              <li class="monticello-media-list-item">
+                <a href="https://www.instagram.com/">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.4688 17.4688C18.1771 16.7604 19.0312 16.4062 20.0312 16.4062C21.0312 16.4062 21.875 16.7604 22.5625 17.4688C23.2708 18.1562 23.625 19 23.625 20C23.625 21 23.2708 21.8542 22.5625 22.5625C21.875 23.25 21.0312 23.5938 20.0312 23.5938C19.0312 23.5938 18.1771 23.25 17.4688 22.5625C16.7812 21.8542 16.4375 21 16.4375 20C16.4375 19 16.7812 18.1562 17.4688 17.4688ZM18.375 21.6562C18.8333 22.1146 19.3854 22.3438 20.0312 22.3438C20.6771 22.3438 21.2292 22.1146 21.6875 21.6562C22.1458 21.1979 22.375 20.6458 22.375 20C22.375 19.3542 22.1458 18.8021 21.6875 18.3438C21.2292 17.8854 20.6771 17.6562 20.0312 17.6562C19.3854 17.6562 18.8333 17.8854 18.375 18.3438C17.9167 18.8021 17.6875 19.3542 17.6875 20C17.6875 20.6458 17.9167 21.1979 18.375 21.6562ZM24.3438 15.6875C24.5104 15.8333 24.5938 16.0208 24.5938 16.25C24.5938 16.4792 24.5104 16.6771 24.3438 16.8438C24.1979 17.0104 24.0104 17.0938 23.7812 17.0938C23.5521 17.0938 23.3542 17.0104 23.1875 16.8438C23.0208 16.6771 22.9375 16.4792 22.9375 16.25C22.9375 16.0208 23.0208 15.8333 23.1875 15.6875C23.3542 15.5208 23.5521 15.4375 23.7812 15.4375C24.0104 15.4375 24.1979 15.5208 24.3438 15.6875ZM27 17.125C27.0208 17.6875 27.0312 18.6458 27.0312 20C27.0312 21.3542 27.0208 22.3125 27 22.875C26.9375 24.1458 26.5521 25.1354 25.8438 25.8438C25.1562 26.5312 24.1771 26.8958 22.9062 26.9375C22.3438 26.9792 21.3854 27 20.0312 27C18.6771 27 17.7188 26.9792 17.1562 26.9375C15.8854 26.875 14.9062 26.5 14.2188 25.8125C13.9479 25.5625 13.7292 25.2708 13.5625 24.9375C13.3958 24.6042 13.2708 24.2812 13.1875 23.9688C13.125 23.6562 13.0938 23.2917 13.0938 22.875C13.0521 22.3125 13.0312 21.3542 13.0312 20C13.0312 18.6458 13.0521 17.6771 13.0938 17.0938C13.1562 15.8438 13.5312 14.875 14.2188 14.1875C14.9062 13.4792 15.8854 13.0938 17.1562 13.0312C17.7188 13.0104 18.6771 13 20.0312 13C21.3854 13 22.3438 13.0104 22.9062 13.0312C24.1771 13.0938 25.1562 13.4792 25.8438 14.1875C26.5521 14.875 26.9375 15.8542 27 17.125ZM25.5 24.125C25.5625 23.9583 25.6146 23.75 25.6562 23.5C25.6979 23.2292 25.7292 22.9167 25.75 22.5625C25.7708 22.1875 25.7812 21.8854 25.7812 21.6562C25.7812 21.4271 25.7812 21.1042 25.7812 20.6875C25.7812 20.2708 25.7812 20.0417 25.7812 20C25.7812 19.9375 25.7812 19.7083 25.7812 19.3125C25.7812 18.8958 25.7812 18.5729 25.7812 18.3438C25.7812 18.1146 25.7708 17.8229 25.75 17.4688C25.7292 17.0938 25.6979 16.7812 25.6562 16.5312C25.6146 16.2604 25.5625 16.0417 25.5 15.875C25.25 15.2292 24.8021 14.7812 24.1562 14.5312C23.9896 14.4688 23.7708 14.4167 23.5 14.375C23.25 14.3333 22.9375 14.3021 22.5625 14.2812C22.2083 14.2604 21.9167 14.25 21.6875 14.25C21.4792 14.25 21.1562 14.25 20.7188 14.25C20.3021 14.25 20.0729 14.25 20.0312 14.25C19.9896 14.25 19.7604 14.25 19.3438 14.25C18.9271 14.25 18.6042 14.25 18.375 14.25C18.1458 14.25 17.8438 14.2604 17.4688 14.2812C17.1146 14.3021 16.8021 14.3333 16.5312 14.375C16.2812 14.4167 16.0729 14.4688 15.9062 14.5312C15.2604 14.7812 14.8125 15.2292 14.5625 15.875C14.5 16.0417 14.4479 16.2604 14.4062 16.5312C14.3646 16.7812 14.3333 17.0938 14.3125 17.4688C14.2917 17.8229 14.2812 18.1146 14.2812 18.3438C14.2812 18.5521 14.2812 18.875 14.2812 19.3125C14.2812 19.7292 14.2812 19.9583 14.2812 20C14.2812 20.0833 14.2812 20.2812 14.2812 20.5938C14.2812 20.8854 14.2812 21.1354 14.2812 21.3438C14.2812 21.5312 14.2812 21.7812 14.2812 22.0938C14.3021 22.4062 14.3229 22.6771 14.3438 22.9062C14.3646 23.1146 14.3958 23.3333 14.4375 23.5625C14.4792 23.7917 14.5208 23.9792 14.5625 24.125C14.8333 24.7708 15.2812 25.2188 15.9062 25.4688C16.0729 25.5312 16.2812 25.5833 16.5312 25.625C16.8021 25.6667 17.1146 25.6979 17.4688 25.7188C17.8438 25.7396 18.1354 25.75 18.3438 25.75C18.5729 25.75 18.8958 25.75 19.3125 25.75C19.75 25.75 19.9896 25.75 20.0312 25.75C20.0938 25.75 20.3229 25.75 20.7188 25.75C21.1354 25.75 21.4583 25.75 21.6875 25.75C21.9167 25.75 22.2083 25.7396 22.5625 25.7188C22.9375 25.6979 23.25 25.6667 23.5 25.625C23.7708 25.5833 23.9896 25.5312 24.1562 25.4688C24.8021 25.1979 25.25 24.75 25.5 24.125Z"
+                      fill="white" />
+                    <circle opacity="0.4" cx="20" cy="20" r="19.5" stroke="white" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="monticello-footer-copyright monticello-copyright-text">Copyrights © 2020 Montichello</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+      ({ key: "AIzaSyDSwYK5EqoYjHqN2uW3n4BB3y9inu26DbE", v: "beta" });
+  </script>
+  <script src="./build/index.js"></script>
+
+</body>
+
+</html>
