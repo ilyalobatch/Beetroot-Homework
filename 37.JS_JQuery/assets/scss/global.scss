@@ -1,0 +1,27 @@
+.onwave {
+  &-container {
+    padding: 0 100px;
+  }
+
+  &-button-white,
+  &-button-black {
+    backdrop-filter: blur(10px);
+    padding: 15px 57px;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: var(--tomato-light);
+      border-color: var(--tomato-light);
+      color: var(--brown-light);
+    }
+  }
+  &-button-white {
+    border: 2px solid var(--brown-light);
+    color: var(--brown-light);
+  }
+
+  &-button-black {
+    border: 2px solid var(--black);
+    color: var(--black);
+  }
+}

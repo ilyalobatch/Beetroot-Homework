@@ -1,0 +1,19 @@
+:root {
+  --black: #000;
+  --brown-dark: #35312d;
+  --arrow-inactive: #202020;
+  --tomato: #c62100;
+  --tomato-light: #f16a50;
+  --brown-light: #f8f1ea;
+  --dot-inactive: rgba(248, 241, 234, 0.7);
+  --dark-dot-inactive: #cac2ba;
+
+  --image-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.84) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+
+  --swiper-pagination-bottom: 50px;
+  --swiper-pagination-top: auto;
+}

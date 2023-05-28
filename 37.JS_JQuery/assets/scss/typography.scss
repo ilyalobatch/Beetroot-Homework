@@ -1,0 +1,99 @@
+.onwave {
+  &-title,
+  &-subtitle,
+  &-navigation-text,
+  &-menu-text,
+  &-product-text,
+  &-status-text,
+  &-button-text,
+  &-contact-text,
+  &-copyright-text {
+    font-family: "Montserrat";
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    text-transform: uppercase;
+    color: var(--brown-light);
+  }
+
+  &-subtitle {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  &-navigation-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--black);
+
+    &--home {
+      color: var(--brown-light);
+    }
+  }
+
+  &-menu-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--brown-light);
+    transition: 0.25s;
+
+    &:hover {
+      color: var(--tomato-light);
+    }
+
+    &--home {
+      color: var(--tomato-light);
+    }
+  }
+
+  &-status-text {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: var(--brown-light);
+  }
+
+  &-products-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--black);
+  }
+
+  &-price-text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--black);
+  }
+
+  &-button-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+
+  &-contact-text {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+    color: var(--brown-light);
+  }
+
+  &-copyright-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--brown-light);
+  }
+}

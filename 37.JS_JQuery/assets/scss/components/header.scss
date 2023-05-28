@@ -1,0 +1,51 @@
+.onwave {
+  &-header {
+    background-color: var(--brown-light);
+  }
+
+  &-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+  }
+
+  &-navigation-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-navigation-list-item {
+    padding: 28px 15px;
+    cursor: pointer;
+    transition: 0.25s;
+
+    &:hover {
+      background-color: var(--tomato-light);
+    }
+
+    &:hover .onwave-navigation-text {
+      color: var(--brown-light);
+    }
+
+    &--home {
+      background-color: var(--tomato-light);
+      color: var(--brown-light);
+    }
+  }
+
+  &-navigation-iconset {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &-navigation-icon {
+    cursor: pointer;
+
+    &:hover svg {
+      transition: 0.4s;
+      transform: rotateY(360deg) scale(1.2);
+    }
+  }
+}
