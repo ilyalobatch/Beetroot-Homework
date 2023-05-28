@@ -140,10 +140,9 @@ const fetchAndLoadDetails = async (id) => {
 
   if (!data?.Error) {
     const dataProps = Object.keys(data);
-    const dataValues = Object.values(data);
 
-    const infoElements = dataProps.map((prop, index) => {
-      if (typeof dataValues[index] !== "string") {
+    const infoElements = dataProps.map((prop) => {
+      if (typeof data[prop] !== "string") {
         return;
       }
 
@@ -152,7 +151,7 @@ const fetchAndLoadDetails = async (id) => {
       const propDescription = createElementWithProps(
         "td",
         ["innerText"],
-        [dataValues[index]]
+        [data[prop]]
       );
 
       tableRow.append(property, propDescription);
