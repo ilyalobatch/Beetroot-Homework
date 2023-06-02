@@ -20,18 +20,16 @@ export const successIconOnSumbit = function () {
     ".monticello-footer-contactbox-form-container"
   );
   const newSuccessIcon = document.createElement("div");
-  newSuccessIcon.classList.add("swal-icon", "swal-icon--success");
+  newSuccessIcon.classList.add("swal-icon swal-icon--success");
 
   const newFirstSpan = document.createElement("span");
   newFirstSpan.classList.add(
-    "swal-icon--success__line",
-    "swal-icon--success__line--long"
+    "swal-icon--success__line swal-icon--success__line--long"
   );
 
   const newSecondSpan = document.createElement("span");
   newSecondSpan.classList.add(
-    "swal-icon--success__line",
-    "swal-icon--success__line--tip"
+    "swal-icon--success__line swal-icon--success__line--tip"
   );
 
   const newRingIcon = document.createElement("div");

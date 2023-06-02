@@ -28,48 +28,50 @@ const news = [
 
 const newsSet = [news, news, news, news, news].flat();
 
+const generateNewsSlide = (newsData, prefix, element) => {
+  const slide = element.cloneNode(true);
+  const postImage = slide.querySelector(`${prefix}-imagebox img`);
+  if (postImage) {
+    postImage.src = newsData.postImage;
+    postImage.alt = newsData.postTitle;
+  }
+
+  const postTitle = slide.querySelector(`${prefix}-title`);
+  if (postTitle) {
+    postTitle.innerText = newsData.postTitle;
+  }
+
+  const postText = slide.querySelector(`${prefix}-text`);
+  if (postText) {
+    postText.innerText = newsData.postText;
+  }
+
+  const authorImage = slide.querySelector(`${prefix}-author-imagebox img`);
+  if (authorImage) {
+    authorImage.src = newsData.authorImage;
+    authorImage.alt = newsData.postTitle;
+  }
+
+  const authorName = slide.querySelector(`${prefix}-author-name`);
+  if (authorName) {
+    authorName.innerText = newsData.authorName;
+  }
+
+  const postDate = slide.querySelector(`${prefix}-author-date`);
+  if (postDate) {
+    postDate.innerText = newsData.postDate;
+  }
+
+  return slide;
+};
+
 export const renderNewsCards = () => {
   const cardPrefix = ".monticello-news-card";
   const newsContainer = document.querySelector(".monticello-news-wrapper");
   const newsCardEl = document.querySelector(`${cardPrefix}`);
 
   const newsSlides = newsSet.map((newsData) => {
-    const slide = newsCardEl.cloneNode(true);
-    const postImage = slide.querySelector(`${cardPrefix}-imagebox img`);
-    if (postImage) {
-      postImage.src = newsData.postImage;
-      postImage.alt = newsData.postTitle;
-    }
-
-    const postTitle = slide.querySelector(`${cardPrefix}-title`);
-    if (postTitle) {
-      postTitle.innerText = newsData.postTitle;
-    }
-
-    const postText = slide.querySelector(`${cardPrefix}-text`);
-    if (postText) {
-      postText.innerText = newsData.postText;
-    }
-
-    const authorImage = slide.querySelector(
-      `${cardPrefix}-author-imagebox img`
-    );
-    if (authorImage) {
-      authorImage.src = newsData.authorImage;
-      authorImage.alt = newsData.postTitle;
-    }
-
-    const authorName = slide.querySelector(`${cardPrefix}-author-name`);
-    if (authorName) {
-      authorName.innerText = newsData.authorName;
-    }
-
-    const postDate = slide.querySelector(`${cardPrefix}-author-date`);
-    if (postDate) {
-      postDate.innerText = newsData.postDate;
-    }
-
-    return slide;
+    return generateNewsSlide(newsData, cardPrefix, newsCardEl);
   });
 
   newsContainer.innerHTML = "";
