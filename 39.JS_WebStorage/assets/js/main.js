@@ -13,7 +13,7 @@ const saveToStorage = (key = WEATHER_STORAGE_KEY, data) => {
 };
 
 const getFromStorage = (key = WEATHER_STORAGE_KEY) => {
-  return JSON.parse(localStorage.getItem(key));
+  return JSON.parse(localStorage.getItem(key) || "{}");
 };
 
 const fetchData = async (url) => {
@@ -59,41 +59,42 @@ const createWeatherWidget = (weather) => {
   return container;
 };
 
+const generateTableRow = (data, prop) => {
+  const tableRow = document.createElement("tr");
+  const formattedPropName = prop.replace("_", " ").toUpperCase();
+  const property = createElementWithProps(
+    "td",
+    ["innerText"],
+    [formattedPropName]
+  );
+  let propDescription;
+
+  if (Array.isArray(data[prop])) {
+    const [weather] = data[prop];
+    const widget = createWeatherWidget(weather);
+    weatherContainer.innerHTML = "";
+    weatherContainer.append(widget);
+
+    return;
+  }
+
+  propDescription = createElementWithProps("td", ["innerText"], [data[prop]]);
+
+  tableRow.append(property, propDescription);
+
+  return tableRow;
+};
+
 const mapAndLoadWeatherProps = (data) => {
   if (!data) {
     return;
   }
 
   const weatherProps = Object.keys(data);
-
-  const infoElements = weatherProps.map((prop) => {
-    const tableRow = document.createElement("tr");
-    const formattedPropName = prop.replace("_", " ").toUpperCase();
-    const property = createElementWithProps(
-      "td",
-      ["innerText"],
-      [formattedPropName]
-    );
-    let propDescription;
-
-    if (Array.isArray(data[prop])) {
-      const [weather] = data[prop];
-      const widget = createWeatherWidget(weather);
-      weatherContainer.innerHTML = "";
-      weatherContainer.append(widget);
-
-      return;
-    }
-
-    propDescription = createElementWithProps("td", ["innerText"], [data[prop]]);
-
-    tableRow.append(property, propDescription);
-
-    return tableRow;
-  });
-
   const table = document.createElement("table");
   const tableBody = document.createElement("tbody");
+
+  const infoElements = weatherProps.map((prop) => generateTableRow(data, prop));
 
   tableBody.append(...infoElements.filter((item) => item !== undefined));
   table.append(tableBody);
@@ -103,7 +104,9 @@ const mapAndLoadWeatherProps = (data) => {
 
 const loadAndDisplayData = async (value) => {
   const [lat, lon] = value.split(", ");
-  const data = await fetchWeatherData(lat, lon);
+  const data = await fetchWeatherData(lat, lon).catch((error) =>
+    console.log(error)
+  );
 
   mapAndLoadWeatherProps(data?.current);
   saveToStorage(WEATHER_STORAGE_KEY, {
@@ -116,16 +119,14 @@ const loadAndDisplayData = async (value) => {
 const handleOnChangeSelect = async (event) => {
   detailsContainer.innerHTML = "";
 
-  console.log(event.target.value);
-
   await loadAndDisplayData(event.target.value);
 };
 
 const checkForDataUpdate = (lastUpdateTime) => {
-  let dt = new Date(lastUpdateTime);
-  dt.setHours(dt.getHours() + 2);
+  let lastUpdateTimeDateObject = new Date(lastUpdateTime);
+  lastUpdateTimeDateObject.setHours(lastUpdateTimeDateObject.getHours() + 2);
 
-  return dt.getTime() < new Date().getTime();
+  return lastUpdateTimeDateObject.getTime() < new Date().getTime();
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
