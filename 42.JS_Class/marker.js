@@ -11,14 +11,14 @@ class Marker {
     let remainingInk = this.ink;
     let output = "";
 
-    for (let letter = 0; letter < text.length; letter++) {
-      if (text[letter] !== " " && remainingInk > 0) {
-        output += text[letter];
+    text.split("").forEach((letter) => {
+      if (letter !== " " && remainingInk > 0) {
+        output += letter;
         remainingInk -= 0.5;
       } else {
         output += " ";
       }
-    }
+    });
 
     const container = document.createElement("div");
     container.innerHTML = `<p>${output}</p>`;
