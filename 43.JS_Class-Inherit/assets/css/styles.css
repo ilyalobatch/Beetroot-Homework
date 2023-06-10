@@ -1,0 +1,44 @@
+.clock-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.clock-element {
+    border: 1px solid rgba(180, 180, 180, 0.65);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.clock-display {
+    background-color: rgba(180, 180, 180, 0.65);
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    margin: 0 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.clock-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.clock-buttons .show-time-btn {
+    background-color: lawngreen;
+}
+
+.clock-buttons .show-date-time-btn {
+    background-color: deepskyblue;
+}
+
+.clock-buttons .delete-clock-btn {
+    background-color: red;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<form class="create-user-form">
+    <fieldset>
+        <legend>Create new User</legend>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+
+        <label for="role">Role</label>
+        <select id="role" name="role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <input type="submit" value="Create"/>
+    </fieldset>
+</form>
+
+<form class="create-clock-form">
+    <fieldset>
+        <legend>Create World Clock</legend>
+
+        <label for="clockTime"></label>
+        <input name="clockTime" id="clockTime" type="datetime-local"/>
+
+        <input type="submit" value="Create"/>
+    </fieldset>
+</form>
+<div class="clock-container"></div>
+<script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>
