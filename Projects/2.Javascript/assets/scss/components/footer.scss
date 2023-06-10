@@ -1,0 +1,109 @@
+.monticello {
+  &-footer {
+    position: relative;
+    min-height: 550px;
+    background: linear-gradient(251.06deg, #7e5aff -2.19%, #55b7ff 103.21%);
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-300px);
+    }
+
+    &-bg-image {
+      background-image: url(../assets/imgs/footer-bg.png);
+    }
+
+    &-contactbox {
+      width: 770px;
+      padding: 60px;
+      margin-bottom: 50px;
+      background-color: var(--color_white);
+    }
+
+    &-contactbox-bg-image {
+      background-image: url(../assets/imgs/form-bg.png);
+      background-size: 100% 50%;
+      background-position: bottom;
+    }
+
+    &-contactbox-title {
+      position: relative;
+      text-align: center;
+      padding: 30px 0 40px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 100px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color_dark-blue);
+      }
+    }
+    &-contactbox-wrapper {
+      display: flex;
+      gap: 50px;
+    }
+
+    &-contactbox-info-list {
+      width: 50%;
+      min-height: 195px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-contactbox-info-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    &-contactbox-form-container {
+      width: 50%;
+    }
+
+    &-contactbox-form {
+      min-height: 195px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &-contactbox-form-input {
+      width: 100%;
+    }
+
+    &-contactbox-form-input input {
+      width: 100%;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(43, 65, 86, 0.3);
+      transition: 0.3s;
+
+      &:focus {
+        border-color: var(--color_dark-blue);
+      }
+    }
+
+    &-contactbox-form-button {
+      padding: 15px 34px;
+      max-width: 140px;
+      font-size: 18px;
+    }
+
+    &-menu-container {
+      width: 770px;
+    }
+
+    &-menu {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+  }
+}

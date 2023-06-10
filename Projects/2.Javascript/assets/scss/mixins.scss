@@ -1,0 +1,5 @@
+@mixin maxbreakpoint($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
